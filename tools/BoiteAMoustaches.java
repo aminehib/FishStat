@@ -12,7 +12,7 @@ public class BoiteAMoustaches {
     private double moustacheSup ;
 
     public BoiteAMoustaches(ArrayList<Fish> poissons){
-        // grader les poissont avec un taux d'infestation connu
+        // grader les poissons avec un taux d'infestation connu
         poissons.removeIf( arg->{
             return (arg.getInfestationRate() == null ) ;
         });
