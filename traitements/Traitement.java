@@ -35,10 +35,13 @@ public abstract class Traitement implements Cleanable {
 
     @Override
     public void clean(ArrayList<Fish> poissons){
-        BoiteAMoustaches boite = new BoiteAMoustaches(poissons);
-        for(Fish poisson : poissons){
-            if(poisson.getInfestationRate() > boite.getMoustacheSup() || poisson.getInfestationRate() < boite.getMoustacheInf())
-                poisson.setInfestationRate(null);
+        LinkedHashMap<String , ArrayList<Fish>> = getSpecies(poissons) ;
+        for( String espece : species ){
+        BoiteAMoustaches boite = new BoiteAMoustaches(espace.get(espece));
+            for(Fish poisson : poissons){
+                if(poisson.getInfestationRate() != null &&( poisson.getInfestationRate() > boite.getMoustacheSup() || poisson.getInfestationRate() < boite.getMoustacheInf()) )
+                    poisson.setInfestationRate(null);
+            }
         }
     }
 
