@@ -36,7 +36,7 @@ public class DataFrame {
         poissons = new ArrayList<>() ;
         for(String line : lines){
             poissons.add(new Fish(null,null , null , null )) ;
-            String[] data = line.split(",") ;
+            String[] data = line.split(",", -1) ;
             if(data.length!= 6){
                 // Pourquoi: une ligne mal formée ne doit pas être acceptée silencieusement.
                 throw new InvalidFileFormat("Ligne invalide (6 champs attendus) : " + line);
