@@ -1,0 +1,1 @@
+Version code modulable , avec gesrion d'erreur et ajout de logique de traitement de completion
