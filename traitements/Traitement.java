@@ -35,16 +35,58 @@ public abstract class Traitement implements Cleanable {
 
     @Override
     public void clean(ArrayList<Fish> poissons){
-        BoiteAMoustaches boite = new BoiteAMoustaches(poissons);
+        
+        LinkedHashMap<String,ArrayList<Double> > colonnes = new LinkedHashMap<>() ;
+        colonnes.put("Length", new ArrayList<>());
+        colonnes.put("Size", new ArrayList<>());
+        colonnes.put("Weight", new ArrayList<>());
+        colonnes.put("Infestation", new ArrayList<>());
         for(Fish poisson : poissons){
-            Double rate = poisson.getInfestationRate();
-            if(rate == null){
-                // Pourquoi: éviter un NullPointerException sur les comparaisons.
-                continue;
-            }
-            if(rate > boite.getMoustacheSup() || rate < boite.getMoustacheInf())
-                poisson.setInfestationRate(null);
+            colonnes.get("Length").add(poisson.getLength());
+            colonnes.get("Size").add(poisson.getSize());
+            colonnes.get("Weight").add(poisson.getWeight());
+            colonnes.get("Infestation").add(poisson.getInfestationRate());
         }
+        BoiteAMoustaches boiteL = new BoiteAMoustaches(colonnes.get("Length"));
+        BoiteAMoustaches boiteS = new BoiteAMoustaches(colonnes.get("Size"));
+        BoiteAMoustaches boiteW = new BoiteAMoustaches(colonnes.get("Weight"));
+        BoiteAMoustaches boiteI = new BoiteAMoustaches(colonnes.get("Infestation"));
+        
+        for(Fish poisson : poissons){
+
+            Double rate = poisson.getInfestationRate();
+            Double weight = poisson.getWeight();
+            Double size = poisson.getSize();
+            Double length = poisson.getLength();
+
+            if(rate != null &&(rate > boiteI.getMoustacheSup()|| rate > 1.0 || rate <0.0 || rate < boiteI.getMoustacheInf()))
+                poisson.setInfestationRate(null);
+
+            if(weight != null &&(weight > boiteW.getMoustacheSup()||  weight < boiteW.getMoustacheInf()))
+                poisson.setWeight(null);
+
+            if(size != null &&(size > boiteS.getMoustacheSup()||  size < boiteS.getMoustacheInf()))
+                poisson.setSize(null);
+
+            if(length  != null &&( length  > boiteL.getMoustacheSup()||  length  < boiteL.getMoustacheInf()))
+                poisson.setLength(null);
+           
+        }
+
+        
+
+
+
+
+
+
+
+
+
+
+
+
+
     }
 
 
