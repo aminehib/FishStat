@@ -7,8 +7,9 @@ import graphique.SvgGenerator;
 import model.DataFrame;
 import model.Fish;
 import tools.BoiteAMoustaches;
-import traitements.LinearRegression;
-import traitements.MeanValue;
+import tools.LinearRegression;
+import traitements.LinearRegressionCompletion;
+
 import traitements.Traitement;
 
 public class Main {
@@ -22,14 +23,19 @@ public class Main {
         }
         
         System.out.println(df);
-        Traitement t = new LinearRegression();
-        t.clean(df.getData());
-        t.complete(df.getData());
+        Traitement t = new LinearRegressionCompletion();
+        t.clean(df);
+        t.complete(df);
+
+
         
         
         System.out.println(df);
 
-        SvgGenerator.GenerateSVG(df.getData());
+        SvgGenerator.GenerateSVG(df);
+
+        LinearRegression model = new LinearRegression(df.getSizes(), df.getInfestationRates());
+        System.out.println(model.getCoeff()+ " " + model.getIntercept());
         
 
     }

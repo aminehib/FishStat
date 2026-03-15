@@ -3,6 +3,7 @@ import  interfaces.Cleanable;
 import java.util.ArrayList;
 import java.util.LinkedHashMap;
 
+import model.DataFrame;
 import model.Fish;
 import tools.BoiteAMoustaches;
 
@@ -34,8 +35,8 @@ public abstract class Traitement implements Cleanable {
     }
 
     @Override
-    public void clean(ArrayList<Fish> poissons){
-        
+    public void clean(DataFrame Fish ){
+        ArrayList<Fish> poissons = new ArrayList<>(Fish.getData());
         LinkedHashMap<String,ArrayList<Double> > colonnes = new LinkedHashMap<>() ;
         colonnes.put("Length", new ArrayList<>());
         colonnes.put("Size", new ArrayList<>());
@@ -73,23 +74,6 @@ public abstract class Traitement implements Cleanable {
            
         }
 
-        
-
-
-
-
-
-
-
-
-
-
-
-
-
     }
 
-
-    
-    
 }

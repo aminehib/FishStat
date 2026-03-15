@@ -79,6 +79,23 @@ public class DataFrame {
         }
     }
 
+    public ArrayList<Double> getInfestationRates(){
+        ArrayList<Double> InfestationRate = new ArrayList<>() ;
+        for(Fish poisson : poissons){
+            InfestationRate.add(poisson.getInfestationRate());
+        }
+        return InfestationRate ;
+    }
+
+
+    public ArrayList<Double> getSizes(){
+        ArrayList<Double> Size = new ArrayList<>() ;
+        for(Fish poisson : poissons){
+            Size.add(poisson.getSize());
+        }
+        return Size ;
+    }
+
 
 
 

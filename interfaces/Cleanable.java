@@ -1,12 +1,14 @@
 package interfaces;
 import java.util.ArrayList;
 
+
+import model.DataFrame;
 import model.Fish;
 
 
 public interface Cleanable {
 
-    public void clean(ArrayList<Fish> poissons);
-    public void complete(ArrayList<Fish> poissons );
+    public void clean(DataFrame fish);
+    public void complete(DataFrame fish);
     
 }
