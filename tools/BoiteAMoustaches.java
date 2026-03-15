@@ -14,7 +14,7 @@ public class BoiteAMoustaches {
 
         // Pourquoi: éviter de modifier la liste d'origine (effet de bord).
         ArrayList<Double> filtered = new ArrayList<>(valeurs);
-        // garder les poissons avec un taux d'infestation connu
+        // garder les valeurs connues
         filtered.removeIf( arg->{
             return (arg == null ) ;
         });
