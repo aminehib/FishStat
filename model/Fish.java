@@ -1,5 +1,6 @@
 package model;
 import java.util.ArrayList;
+import java.util.HashSet;
 
 public class Fish{
 
@@ -9,14 +10,15 @@ public class Fish{
     private Double weight ;
     private Double size ;
     private Double infestationRate ;
-    private ArrayList<String> content ;
+    private HashSet<String> content ;
 
-    public Fish(String species , Double length , Double size , Double infestationRate){
+    public Fish(String species , Double length ,Double weight , Double size , Double infestationRate){
         this.species = species ;
         this.length = length ;
+        this.weight = weight ;
         this.size = size ;
         this.infestationRate = infestationRate ;
-        content = new ArrayList<>();
+        content = new HashSet<>();
     }
 
 
@@ -54,12 +56,10 @@ public class Fish{
         content.add(contenu);
     }
     
-    public ArrayList<String> getContent(){return this.content ;}
+    public HashSet<String> getContent(){return new HashSet<>(content) ;}
 
-    public boolean removeContent(int slot){
-        if(slot < 0 || slot > content.size() - 1 )return false ;
-        content.remove(slot);
-        return true ;
+    public boolean removeContent(String content){
+        return this.content.remove(content);
     }
 
     @Override

@@ -2,6 +2,9 @@ package model;
 
 import java.io.IOException;
 import java.util.ArrayList;
+import java.util.HashSet;
+import java.util.Set;
+
 import exceptions.InvalidFileFormat;
 import files.Files;
 
@@ -15,7 +18,7 @@ public class DataFrame {
     }
 
     public DataFrame(){
-
+        this.poissons = new ArrayList<>();
     }
 
     public void readcsv(String fileName) throws InvalidFileFormat{
@@ -35,7 +38,7 @@ public class DataFrame {
         int i = 0 ;
         poissons = new ArrayList<>() ;
         for(String line : lines){
-            poissons.add(new Fish(null,null , null , null )) ;
+            poissons.add(new Fish(null,null ,null , null , null )) ;
             String[] data = line.split(",", -1) ;
             if(data.length!= 6){
                 // Pourquoi: une ligne mal formée ne doit pas être acceptée silencieusement.
@@ -97,9 +100,41 @@ public class DataFrame {
     }
 
 
+    public ArrayList<Double> getLengths(){
+        ArrayList<Double> length = new ArrayList<>() ;
+        for(Fish poisson : poissons){
+            length.add(poisson.getLength());
+        }
+        return  length ;
+    }
+
+     public ArrayList<Double> getWeights(){
+        ArrayList<Double> weigth = new ArrayList<>() ;
+        for(Fish poisson : poissons){
+            weigth.add(poisson.getWeight());
+        }
+        return  weigth;
+    }
 
 
+     public HashSet<String> getSpecies(){
+        HashSet<String> species = new HashSet<>() ;
+        for(Fish poisson : poissons){
+            species.add(poisson.getSpecies());
+        }
+        return species;
+    }
 
+    public HashSet<String> getContents(){
+        HashSet<String> content = new  HashSet<>() ;
+        for(Fish poisson : poissons){
+            HashSet<String> fishContent = poisson.getContent() ;
+            for(String fishCont : fishContent){
+                content.add(fishCont); 
+            }
+        }
+        return  content;
+    }
 
 
 
