@@ -26,6 +26,10 @@ public class SvgGenerator {
             // tri croissant
             return t1.compareTo(t2);
         });
+        if(poissons.size() == 0){
+            System.out.println("Données manquantes");
+            return ;
+        }
         OutputStream out  = null ;
         Path p = Paths.get("graphique.svg").toAbsolutePath();
         try{

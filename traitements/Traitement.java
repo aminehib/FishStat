@@ -60,16 +60,16 @@ public abstract class Traitement implements Cleanable {
             Double size = poisson.getSize();
             Double length = poisson.getLength();
 
-            if(rate != null &&(rate > boiteI.getMoustacheSup()|| rate > 1.0 || rate <0.0 || rate < boiteI.getMoustacheInf()))
+            if( (rate != null && boiteI.getMoustacheSup() != null) &&(rate > boiteI.getMoustacheSup()|| rate > 1.0 || rate <0.0 || rate < boiteI.getMoustacheInf()))
                 poisson.setInfestationRate(null);
 
-            if(weight != null &&(weight > boiteW.getMoustacheSup()||  weight < boiteW.getMoustacheInf()))
+            if((rate != null && boiteW.getMoustacheSup() != null) &&(weight > boiteW.getMoustacheSup()||  weight < boiteW.getMoustacheInf()))
                 poisson.setWeight(null);
 
-            if(size != null &&(size > boiteS.getMoustacheSup()||  size < boiteS.getMoustacheInf()))
+            if((rate != null && boiteS.getMoustacheSup() != null)&&(size > boiteS.getMoustacheSup()||  size < boiteS.getMoustacheInf()))
                 poisson.setSize(null);
 
-            if(length  != null &&( length  > boiteL.getMoustacheSup()||  length  < boiteL.getMoustacheInf()))
+            if((rate != null && boiteL.getMoustacheSup() != null) &&( length  > boiteL.getMoustacheSup()||  length  < boiteL.getMoustacheInf()))
                 poisson.setLength(null);
            
         }

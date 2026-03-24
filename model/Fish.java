@@ -65,7 +65,7 @@ public class Fish{
     @Override
     public String toString(){
         String contenu = (content.isEmpty())? "vide" : "{" + String.join(",", content) + "}";
-        return String.format("%-10sLongueur:%-10sPoids:%-10sTaille:%-10sTaux d'infestation:%-20sContenu:%-10s\n","[" + getSpecies() + "]" ,getLength() , getWeight(),getSize() , getInfestationRate() , contenu ) ;
+        return String.format("%-30sLongueur:%-10.4fPoids:%-10.4fTaille:%-10.4fTaux d'infestation:%-20.4fContenu:%-10s\n","[" + getSpecies() + "]" ,getLength() , getWeight(),getSize() , getInfestationRate() , contenu ) ;
     }
 
 

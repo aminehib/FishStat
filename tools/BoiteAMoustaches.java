@@ -4,11 +4,11 @@ import java.util.ArrayList;
 
 public class BoiteAMoustaches {
 
-    private double Q1;
-    private double Q2;
-    private double Q3;
-    private double moustacheInf;
-    private double moustacheSup;
+    private Double Q1;
+    private Double Q2;
+    private Double Q3;
+    private Double moustacheInf;
+    private Double moustacheSup;
 
     public BoiteAMoustaches(ArrayList<Double> valeurs){
 
@@ -46,6 +46,12 @@ public class BoiteAMoustaches {
         Q1 = median(lower);
         Q3 = median(upper);
 
+        if(Q1 == null || Q2 == null ){
+            moustacheInf = null ;
+            moustacheSup = null ;
+            return ;
+        }
+
         // écart interquartile
         double ecartInterquantile = Q3 - Q1 ;
 
@@ -53,35 +59,36 @@ public class BoiteAMoustaches {
         moustacheSup =  Q3 +  (1.5 * ecartInterquantile );
     }
 
-    private double median(ArrayList<Double> list){
+    private Double median(ArrayList<Double> list){
 
         int n = list.size();
+        if(n == 0)return null ;
         int m = n / 2;
 
-        if(n % 2 == 0){
+        if(n % 2 == 0 ){
             return (list.get(m - 1) + list.get(m)) / 2.0;
         }else{
             return list.get(m);
         }
     }
 
-    public double getPremierQuantile(){
+    public Double getPremierQuantile(){
         return Q1;
     }
 
-    public double getMediane(){
+    public Double getMediane(){
         return Q2;
     }
 
-    public double getDernierQuantile(){
+    public Double getDernierQuantile(){
         return Q3;
     }
 
-    public double getMoustacheInf(){
+    public Double getMoustacheInf(){
         return moustacheInf;
     }
 
-    public double getMoustacheSup(){
+    public Double getMoustacheSup(){
         return moustacheSup;
     }
 }

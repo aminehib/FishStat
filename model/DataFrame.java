@@ -1,12 +1,17 @@
 package model;
 
+import java.io.BufferedReader;
+import java.io.FileReader;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.HashSet;
+import java.util.LinkedHashMap;
 import java.util.Set;
 
+import exceptions.InvalidAttribute;
 import exceptions.InvalidFileFormat;
-import files.Files;
+
+import tools.MeanValue;
 
 
 public class DataFrame {
@@ -21,42 +26,90 @@ public class DataFrame {
         this.poissons = new ArrayList<>();
     }
 
-    public void readcsv(String fileName) throws InvalidFileFormat{
+    public void readcsv(String name, LinkedHashMap<String , String > headers ) throws InvalidFileFormat, InvalidAttribute{
 
-        if(!Files.getExtension(fileName).equals("csv")) throw new InvalidFileFormat();
-
-        ArrayList<String> lines = null ;
+      if(headers == null || headers.size() == 0 ) return ;
+        FileReader fileReader = null  ;
+        
         try{
-            lines = Files.getFile(fileName) ;
-        }catch(IOException e){
-            System.out.println(e.getMessage());
+        fileReader = new FileReader(name)  ;
+
+        LinkedHashMap<String ,Integer > headerIndex = new LinkedHashMap<>() ;
+        
+        BufferedReader buffer  = new BufferedReader(fileReader) ;
+        String line ;
+        ArrayList<String> lines  = new ArrayList<>() ;
+
+        line = buffer.readLine();
+
+        String header[] = line.split(";");
+        lines.add(String.join(",", header));
+
+        for(int i = 0 ; i < header.length; i++){
+            if(headers.containsKey(header[i])){
+                headerIndex.put( headers.get(header[i] ) , i);
+                System.out.println(header[i]+ " trouvé");
+            }
+            else{
+                System.out.println(header[i]+ " ignoré");
+            }
         }
-        if(lines == null){
-            // Pourquoi: éviter un NullPointerException si la lecture échoue.
-            throw new InvalidFileFormat("Impossible de lire le fichier CSV : " + fileName);
+        if(headerIndex.size() ==0){
+            System.out.println("Erreur:Aucune colonne ne correspond");
+            return ;
         }
-        int i = 0 ;
         poissons = new ArrayList<>() ;
-        for(String line : lines){
-            poissons.add(new Fish(null,null ,null , null , null )) ;
-            String[] data = line.split(",", -1) ;
-            if(data.length!= 6){
-                // Pourquoi: une ligne mal formée ne doit pas être acceptée silencieusement.
-                throw new InvalidFileFormat("Ligne invalide (6 champs attendus) : " + line);
+        while( (line = buffer.readLine() ) != null){
+            Fish poisson = new Fish(null, null, null, null, null) ;
+            String[] ligne = line.split(";", -1);
+            for(String key : headerIndex.keySet()){
+                switch (key) {
+                    case "Species":
+                        
+                        poisson.setSpecies(ligne[headerIndex.get(key)]) ;
+                        break;
+
+                    case "Length":
+                        if(ligne[headerIndex.get(key)].equals(""))poisson.setLength(null);
+                        else poisson.setLength(Double.parseDouble(ligne[headerIndex.get(key)]));
+                        break;
+
+                    case "Weight":
+                        if(ligne[headerIndex.get(key)].equals(""))poisson.setLength(null);
+                        else poisson.setWeight(Double.parseDouble(ligne[headerIndex.get(key)]));
+                        break;
+                    
+                    case "Size":
+                        if(ligne[headerIndex.get(key)].equals(""))poisson.setLength(null);
+                        else poisson.setSize(Double.parseDouble(ligne[headerIndex.get(key)]));
+                        break;
+                    
+                    case "InfestationRate":
+                        if(ligne[headerIndex.get(key)].equals(""))poisson.setLength(null);
+                        else poisson.setInfestationRate(Double.parseDouble(ligne[headerIndex.get(key)]));
+                        break;
+                    
+                    case "Content":
+                       poisson.addContent(ligne[headerIndex.get(key)]);
+                        break;
+                    
+                    default:
+                        throw new InvalidAttribute(key);
+                   
+                }
             }
-            Fish poisson = poissons.get(i);
-            if(data[0].equals(""))poisson.setSpecies(null);
-            else poisson.setSpecies(data[0]);
-            poisson.setLength(parseDouble(data[1], line));
-            poisson.setWeight(parseDouble(data[2], line));
-            poisson.setSize(parseDouble(data[3], line));
-            poisson.setInfestationRate(parseDouble(data[4], line));
-            String[] contenu = data[5].split(";;");
-            for(String cont : contenu){
-                if(!cont.equals("")) poisson.addContent(cont);
-            }
-            i++ ;
+           poissons.add(poisson);
         }
+
+
+        fileReader.close();
+        buffer.close();
+
+    }catch(IOException e){
+        System.out.println(e.getMessage());
+    }
+        
+        
     }
 
     public void setData(ArrayList<Fish> poissons){
@@ -69,7 +122,7 @@ public class DataFrame {
         String Total = "Liste des poissons :\n" ;
        for(Fish poisson : poissons)
             Total += poisson.toString() ;
-        return Total ;
+        return Total.equals("Liste des poissons :\n")? Total +"empty":Total ;
     }
 
     private Double parseDouble(String value, String line) throws InvalidFileFormat{
