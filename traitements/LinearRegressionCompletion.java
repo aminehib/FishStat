@@ -10,9 +10,9 @@ public class LinearRegressionCompletion extends Traitement {
 
 
     @Override
-    public void complete(DataFrame fish) {
+    public void complete(DataFrame<Fish> fish) {
         ArrayList<Fish> poissons = new ArrayList<>(fish.getData());
-        DataFrame Known = new DataFrame(getKnownValues(poissons));
+        DataFrame<Fish> Known = new DataFrame(getKnownValues(poissons));
         if(Known.getData().size() < 2)return ;
         ArrayList<Double> x = Known.getSizes() ;
         ArrayList<Double> y = Known.getInfestationRates() ;
@@ -25,7 +25,7 @@ public class LinearRegressionCompletion extends Traitement {
             return;
         }
         
-        DataFrame Unknown = new DataFrame(getUnknownValues(poissons));
+        DataFrame<Fish> Unknown = new DataFrame(getUnknownValues(poissons));
 
         for(Fish poisson : Unknown.getData()){
             Double size =  poisson.getSize();

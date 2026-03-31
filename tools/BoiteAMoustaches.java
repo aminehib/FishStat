@@ -9,8 +9,8 @@ public class BoiteAMoustaches {
     private Double Q3;
     private Double moustacheInf;
     private Double moustacheSup;
-
-    public BoiteAMoustaches(ArrayList<Double> valeurs){
+    
+    public BoiteAMoustaches(ArrayList<Double> valeurs ){
 
         // Pourquoi: éviter de modifier la liste d'origine (effet de bord).
         ArrayList<Double> filtered = new ArrayList<>(valeurs);
@@ -56,7 +56,7 @@ public class BoiteAMoustaches {
         double ecartInterquantile = Q3 - Q1 ;
 
         moustacheInf =  Q1 -  (1.5 * ecartInterquantile) ;
-        moustacheSup =  Q3 +  (1.5 * ecartInterquantile );
+        moustacheSup =  Q3 +  (1.5 * ecartInterquantile ) ;
     }
 
     private Double median(ArrayList<Double> list){

@@ -11,7 +11,7 @@ import tools.MeanValue;
 public class MeanValueCompletion extends Traitement {
 
     @Override
-    public void complete(DataFrame fish){
+    public void complete(DataFrame<Fish> fish){
         ArrayList<Fish> poissons = new ArrayList<>(fish.getData());
         LinkedHashMap<String , ArrayList<Fish> > Species = getSpecies(poissons);
         for(String species : Species.keySet()){

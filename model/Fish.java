@@ -2,7 +2,7 @@ package model;
 import java.util.ArrayList;
 import java.util.HashSet;
 
-public class Fish{
+public class Fish extends Data{
 
     // Correction de la faute de frappe : "species" (cohérent avec le sujet et le reste du code).
     private String species;
@@ -25,7 +25,10 @@ public class Fish{
     public void setSpecies(String species){
         this.species = species ;
     }
-
+    /**
+    @params length: la logueur du poisson
+    @return : la logueur
+     **/
     public void setLength(Double length){
         this.length = length ;
     }
