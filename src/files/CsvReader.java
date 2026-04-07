@@ -143,7 +143,7 @@ public class CsvReader {
                             break;   
                     
                         case "Content":
-                            population.setContentTested(ligne[headerIndex.get(key)]);
+                            population.addContent(ligne[headerIndex.get(key)]);
                             break;
                     
                         default:
@@ -321,7 +321,7 @@ public static <T extends Data> ArrayList<T> readCsvFormat(String name ,String sp
                             break;   
                     
                         case "Content":
-                            population.setContentTested(ligne[headerIndex.get(key)]);
+                            population.addContent(ligne[headerIndex.get(key)]);
                             break;
                     
                         default:
