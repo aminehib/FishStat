@@ -20,16 +20,13 @@ public class MeanValueCompletion extends Traitement {
             DataFrame Known = new DataFrame(Species.get(species));
         
             LinkedHashMap<String, ArrayList<Double> > KnownValues = new LinkedHashMap<>();
-            System.out.println(Known);
             KnownValues.put("InfestationRates", Known.getInfestationRates());
             KnownValues.put("Weights", Known.getWeights());
             KnownValues.put("Sizes", Known.getSizes());
             KnownValues.put("Lengths", Known.getLengths());
             Double moyenne ;
             for( String type : KnownValues.keySet()){
-                System.out.println(type);
                 ArrayList<Double> values = KnownValues.get(type);
-                System.out.println(values);
                 if(values.isEmpty())continue ;
                 moyenne = new MeanValue(values).getMean();
                 if(moyenne == null)continue ;
