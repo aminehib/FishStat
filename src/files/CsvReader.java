@@ -42,7 +42,7 @@ public class CsvReader {
             lines.add(String.join(",", header));
 
             for(int i = 0 ; i < header.length; i++){
-                if(headers.containsKey(header[i])){
+                if(headers.containsKey(header[i])){ 
                     headerIndex.put( headers.get(header[i] ) , i);
                     System.out.println(header[i]+ " trouvé");
                 }

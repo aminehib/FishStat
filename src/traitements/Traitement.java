@@ -23,7 +23,7 @@ public abstract class Traitement implements Cleanable {
     protected ArrayList<Fish> getUnknownValues(ArrayList<Fish> poissons){
         ArrayList<Fish> Unknown  = new ArrayList<>();
         for(Fish poisson : poissons){
-            if(poisson.getInfestationRate() == null)Unknown.add(poisson);
+            if(poisson.getInfestationRate() == null || poisson.getLength() == null || poisson.getWeight() ==null || poisson.getSize() == null)Unknown.add(poisson);
         }
         return Unknown;
     }

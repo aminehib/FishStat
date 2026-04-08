@@ -29,7 +29,8 @@ public class LinearRegressionCompletion extends Traitement {
 
         for(Fish poisson : Unknown.getData()){
             Double size =  poisson.getSize();
-            if(size == null) continue;
+            Double infestationRate = poisson.getInfestationRate();
+            if(size == null || infestationRate != null) continue;
             poisson.setInfestationRate(model.predict(size));
         }
     }

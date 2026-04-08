@@ -58,9 +58,9 @@ public class Main {
         
         
         
-        /*Double[] errors = {0.0,0.1,0.0,0.1};
+        Double[] errors = {0.0,0.1,0.0,0.1};
         System.out.println(df.toString());
-        Traitement t = new LinearRegressionCompletion();
+        Traitement t = new MeanValueCompletion();
         t.clean(df ,errors );
         t.complete(df);
 
@@ -69,7 +69,7 @@ public class Main {
         SvgGenerator.GenerateSVG(df);
 
         LinearRegression model = new LinearRegression(df.getSizes(), df.getInfestationRates());
-        System.out.println(model.getCoeff()+ " " + model.getIntercept() + " "+ df.getSpecies().size());    */
+        System.out.println(model.getCoeff()+ " " + model.getIntercept() + " "+ df.getSpecies().size());    
         
         
     }
