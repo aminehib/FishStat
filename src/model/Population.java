@@ -86,6 +86,8 @@ public class Population extends Data{
         return intensity *inestationRate;
     }
 
+
+
     
 
     public void setMeanLength(Double meanLength){this.meanLength = meanLength ;}
@@ -98,7 +100,7 @@ public class Population extends Data{
      @Override
     public String toString(){
         String contenu = (contentTested.isEmpty())? "vide" : "{" + String.join(",", contentTested) + "}";
-        return String.format("%-30sLongueur_Moyenne:%-10.4fPoids_Moyen:%-10.4fTaille_Moyenne:%-10.4fTaux d'infestation:%-10.4fIntensité:%-10.4fAbondance:%-10.4fContenu:%-10s\n","[" + getSpecies() + "]" ,getLength() , getWeight(),getSize() , getInfestationRate(),getIntensity(),getAbondance() , contenu ) ;
+        return String.format("%-30sTotal:%-10dLongueur_Moyenne:%-10.4fPoids_Moyen:%-10.4fTaille_Moyenne:%-10.4fTaux d'infestation:%-10.4fIntensité:%-10.4fAbondance:%-10.4fContenu:%-10s\n","[" + getSpecies() + "]" ,getNumber() ,getLength() , getWeight(),getSize() , getInfestationRate(),getIntensity(),getAbondance() , contenu ) ;
     }
 
 
