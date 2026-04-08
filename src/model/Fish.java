@@ -9,7 +9,6 @@ public class Fish extends Data{
     private Double length ;
     private Double weight ;
     private Double size ;
-    private Integer parasitesNumber ;
     private Double infestationRate ;
     private HashSet<String> content ;
 
@@ -69,7 +68,7 @@ public class Fish extends Data{
     @Override
     public String toString(){
         String contenu = (content.isEmpty())? "vide" : "{" + String.join(",", content) + "}";
-        return String.format("%-30sLongueur:%-10.4fPoids:%-10.4fTaille:%-10.4f%-10Nombre de parasites:Taux d'infestation:%-20.4fContenu:%-10s\n","[" + getSpecies() + "]" ,getLength() , getWeight(),getSize() , getInfestationRate() , contenu ) ;
+        return String.format("%-30sLongueur:%-10.4fPoids:%-10.4fTaille:%-10.4fTaux d'infestation:%-20.4fContenu:%-10s\n","[" + getSpecies() + "]" ,getLength() , getWeight(),getSize() , getInfestationRate() , contenu ) ;
     }
 
 

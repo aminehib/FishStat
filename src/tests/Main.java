@@ -30,7 +30,7 @@ public class Main {
 
         LinkedHashMap<String , String > head = new LinkedHashMap<>() ;
 
-        head.put("N", "Total");
+        //head.put("N", "Total");
     
 
 
@@ -49,9 +49,9 @@ public class Main {
 
         try{
             df.setData(CsvReader.readCsv("src/anis.csv",";","," , header, Fish.class)) ;
-            //System.out.print(df);
+            System.out.print(df);
         }catch(Exception e){
-            System.out.print(e);
+            e.printStackTrace();
         }
        Population pop = new Population(new DataFrame<>(df.getSpecies("Thon")));
        System.out.println(pop);
