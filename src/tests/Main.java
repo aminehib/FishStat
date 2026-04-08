@@ -34,12 +34,12 @@ public class Main {
     
 
 
-        header.put("espece", "Species");
-        header.put("longueur","Length") ;
-        header.put("Taille","Size");
-        header.put("Poids","Weight");
-        header.put("TI","InfestationRate");
-        header.put("contenu", "Content");
+        header.put("Espèce", "Species");
+        //header.put("longueur","Length") ;
+        //header.put("Taille","Size");
+        header.put("Masse g","Weight");
+        //header.put("TI","InfestationRate");
+        //header.put("contenu", "Content");
 
 
        
@@ -48,13 +48,13 @@ public class Main {
 
 
         try{
-            df.setData(CsvReader.readCsv("src/anis.csv",";","," , header, Fish.class)) ;
+            df.setData(CsvReader.readCsv("src/test3.csv",",",";" , header, Fish.class)) ;
             System.out.print(df);
         }catch(Exception e){
             e.printStackTrace();
         }
-       Population pop = new Population(new DataFrame<>(df.getSpecies("Thon")));
-       System.out.println(pop);
+       /*Population pop = new Population(new DataFrame<>(df.getSpecies("Thon")));
+       System.out.println(pop);*/
         
         
         
@@ -62,8 +62,10 @@ public class Main {
         System.out.println(df.toString());
         Traitement t = new MeanValueCompletion();
         t.clean(df ,errors );
+        System.out.println("completion");
         t.complete(df);
 
+        System.out.println(df.getWeights());
         System.out.println(df);
 
         SvgGenerator.GenerateSVG(df);

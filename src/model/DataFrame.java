@@ -68,7 +68,6 @@ public class DataFrame<T extends Data>  {
         ArrayList<Double> Size = new ArrayList<>() ;
         for(T poisson : poissons){
             Size.add(poisson.getSize());                
-            
         }
         return Size ;
     }
