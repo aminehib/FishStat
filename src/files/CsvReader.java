@@ -20,7 +20,7 @@ public class CsvReader {
     
 
 
-    public static <T extends Data> ArrayList<T> readCsv(String name ,String split , LinkedHashMap<String , String > headers  , Class<T> type ) throws InvalidFileFormat, InvalidAttribute{
+    public static <T extends Data> ArrayList<T> readCsv(String name ,String split ,String multipleSplit , LinkedHashMap<String , String > headers  , Class<T> type ) throws InvalidFileFormat, InvalidAttribute{
 
       if(headers == null || headers.size() == 0 ) return null ;
       ArrayList<T> result  = new ArrayList<>() ;
@@ -96,7 +96,10 @@ public class CsvReader {
                         
                     
                         case "Content":
-                            poisson.addContent(ligne[headerIndex.get(key)]);
+                            String[] contents = ligne[headerIndex.get(key)].split(multipleSplit);
+                            for(String content : contents){
+                                poisson.addContent(content);
+                            }
                             break;
                     
                         default:
@@ -143,7 +146,10 @@ public class CsvReader {
                             break;   
                     
                         case "Content":
-                            population.addContent(ligne[headerIndex.get(key)]);
+                            String[] contents = ligne[headerIndex.get(key)].split(multipleSplit);
+                            for(String content : contents){
+                                population.addContent(content);
+                            }
                             break;
                     
                         default:
@@ -169,7 +175,7 @@ public class CsvReader {
 }
 
 
-public static <T extends Data> ArrayList<T> readCsvFormat(String name ,String split , LinkedHashMap<String , String > headers ,LinkedHashMap<String,String> params,int N , Class<T> type ) throws InvalidFileFormat, InvalidAttribute{
+public static <T extends Data> ArrayList<T> readCsvFormat(String name ,String split ,String multipleSplit , LinkedHashMap<String , String > headers ,LinkedHashMap<String,String> params,int N , Class<T> type ) throws InvalidFileFormat, InvalidAttribute{
 
 
       if(headers == null || headers.size() == 0 ) return null ;
@@ -257,7 +263,10 @@ public static <T extends Data> ArrayList<T> readCsvFormat(String name ,String sp
                         
                     
                         case "Content":
-                            poisson.addContent(ligne[headerIndex.get(key)]);
+                            String[] contents = ligne[headerIndex.get(key)].split(multipleSplit);
+                            for(String content : contents){
+                                poisson.addContent(content);
+                            }
                             break;
                     
                         default:
@@ -321,7 +330,10 @@ public static <T extends Data> ArrayList<T> readCsvFormat(String name ,String sp
                             break;   
                     
                         case "Content":
-                            population.addContent(ligne[headerIndex.get(key)]);
+                            String[] contents = ligne[headerIndex.get(key)].split(multipleSplit);
+                            for(String content : contents){
+                                population.addContent(content);
+                            }
                             break;
                     
                         default:

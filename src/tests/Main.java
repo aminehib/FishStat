@@ -48,7 +48,7 @@ public class Main {
 
 
         try{
-            df.setData(CsvReader.readCsv("src/anis.csv",";" , header, Fish.class)) ;
+            df.setData(CsvReader.readCsv("src/anis.csv",";","," , header, Fish.class)) ;
             //System.out.print(df);
         }catch(Exception e){
             System.out.print(e);
