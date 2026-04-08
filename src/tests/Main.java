@@ -36,26 +36,21 @@ public class Main {
 
         header.put("Espèce", "Species");
         //header.put("longueur","Length") ;
-        //header.put("Taille","Size");
+        header.put("LT mm","Size");
         header.put("Masse g","Weight");
-        //header.put("TI","InfestationRate");
+        header.put("Prevalence","InfestationRate");
         //header.put("contenu", "Content");
 
 
        
 
-
-
-
         try{
-            df.setData(CsvReader.readCsv("src/test3.csv",",",";" , header, Fish.class)) ;
+            df.setData(CsvReader.readCsv("src/test3.csv",",",";",100 , header, Fish.class)) ;
             System.out.print(df);
         }catch(Exception e){
             e.printStackTrace();
         }
-       /*Population pop = new Population(new DataFrame<>(df.getSpecies("Thon")));
-       System.out.println(pop);*/
-        
+       
         
         
         Double[] errors = {0.0,0.1,0.0,0.1};
@@ -65,13 +60,18 @@ public class Main {
         System.out.println("completion");
         t.complete(df);
 
-        System.out.println(df.getWeights());
+        
         System.out.println(df);
+
+
+        Population pop = new Population(new DataFrame<>(df.getSpecies("Merluccius")));
+        System.out.println(pop);
 
         SvgGenerator.GenerateSVG(df);
 
         LinearRegression model = new LinearRegression(df.getSizes(), df.getInfestationRates());
         System.out.println(model.getCoeff()+ " " + model.getIntercept() + " "+ df.getSpecies().size());    
+        
         
         
     }

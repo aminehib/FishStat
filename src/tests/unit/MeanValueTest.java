@@ -7,8 +7,10 @@ import java.util.ArrayList;
 
 import org.junit.jupiter.api.Test;
 
+import model.DataFrame;
 import model.Fish;
 import traitements.MeanValue;
+import traitements.MeanValueCompletion;
 
 public class MeanValueTest {
 
@@ -19,8 +21,8 @@ public class MeanValueTest {
         data.add(fish("a", null));
         data.add(fish("b", null));
 
-        MeanValue mean = new MeanValue();
-        mean.complete(data);
+        MeanValueCompletion mean = new MeanValueCompletion();
+        mean.complete(new DataFrame<>(data));
 
         assertEquals(0.10, data.get(1).getInfestationRate(), 1e-9);
         assertNull(data.get(2).getInfestationRate());

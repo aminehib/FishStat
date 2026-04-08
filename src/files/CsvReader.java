@@ -18,9 +18,9 @@ public class CsvReader {
     private static String[] populationAttributes = {"Name","Total","MeanLength","MeanWeight","MeanSize","InfestationRate","Intensity","Content"};
 
     
+//utiliser equale 
 
-
-    public static <T extends Data> ArrayList<T> readCsv(String name ,String split ,String multipleSplit , LinkedHashMap<String , String > headers  , Class<T> type ) throws InvalidFileFormat, InvalidAttribute{
+    public static <T extends Data> ArrayList<T> readCsv(String name ,String split ,String multipleSplit ,int poucentage, LinkedHashMap<String , String > headers  , Class<T> type ) throws InvalidFileFormat, InvalidAttribute{
 
       if(headers == null || headers.size() == 0 ) return null ;
       ArrayList<T> result  = new ArrayList<>() ;
@@ -42,7 +42,7 @@ public class CsvReader {
             lines.add(String.join(",", header));
 
             for(int i = 0 ; i < header.length; i++){
-                if(headers.containsKey(header[i])){ 
+                if(headers.containsKey(header[i])){
                     headerIndex.put( headers.get(header[i] ) , i);
                     System.out.println(header[i]+ " trouvé");
                 }
@@ -91,7 +91,7 @@ public class CsvReader {
                     
                         case "InfestationRate":
                             if(ligne[headerIndex.get(key)].equals(""))poisson.setInfestationRate(null);
-                            else poisson.setInfestationRate(Double.parseDouble(ligne[headerIndex.get(key)]));
+                            else poisson.setInfestationRate(Double.parseDouble(ligne[headerIndex.get(key)])/poucentage);
                             break;
                         
                     
@@ -132,7 +132,7 @@ public class CsvReader {
                     
                         case "InfestationRate":
                             if(ligne[headerIndex.get(key)].equals(""))population.setInfestationRate(null);
-                            else population.setInfestationRate(Double.parseDouble(ligne[headerIndex.get(key)]));
+                            else population.setInfestationRate(Double.parseDouble(ligne[headerIndex.get(key)])/poucentage);
                             break;
                         
                         case "Intensity":
@@ -175,7 +175,7 @@ public class CsvReader {
 }
 
 
-public static <T extends Data> ArrayList<T> readCsvFormat(String name ,String split ,String multipleSplit , LinkedHashMap<String , String > headers ,LinkedHashMap<String,String> params,int N , Class<T> type ) throws InvalidFileFormat, InvalidAttribute{
+public static <T extends Data> ArrayList<T> readCsvFormat(String name ,String split ,String multipleSplit ,int poucentage, LinkedHashMap<String , String > headers ,LinkedHashMap<String,String> params,int N , Class<T> type ) throws InvalidFileFormat, InvalidAttribute{
 
 
       if(headers == null || headers.size() == 0 ) return null ;
@@ -258,7 +258,7 @@ public static <T extends Data> ArrayList<T> readCsvFormat(String name ,String sp
                     
                         case "InfestationRate":
                             if(ligne[headerIndex.get(key)].equals(""))poisson.setInfestationRate(null);
-                            else poisson.setInfestationRate(Double.parseDouble(ligne[headerIndex.get(key)]));
+                            else poisson.setInfestationRate(Double.parseDouble(ligne[headerIndex.get(key)])/poucentage);
                             break;
                         
                     
@@ -316,7 +316,7 @@ public static <T extends Data> ArrayList<T> readCsvFormat(String name ,String sp
                     
                         case "InfestationRate":
                             if(ligne[headerIndex.get(key)].equals(""))population.setInfestationRate(null);
-                            else population.setInfestationRate(Double.parseDouble(v));
+                            else population.setInfestationRate(Double.parseDouble(v)/poucentage);
                             break;
                         
                         case "Intensity":
@@ -355,12 +355,6 @@ public static <T extends Data> ArrayList<T> readCsvFormat(String name ,String sp
         }
             
             
-
-                    
-        
-
-
-
 
         }catch(IOException e){
             System.out.print(e);

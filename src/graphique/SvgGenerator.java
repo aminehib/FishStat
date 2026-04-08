@@ -68,9 +68,9 @@ public class SvgGenerator {
             svg += String.format("<line x1='%d' y1='%d' x2='%d' y2='%d' stroke='black' stroke-width='1' />", 0 , i*100 , width , i*100);
             svg += String.format("<text x='%d' y='%d' >%d %%</text>" , width , i*100 , 100-i*10) ;
         }
-        for(int i = 0 ; i <= width/100 ; i++){
-            svg += String.format("<line x1='%d' y1='%d' x2='%d' y2='%d' stroke='black' stroke-width='1' />", i*100 , 0 , i*100, length);
-            svg += String.format("<text x='%d' y='%d'>%.1f </text>" , i*100 , length +20 , start +i* ( (end -start)/ ((width/100))) );
+        for(int i = 0 ; i <= 10 ; i++){
+            svg += String.format("<line x1='%d' y1='%d' x2='%d' y2='%d' stroke='black' stroke-width='1' />", i*(width/10) , 0 , i*(width/10), length);
+            svg += String.format("<text x='%d' y='%d'>%.1f </text>" , i*(width/10) , length +20 , start +i* ( (end -start)/ ((width/100))) );
         }
         return svg ;
     }

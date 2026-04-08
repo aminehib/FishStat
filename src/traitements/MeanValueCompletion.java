@@ -38,7 +38,6 @@ public class MeanValueCompletion extends Traitement {
                                 unknown.setInfestationRate(moyenne);
                             break;
                         case "Weights":
-                            System.out.println("poisson : " + unknown.getSpecies());
                             if(unknown.getWeight() == null)
                                 unknown.setWeight(moyenne);
                             break;
