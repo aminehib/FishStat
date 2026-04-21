@@ -9,6 +9,7 @@ import tools.MeanValue;
 public class Population extends Data{
 
     private Integer total ;
+    private Integer parasites ;
     private String name ;
     private HashSet<String> contentTested ;
     private Double inestationRate ;// infestedNumber / total ;
@@ -48,6 +49,8 @@ public class Population extends Data{
 
     public String getSpecies(){return this.name;}
 
+    public Integer getParasites(){return this.parasites ;}
+
     public Integer  getNumber(){ return this.total;}
 
     public HashSet<String> getContentTested(){ return this.contentTested ;}
@@ -73,7 +76,12 @@ public class Population extends Data{
         this.name = name ;
     }
 
+    public void setParasites(Integer parasites){
+        this.parasites = parasites ;
+    }
+
     public void addContent(String content){
+        if(contentTested== null) contentTested = new HashSet<>() ;
         this.contentTested.add(content) ;
     }
 

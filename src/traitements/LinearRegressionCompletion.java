@@ -2,8 +2,7 @@ package traitements;
 
 import java.util.ArrayList;
 
-import model.DataFrame;
-import model.Fish;
+import model.*;
 import tools.*;
 
 public class LinearRegressionCompletion extends Traitement {
@@ -34,6 +33,106 @@ public class LinearRegressionCompletion extends Traitement {
             poisson.setInfestationRate(model.predict(size));
         }
     }
+
+    public void Complete(DataFrame<Fish> fish , String X ,String Y){
+
+        if(X.equals(Y))return ;
+
+        ArrayList<Double> x = null ;
+        ArrayList<Double> y = null ;
+        ArrayList<Fish> unknown = new ArrayList<>() ;
+
+        switch(X){
+            case "Length":
+                x = fish.getLengths() ;
+                break ;
+            
+             case "Weight":
+                x = fish.getWeights() ;
+                break ;
+
+             case "Size":
+                x = fish.getSizes() ;
+                break ;
+            
+             case "InfestationRate":
+                x = fish.getInfestationRates() ;
+                break ;
+            
+        }
+
+        switch(Y){
+            case "Length":
+                y = fish.getLengths() ;
+                break ;
+            
+             case "Weight":
+                y = fish.getWeights() ;
+                break ;
+
+             case "Size":
+                y = fish.getSizes() ;
+                break ;
+            
+             case "InfestationRate":
+                y = fish.getInfestationRates() ;
+                break ;
+            
+        }
+
+        for(int i = 0 ; i < y.size() ; i++){
+            if(y.get(i) == null)
+                unknown.add(fish.getData().get(i));
+        }
+
+        if(unknown.size() == 0){
+            System.out.println("ERROR OCCURED NIGGER");
+            return ;
+        } ;
+        LinearRegression model = new  LinearRegression(x ,y ) ;
+
+        if(model.getCoeff() == null || model.getIntercept() == null){
+            System.out.println("ERROR OCCURED KYS");
+            return ;
+        } ;
+
+        y = model.predict(x) ;
+
+
+        switch(Y){
+            case "Length":
+                for(int i = 0 ; i < unknown.size() ;i++){
+                    unknown.get(i).setLength(y.get(i));
+                }
+                break ;
+            
+             case "Weight":
+                for(int i = 0 ; i < unknown.size() ;i++){
+                    unknown.get(i).setWeight(y.get(i));
+                }
+                break ;
+
+             case "Size":
+                for(int i = 0 ; i < unknown.size() ;i++){
+                    unknown.get(i).setSize(y.get(i));
+                }
+                break ;
+            
+             case "InfestationRate":
+                for(int i = 0 ; i < unknown.size() ;i++){
+                    unknown.get(i).setInfestationRate(y.get(i));
+                }
+                break ;
+            
+        }
+        
+
+    }
+
+
+
+
+
 
 
    

@@ -14,8 +14,8 @@ import model.Population;
 
 public class CsvReader {
 
-    private static String[] fishAttributes = {"Species","Length","Weight","Size","InfestationRate","Content"};
-    private static String[] populationAttributes = {"Name","Total","MeanLength","MeanWeight","MeanSize","InfestationRate","Intensity","Content"};
+    private static String[] fishAttributes = {"Species","Length","Weight","Size","Total_parasites" ,"InfestationRate","Content"};
+    private static String[] populationAttributes = {"Name","Total","MeanLength","MeanWeight","MeanSize","Total_parasites" ,"InfestationRate","Intensity","Content"};
 
     
 //utiliser equale 
@@ -88,6 +88,11 @@ public class CsvReader {
                             if(ligne[headerIndex.get(key)].equals(""))poisson.setSize(null);
                             else poisson.setSize(Double.parseDouble(ligne[headerIndex.get(key)]));
                             break;
+
+                        case "Total_parasites":
+                            if(ligne[headerIndex.get(key)].equals(""))poisson.setLength(null);
+                            else poisson.setParasites(Integer.parseInt(ligne[headerIndex.get(key)]));
+                            break;
                     
                         case "InfestationRate":
                             if(ligne[headerIndex.get(key)].equals(""))poisson.setInfestationRate(null);
@@ -144,6 +149,11 @@ public class CsvReader {
                             if(ligne[headerIndex.get(key)].equals(""))population.setTotal(null);
                             else population.setTotal(Integer.parseInt(ligne[headerIndex.get(key)]));
                             break;   
+
+                        case "Total_parasites":
+                            if(ligne[headerIndex.get(key)].equals(""))population.setTotal(null);
+                            else population.setParasites(Integer.parseInt(ligne[headerIndex.get(key)]));
+                            break;  
                     
                         case "Content":
                             String[] contents = ligne[headerIndex.get(key)].split(multipleSplit);
@@ -255,6 +265,11 @@ public static <T extends Data> ArrayList<T> readCsvFormat(String name ,String sp
                             if(ligne[headerIndex.get(key)].equals(""))poisson.setSize(null);
                             else poisson.setSize(Double.parseDouble(ligne[headerIndex.get(key)]));
                             break;
+                        
+                        case "Total_parasites":
+                            if(ligne[headerIndex.get(key)].equals(""))poisson.setLength(null);
+                            else poisson.setParasites(Integer.parseInt(ligne[headerIndex.get(key)]));
+                            break;
                     
                         case "InfestationRate":
                             if(ligne[headerIndex.get(key)].equals(""))poisson.setInfestationRate(null);
@@ -328,6 +343,11 @@ public static <T extends Data> ArrayList<T> readCsvFormat(String name ,String sp
                             if(ligne[headerIndex.get(key)].equals(""))population.setTotal(null);
                             else population.setTotal(Integer.parseInt(v));
                             break;   
+                        
+                        case "Total_parasites":
+                            if(ligne[headerIndex.get(key)].equals(""))population.setTotal(null);
+                            else population.setParasites(Integer.parseInt(ligne[headerIndex.get(key)]));
+                            break; 
                     
                         case "Content":
                             String[] contents = ligne[headerIndex.get(key)].split(multipleSplit);

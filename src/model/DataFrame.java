@@ -38,10 +38,12 @@ public class DataFrame<T extends Data>  {
     public ArrayList<T> getData(){return this.poissons ;}
 
     public String toString(){
-        String Total = "Liste des poissons :\n" ;
+        String Total =  "Liste des poissons :\n" ;
+        if(poissons == null)return Total +"empty\n" ;
        for(T poisson : poissons)
-            Total += poisson.toString() ;
-        return Total.equals("Liste des poissons :\n")? Total +"empty":Total ;
+            if(poisson != null)
+                Total += poisson.toString() ;
+        return Total.equals("Liste des poissons :\n")? Total +"empty\n":Total ;
     }
 
     private Double parseDouble(String value, String line) throws InvalidFileFormat{
@@ -122,6 +124,8 @@ public class DataFrame<T extends Data>  {
         }
         return res ;
     }
+
+
 
 
 }           

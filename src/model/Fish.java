@@ -10,6 +10,7 @@ public class Fish extends Data{
     private Double weight ;
     private Double size ;
     private Double infestationRate ;
+    private Integer parasites_number ;
     private HashSet<String> content ;
 
     public Fish(String species , Double length ,Double weight , Double size , Double infestationRate){
@@ -41,6 +42,10 @@ public class Fish extends Data{
         this.size = size ;
     }
 
+    public void setParasites(Integer parasites){
+        this.parasites_number = parasites ;
+    }
+
     public void setInfestationRate(Double infestationRate){
         this.infestationRate = infestationRate ;
     }
@@ -55,7 +60,12 @@ public class Fish extends Data{
 
     public Double getInfestationRate(){return this.infestationRate;}
 
+    public Integer getParasites(){
+        return this.parasites_number ;
+    }
+
     public void addContent(String contenu){
+        if(content == null)content = new HashSet<>() ;
         content.add(contenu);
     }
     
@@ -68,12 +78,7 @@ public class Fish extends Data{
     @Override
     public String toString(){
         String contenu = (content == null || content.isEmpty())? "vide" : "{" + String.join(",", content) + "}";
-        return String.format("%-30sLongueur:%-10.4fPoids:%-10.4fTaille:%-10.4fTaux d'infestation:%-20.4fContenu:%-10s\n","[" + getSpecies() + "]" ,getLength() , getWeight(),getSize() , getInfestationRate() , contenu ) ;
+        return String.format("%-30sLongueur:%-10.4fPoids:%-10.4fTaille:%-10.4fNombre de parasites:%-10.4dTaux d'infestation:%-20.4fContenu:%-10s\n","[" + getSpecies() + "]" ,getLength() , getWeight(),getSize() ,getParasites() , getInfestationRate() , contenu ) ;
     }
-
-
-
-
-
 
 }

@@ -25,7 +25,7 @@ public class Main {
     public static void main(String[] args){
         
         
-        DataFrame<Fish> df  = new DataFrame<>();
+        DataFrame<Population> df  = new DataFrame<>();
         LinkedHashMap<String , String > header = new LinkedHashMap<>() ;
 
         LinkedHashMap<String , String > head = new LinkedHashMap<>() ;
@@ -34,18 +34,19 @@ public class Main {
     
 
 
-        header.put("Espèce", "Species");
-        //header.put("longueur","Length") ;
-        header.put("LT mm","Size");
-        header.put("Masse g","Weight");
-        header.put("Prevalence","InfestationRate");
-        //header.put("contenu", "Content");
+        header.put("TrueHost", "Species");
+        header.put("Total_Fish_Examined", "Total");
+        header.put("Standard_LengthCalc","MeanLength") ;
+        //header.put("Taille","Size");
+        //header.put("Poids","Weight");
+        //header.put("TI","InfestationRate");
+        header.put("Portion_of_Body", "Content");
 
 
        
 
         try{
-            df.setData(CsvReader.readCsv("src/test3.csv",",",";",100 , header, Fish.class)) ;
+            df.setData(CsvReader.readCsv("/home/anis/Downloads/Données collectées DRYAD-20260318/processed_data_anisakis.csv" ,",",";",1 , header, Population.class)) ;
             System.out.print(df);
         }catch(Exception e){
             e.printStackTrace();
@@ -55,17 +56,15 @@ public class Main {
         
         Double[] errors = {0.0,0.1,0.0,0.1};
         System.out.println(df.toString());
-        Traitement t = new MeanValueCompletion();
-        t.clean(df ,errors );
+        LinearRegressionCompletion t = new LinearRegressionCompletion();
+        /*t.clean(df ,errors );
         System.out.println("completion");
-        t.complete(df);
+        t.Complete(df , "Size" , "InfestationRate");*/
 
-        
         System.out.println(df);
 
 
-        Population pop = new Population(new DataFrame<>(df.getSpecies("Merluccius")));
-        System.out.println(pop);
+        
 
         SvgGenerator.GenerateSVG(df);
 
