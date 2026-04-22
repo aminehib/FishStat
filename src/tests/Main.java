@@ -41,6 +41,7 @@ public class Main {
         //header.put("Poids","Weight");
         //header.put("TI","InfestationRate");
         header.put("Portion_of_Body", "Content");
+        
 
 
        
@@ -64,17 +65,12 @@ public class Main {
         System.out.println(df);
 
 
-        
-
         SvgGenerator.GenerateSVG(df);
 
         LinearRegression model = new LinearRegression(df.getSizes(), df.getInfestationRates());
         System.out.println(model.getCoeff()+ " " + model.getIntercept() + " "+ df.getSpecies().size());    
         
-        
-        
     }
-
 
     
 }

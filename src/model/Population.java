@@ -8,8 +8,8 @@ import tools.MeanValue;
 
 public class Population extends Data{
 
-    private Integer total ;
-    private Integer parasites ;
+    private Integer total = 0 ;
+    private Integer parasites = 0 ;
     private String name ;
     private HashSet<String> contentTested ;
     private Double inestationRate ;// infestedNumber / total ;
@@ -34,14 +34,18 @@ public class Population extends Data{
         ArrayList<Fish> poissons = new ArrayList<>(fish.getData());
         name = poissons.get(0).getSpecies();
         this.total = poissons.size();
-        MeanValue mean = new MeanValue(fish.getLengths());
+        MeanValue<Double> mean = new MeanValue<>(fish.getLengths());
         meanLength = mean.getMean();
-        mean = new MeanValue(fish.getInfestationRates());
+        mean = new MeanValue<>(fish.getInfestationRates());
         inestationRate = mean.getMean();
-        mean = new MeanValue(fish.getWeights());
+        mean = new MeanValue<>(fish.getWeights());
         meanWeight = mean.getMean();
-        mean = new MeanValue(fish.getSizes());
+        mean = new MeanValue<>(fish.getSizes());
         meanSize = mean.getMean();
+        ArrayList<Integer> par = fish.getParasites() ;
+        for(Integer v : par){
+            parasites += v ;
+        }
         StringBuilder content = new StringBuilder() ;
         contentTested = fish.getContents();
     }
@@ -93,6 +97,8 @@ public class Population extends Data{
         if(intensity == null || inestationRate== null)return null ;
         return intensity *inestationRate;
     }
+
+
 
 
 
