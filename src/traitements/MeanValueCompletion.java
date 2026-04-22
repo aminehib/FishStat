@@ -21,6 +21,7 @@ public class MeanValueCompletion extends Traitement {
         
             LinkedHashMap<String, ArrayList<Double> > KnownValues = new LinkedHashMap<>();
             KnownValues.put("InfestationRates", Known.getInfestationRates());
+            KnownValues.put("Parasites", Known.getParasites());
             KnownValues.put("Weights", Known.getWeights());
             KnownValues.put("Sizes", Known.getSizes());
             KnownValues.put("Lengths", Known.getLengths());
@@ -37,6 +38,12 @@ public class MeanValueCompletion extends Traitement {
                             if(unknown.getInfestationRate() == null)
                                 unknown.setInfestationRate(moyenne);
                             break;
+                        
+                        case "Parasites":
+                            if(unknown.getParasites() == null)
+                                unknown.setParasites((moyenne == null)? null : moyenne.intValue() );
+                            break;
+
                         case "Weights":
                             if(unknown.getWeight() == null)
                                 unknown.setWeight(moyenne);

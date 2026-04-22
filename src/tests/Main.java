@@ -25,7 +25,7 @@ public class Main {
     public static void main(String[] args){
         
         
-        DataFrame<Population> df  = new DataFrame<>();
+        DataFrame<Fish> df  = new DataFrame<>();
         LinkedHashMap<String , String > header = new LinkedHashMap<>() ;
 
         LinkedHashMap<String , String > head = new LinkedHashMap<>() ;
@@ -34,35 +34,40 @@ public class Main {
     
 
 
-        header.put("TrueHost", "Species");
-        header.put("Total_Fish_Examined", "Total");
-        header.put("Standard_LengthCalc","MeanLength") ;
+        header.put("Sample_code", "Species");
+        header.put("NParasitesTotal", "Total_parasites");
+        //header.put("Standard_LengthCalc","MeanLength") ;
         //header.put("Taille","Size");
         //header.put("Poids","Weight");
         //header.put("TI","InfestationRate");
-        header.put("Portion_of_Body", "Content");
+        //header.put("Portion_of_Body", "Content");
         
 
-
-       
-
         try{
-            df.setData(CsvReader.readCsv("/home/anis/Downloads/Données collectées DRYAD-20260318/processed_data_anisakis.csv" ,",",";",1 , header, Population.class)) ;
-            System.out.print(df);
+            df.setData(CsvReader.readCsv("src/mackerel.97442.csv" ,";",",",1 , header, Fish.class)) ;
+            System.out.println(df);
+
         }catch(Exception e){
             e.printStackTrace();
         }
        
-        
-        
-        Double[] errors = {0.0,0.1,0.0,0.1};
-        System.out.println(df.toString());
-        LinearRegressionCompletion t = new LinearRegressionCompletion();
-        /*t.clean(df ,errors );
-        System.out.println("completion");
-        t.Complete(df , "Size" , "InfestationRate");*/
+        for(Fish p : df.getData()){
+            p.setSpecies("mackerel");
+        }
+         System.out.println(df);
 
+               
+        Double[] errors = {0.0,0.1,0.0,0.1};
+        
+        Traitement t = new MeanValueCompletion();
+
+        t.clean(df ,errors );
+        System.out.println("completion");
+        t.complete(df);
         System.out.println(df);
+       
+
+        
 
 
         SvgGenerator.GenerateSVG(df);

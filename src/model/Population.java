@@ -42,9 +42,9 @@ public class Population extends Data{
         meanWeight = mean.getMean();
         mean = new MeanValue<>(fish.getSizes());
         meanSize = mean.getMean();
-        ArrayList<Integer> par = fish.getParasites() ;
-        for(Integer v : par){
-            parasites += v ;
+        ArrayList<Double> par = fish.getParasites() ;
+        for(Double v : par){
+            parasites += v.intValue() ;
         }
         StringBuilder content = new StringBuilder() ;
         contentTested = fish.getContents();
@@ -114,7 +114,7 @@ public class Population extends Data{
      @Override
     public String toString(){
         String contenu = (contentTested == null ||contentTested.isEmpty() )? "vide" : "{" + String.join(",", contentTested) + "}";
-        return String.format("%-30sTotal:%-10dLongueur_Moyenne:%-10.4fPoids_Moyen:%-10.4fTaille_Moyenne:%-10.4fTaux d'infestation:%-10.4fIntensité:%-10.4fAbondance:%-10.4fContenu:%-10s\n","[" + getSpecies() + "]" ,getNumber() ,getLength() , getWeight(),getSize() , getInfestationRate(),getIntensity(),getAbondance() , contenu ) ;
+        return String.format("%-30sTotal:%-10dLongueur_Moyenne:%-10.4fPoids_Moyen:%-10.4fTaille_Moyenne:%-10.4fNombre de parasites :%010d Taux d'infestation:%-10.4fIntensité:%-10.4fAbondance:%-10.4fContenu:%-10s\n","[" + getSpecies() + "]" ,getNumber() ,getLength() , getWeight(),getSize() ,getParasites() , getInfestationRate(),getIntensity(),getAbondance() , contenu ) ;
     }
 
 

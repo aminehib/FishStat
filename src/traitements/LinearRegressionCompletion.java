@@ -7,6 +7,8 @@ import tools.*;
 
 public class LinearRegressionCompletion extends Traitement {
 
+    
+
 
     @Override
     public void complete(DataFrame<Fish> fish) {
@@ -30,13 +32,13 @@ public class LinearRegressionCompletion extends Traitement {
             Double size =  poisson.getSize();
             Double infestationRate = poisson.getInfestationRate();
             if(size == null || infestationRate != null) continue;
-            poisson.setInfestationRate(model.predict(size));
+            //poisson.setInfestationRate(model.predict(size));
         }
     }
 
-    public void Complete(DataFrame<Fish> fish , String X ,String Y){
+    public  void Complete(DataFrame<Fish> fish , String X ,String Y){
 
-        if(X.equals(Y))return ;
+        if(X.equals(Y) || fish.getData().size() == 0)return ;
 
         ArrayList<Double> x = null ;
         ArrayList<Double> y = null ;
@@ -53,6 +55,10 @@ public class LinearRegressionCompletion extends Traitement {
 
              case "Size":
                 x = fish.getSizes() ;
+                break ;
+
+            case "Parasites":
+                x = fish.getParasites();
                 break ;
             
              case "InfestationRate":
@@ -74,6 +80,9 @@ public class LinearRegressionCompletion extends Traitement {
                 y = fish.getSizes() ;
                 break ;
             
+            case  "Parasites":
+                y = fish.getParasites() ;
+            
              case "InfestationRate":
                 y = fish.getInfestationRates() ;
                 break ;
@@ -86,13 +95,12 @@ public class LinearRegressionCompletion extends Traitement {
         }
 
         if(unknown.size() == 0){
-            System.out.println("ERROR OCCURED NIGGER");
             return ;
         } ;
-        LinearRegression model = new  LinearRegression(x ,y ) ;
+        
+        LinearRegression model= new LinearRegression(x, y) ;
 
         if(model.getCoeff() == null || model.getIntercept() == null){
-            System.out.println("ERROR OCCURED KYS");
             return ;
         } ;
 
@@ -109,6 +117,12 @@ public class LinearRegressionCompletion extends Traitement {
              case "Weight":
                 for(int i = 0 ; i < unknown.size() ;i++){
                     unknown.get(i).setWeight(y.get(i));
+                }
+                break ;
+            
+            case "Parasites":
+                for(int i = 0 ; i < unknown.size() ;i++){
+                    unknown.get(i).setParasites(y.get(i).intValue());
                 }
                 break ;
 

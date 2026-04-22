@@ -48,16 +48,19 @@ public abstract class Traitement implements Cleanable {
             colonnes.put("Size", new ArrayList<>());
             colonnes.put("Weight", new ArrayList<>());
             colonnes.put("Infestation", new ArrayList<>());
+            colonnes.put("Parasites", new ArrayList<>());
             for(Fish poisson : poissons){
                 colonnes.get("Length").add(poisson.getLength());
                 colonnes.get("Size").add(poisson.getSize());
                 colonnes.get("Weight").add(poisson.getWeight());
                 colonnes.get("Infestation").add(poisson.getInfestationRate());
+                colonnes.get("Parasites").add( (poisson.getParasites() == null) ? null : poisson.getParasites().doubleValue()  );
             }
             BoiteAMoustaches boiteL = new BoiteAMoustaches(colonnes.get("Length"));
             BoiteAMoustaches boiteS = new BoiteAMoustaches(colonnes.get("Size"));
             BoiteAMoustaches boiteW = new BoiteAMoustaches(colonnes.get("Weight"));
             BoiteAMoustaches boiteI = new BoiteAMoustaches(colonnes.get("Infestation"));
+            BoiteAMoustaches boiteP = new BoiteAMoustaches(colonnes.get("Parasites"));
         
             for(Fish poisson : poissons){
 
@@ -66,6 +69,13 @@ public abstract class Traitement implements Cleanable {
                     poisson.setInfestationRate(null);
                     rate = null ;
                 }
+
+                Integer parasites = poisson.getParasites() ;
+                if(parasites != null && parasites < 0  ){
+                    poisson.setParasites(null);
+                    parasites = null ;
+                }
+
                 Double weight = poisson.getWeight();
                 if(weight != null && weight < 0){
                     poisson.setWeight(null);
@@ -86,8 +96,15 @@ public abstract class Traitement implements Cleanable {
                 if( (rate != null && boiteI.getMoustacheSup() != null) &&(rate > boiteI.getMoustacheSup() +Math.abs(errors[0]) || rate < boiteI.getMoustacheInf() - Math.abs(errors[0])))
                     poisson.setInfestationRate(null);
 
+                
+                if( (parasites != null &&  boiteP.getMoustacheInf() != null  && boiteP.getMoustacheInf() != null )  && ( parasites.doubleValue()  > boiteP.getMoustacheSup()+ Math.abs(errors[1])||  parasites.doubleValue() < boiteP.getMoustacheInf()- Math.abs(errors[1]) ))
+                    poisson.setParasites(null);
+
                 if((weight != null && boiteW.getMoustacheSup() != null) &&(weight > boiteW.getMoustacheSup()+ Math.abs(errors[1])||  weight < boiteW.getMoustacheInf()- Math.abs(errors[1])))
                     poisson.setWeight(null);
+
+
+
 
                 if((size != null && boiteS.getMoustacheSup() != null)&&(size > boiteS.getMoustacheSup() + Math.abs(errors[2])||  size < boiteS.getMoustacheInf()- Math.abs(errors[2])))
                     poisson.setSize(null);

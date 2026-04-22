@@ -78,7 +78,7 @@ public class Fish extends Data{
     @Override
     public String toString(){
         String contenu = (content == null || content.isEmpty())? "vide" : "{" + String.join(",", content) + "}";
-        return String.format("%-30sLongueur:%-10.4fPoids:%-10.4fTaille:%-10.4fNombre de parasites:%-10.4dTaux d'infestation:%-20.4fContenu:%-10s\n","[" + getSpecies() + "]" ,getLength() , getWeight(),getSize() ,getParasites() , getInfestationRate() , contenu ) ;
+        return String.format("%-30sLongueur:%-10.4fPoids:%-10.4fTaille:%-10.4fNombre de parasites:%-10dTaux d'infestation:%-20.4fContenu:%-10s\n","[" + getSpecies() + "]" ,getLength() , getWeight(),getSize() ,getParasites() , getInfestationRate() , contenu ) ;
     }
 
 }

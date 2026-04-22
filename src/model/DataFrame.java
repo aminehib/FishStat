@@ -126,10 +126,10 @@ public class DataFrame<T extends Data>  {
     }
 
 
-    public ArrayList<Integer> getParasites(){
-        ArrayList<Integer> parasites = new ArrayList<>() ;
+    public ArrayList<Double> getParasites(){
+        ArrayList<Double> parasites = new ArrayList<>() ;
         for(T poisson : poissons){
-            parasites.add(poisson.getParasites());
+            parasites.add((poisson.getParasites() == null)? null : poisson.getParasites().doubleValue());
         }
         return  parasites;
 

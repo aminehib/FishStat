@@ -12,7 +12,7 @@ public class MeanValue<T extends Number> {
         double sum = 0 ;
         int taille  = 0 ;
         for(T v : values){
-            if(v!=null){
+            if(v !=null){
                 sum += v.doubleValue() ;
                 taille++ ;
             }
