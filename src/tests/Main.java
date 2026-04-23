@@ -34,17 +34,17 @@ public class Main {
     
 
 
-        header.put("Sample_code", "Species");
-        header.put("NParasitesTotal", "Total_parasites");
-        //header.put("Standard_LengthCalc","MeanLength") ;
-        //header.put("Taille","Size");
-        //header.put("Poids","Weight");
-        //header.put("TI","InfestationRate");
-        //header.put("Portion_of_Body", "Content");
+        header.put("espece", "Species");
+        //header.put("NParasitesTotal", "Total_parasites");
+        header.put("longueur_cm","Length") ;
+        header.put("taille_cm","Size");
+        header.put("poids_kg","Weight");
+        header.put("taux_infestation","InfestationRate");
+        header.put("nombre_parasites", "Total_parasites");
         
 
         try{
-            df.setData(CsvReader.readCsv("src/mackerel.97442.csv" ,";",",",1 , header, Fish.class)) ;
+            df.setData(CsvReader.readCsv("src/tests.csv" ,",",";",1 , header, Fish.class)) ;
             System.out.println(df);
 
         }catch(Exception e){
@@ -54,9 +54,9 @@ public class Main {
         for(Fish p : df.getData()){
             p.setSpecies("mackerel");
         }
-         System.out.println(df);
+        System.out.println(df);
 
-               
+
         Double[] errors = {0.0,0.1,0.0,0.1};
         
         Traitement t = new MeanValueCompletion();
@@ -65,12 +65,18 @@ public class Main {
         System.out.println("completion");
         t.complete(df);
         System.out.println(df);
-       
+
+        Population pop = new Population(df);
+        System.out.println(pop);
+
+        new LinearRegressionCompletion().Complete(df, "InfestationRate", "Parasites");
+
+       System.out.println(df);
 
         
 
 
-        SvgGenerator.GenerateSVG(df);
+        SvgGenerator.GenerateSVG(df,800,800,50,10,10,1);
 
         LinearRegression model = new LinearRegression(df.getSizes(), df.getInfestationRates());
         System.out.println(model.getCoeff()+ " " + model.getIntercept() + " "+ df.getSpecies().size());    

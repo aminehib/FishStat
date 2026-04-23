@@ -90,8 +90,8 @@ public class CsvReader {
                             break;
 
                         case "Total_parasites":
-                            if(ligne[headerIndex.get(key)].equals(""))poisson.setLength(null);
-                            else poisson.setParasites(Integer.parseInt(ligne[headerIndex.get(key)]));
+                            if(ligne[headerIndex.get(key)].equals(""))poisson.setParasites(null);
+                            else poisson.setParasites((poisson.getParasites() == null )? (int) Double.parseDouble(ligne[headerIndex.get(key)]): (int)Double.parseDouble(ligne[headerIndex.get(key)]) + poisson.getParasites());
                             break;
                     
                         case "InfestationRate":
@@ -151,8 +151,8 @@ public class CsvReader {
                             break;   
 
                         case "Total_parasites":
-                            if(ligne[headerIndex.get(key)].equals(""))population.setTotal(null);
-                            else population.setParasites(Integer.parseInt(ligne[headerIndex.get(key)]));
+                            if(ligne[headerIndex.get(key)].equals(""))population.setParasites(null);
+                            else population.setParasites( (population.getParasites() == null)? (int)Double.parseDouble(ligne[headerIndex.get(key)]) : (int) Double.parseDouble(ligne[headerIndex.get(key)]) + poisson.getParasites());
                             break;  
                     
                         case "Content":
@@ -267,8 +267,8 @@ public static <T extends Data> ArrayList<T> readCsvFormat(String name ,String sp
                             break;
                         
                         case "Total_parasites":
-                            if(ligne[headerIndex.get(key)].equals(""))poisson.setLength(null);
-                            else poisson.setParasites(Integer.parseInt(ligne[headerIndex.get(key)]));
+                            if(ligne[headerIndex.get(key)].equals(""))poisson.setParasites(null);
+                            else poisson.setParasites((poisson.getParasites() == null )? (int )Double.parseDouble(ligne[headerIndex.get(key)]) : (int) Double.parseDouble(ligne[headerIndex.get(key)]) + poisson.getParasites());
                             break;
                     
                         case "InfestationRate":
@@ -345,8 +345,8 @@ public static <T extends Data> ArrayList<T> readCsvFormat(String name ,String sp
                             break;   
                         
                         case "Total_parasites":
-                            if(ligne[headerIndex.get(key)].equals(""))population.setTotal(null);
-                            else population.setParasites(Integer.parseInt(ligne[headerIndex.get(key)]));
+                            if(ligne[headerIndex.get(key)].equals(""))population.setParasites(null);
+                            else population.setParasites( (population.getParasites() == null)?(int ) Double.parseDouble( ligne[headerIndex.get(key)]) : Integer.parseInt(ligne[headerIndex.get(key)]) + poisson.getParasites());
                             break; 
                     
                         case "Content":

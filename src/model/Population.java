@@ -8,11 +8,11 @@ import tools.MeanValue;
 
 public class Population extends Data{
 
-    private Integer total = 0 ;
-    private Integer parasites = 0 ;
+    private Integer total  ;
+    private Integer parasites ;
     private String name ;
     private HashSet<String> contentTested ;
-    private Double inestationRate ;// infestedNumber / total ;
+    private Double infestationRate ;// infestedNumber / total ;
     private Double intensity ;
     private Double meanLength ;
     private Double meanSize ;
@@ -34,17 +34,34 @@ public class Population extends Data{
         ArrayList<Fish> poissons = new ArrayList<>(fish.getData());
         name = poissons.get(0).getSpecies();
         this.total = poissons.size();
-        MeanValue<Double> mean = new MeanValue<>(fish.getLengths());
+        MeanValue mean = new MeanValue(fish.getLengths());
         meanLength = mean.getMean();
-        mean = new MeanValue<>(fish.getInfestationRates());
-        inestationRate = mean.getMean();
-        mean = new MeanValue<>(fish.getWeights());
+        mean = new MeanValue(fish.getInfestationRates());
+        infestationRate = mean.getMean();
+        if(infestationRate == null){
+            double n =  0 ;
+            boolean c = false; 
+            for(Fish poisson : poissons){
+                if( poisson.getParasites() != null ){
+                    c = true ;
+                    if(poisson.getParasites() > 0 )
+                        n++ ;
+                }
+            }
+            if(c == true)
+                infestationRate = n / total ;
+        }
+        mean = new MeanValue(fish.getWeights());
         meanWeight = mean.getMean();
-        mean = new MeanValue<>(fish.getSizes());
+        mean = new MeanValue(fish.getSizes());
         meanSize = mean.getMean();
         ArrayList<Double> par = fish.getParasites() ;
         for(Double v : par){
-            parasites += v.intValue() ;
+            if(v != null)
+                if(parasites == null ){
+                    parasites = v.intValue() ;
+                }
+                else parasites += v.intValue() ;
         }
         StringBuilder content = new StringBuilder() ;
         contentTested = fish.getContents();
@@ -60,7 +77,7 @@ public class Population extends Data{
     public HashSet<String> getContentTested(){ return this.contentTested ;}
 
     public Double getInfestationRate(){
-        return this.inestationRate ;
+        return this.infestationRate ;
     }
     public Double getIntensity(){
         return this.intensity ;
@@ -94,11 +111,9 @@ public class Population extends Data{
     }
 
     public Double getAbondance(){
-        if(intensity == null || inestationRate== null)return null ;
-        return intensity *inestationRate;
+        if(intensity == null || infestationRate== null)return null ;
+        return intensity *infestationRate;
     }
-
-
 
 
 
@@ -107,14 +122,14 @@ public class Population extends Data{
     public void setMeanLength(Double meanLength){this.meanLength = meanLength ;}
     public void setMeanSize(Double meanSize){this.meanSize = meanSize ;}
     public void setMeanWeight(Double meanWeight){this.meanWeight = meanWeight ;}
-    public void setInfestationRate(Double prevalence){this.inestationRate = prevalence ;}
+    public void setInfestationRate(Double prevalence){this.infestationRate = prevalence ;}
     public void setIntensity(Double intensity){this.intensity = intensity ;}
     public void setTotal(Integer total){this.total = total ;}    
 
      @Override
     public String toString(){
         String contenu = (contentTested == null ||contentTested.isEmpty() )? "vide" : "{" + String.join(",", contentTested) + "}";
-        return String.format("%-30sTotal:%-10dLongueur_Moyenne:%-10.4fPoids_Moyen:%-10.4fTaille_Moyenne:%-10.4fNombre de parasites :%010d Taux d'infestation:%-10.4fIntensité:%-10.4fAbondance:%-10.4fContenu:%-10s\n","[" + getSpecies() + "]" ,getNumber() ,getLength() , getWeight(),getSize() ,getParasites() , getInfestationRate(),getIntensity(),getAbondance() , contenu ) ;
+        return String.format("%-30sTotal:%-10dLongueur_Moyenne:%-10.4fPoids_Moyen:%-10.4fTaille_Moyenne:%-10.4fNombre de parasites :%-10d Taux d'infestation:%-10.4fIntensité:%-10.4fAbondance:%-10.4fContenu:%-10s\n","[" + getSpecies() + "]" ,getNumber() ,getLength() , getWeight(),getSize() ,getParasites() , getInfestationRate(),getIntensity(),getAbondance() , contenu ) ;
     }
 
 

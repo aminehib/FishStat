@@ -4,14 +4,14 @@ import java.util.ArrayList;
 
 import model.Fish;
 
-public class MeanValue<T extends Number> {
+public class MeanValue {
 
     private Double mean = null;
 
-    public MeanValue(ArrayList<T> values){
+    public MeanValue(ArrayList<Double> values){
         double sum = 0 ;
         int taille  = 0 ;
-        for(T v : values){
+        for(Double v : values){
             if(v !=null){
                 sum += v.doubleValue() ;
                 taille++ ;

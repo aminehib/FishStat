@@ -29,7 +29,7 @@ public class MeanValueCompletion extends Traitement {
             for( String type : KnownValues.keySet()){
                 ArrayList<Double> values = KnownValues.get(type);
                 if(values.isEmpty())continue ;
-                moyenne = new MeanValue<Double>(values).getMean();
+                moyenne = new MeanValue(values).getMean();
                 if(moyenne == null)continue ;
                 ArrayList<Fish> Unknown = fish.getSpecies(species);
                 for(Fish unknown : Unknown)
