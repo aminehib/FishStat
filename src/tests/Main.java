@@ -12,12 +12,11 @@ import graphique.SvgGenerator;
 import model.DataFrame;
 import model.Fish;
 import model.Population;
-import tools.BoiteAMoustaches;
-import tools.LinearRegression;
 import traitements.LinearRegressionCompletion;
 import traitements.MeanValueCompletion;
 
 import traitements.Traitement;
+import tools.*;
 
 
 public class Main {
@@ -79,7 +78,15 @@ public class Main {
         SvgGenerator.GenerateSVG(df,800,800,50,10,10,1);
 
         LinearRegression model = new LinearRegression(df.getSizes(), df.getInfestationRates());
-        System.out.println(model.getCoeff()+ " " + model.getIntercept() + " "+ df.getSpecies().size());    
+        System.out.println(model.getCoeff()+ " " + model.getIntercept() + " "+ df.getSpecies().size()); 
+        Coords[] c = new Coords[2] ;
+        c[1] = new Coords(new MeanValue(df.getLengths()).getMean(), 40.0);
+        c[0] = new Coords(50.0, 80.0);
+
+        ArrayList<Integer> labels = KMeans.Kmeans(c, 300, 0.005, df, "Length", "Parasites");
+        for(Integer l : labels){
+            System.out.println(l);
+        }
         
     }
 
