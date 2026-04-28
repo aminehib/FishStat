@@ -51,23 +51,23 @@ public class Main {
             e.printStackTrace();
         }
        
-        for(Fish p : df.getData()){
+        /*for(Fish p : df.getData()){
             p.setSpecies("mackerel");
-        }
+        }*/
         System.out.println(df);
 
 
         Double[] errors = {0.0,0.1,0.0,0.1,0.1};
         
-        Traitement t = new RegressionCompletion();
+        Traitement t = new KmeansCompletion();
 
         t.clean(df ,errors );
         System.out.println("completion");
         t.complete(df);
         System.out.println(df);
 
-        Population pop = new Population(df);
-        System.out.println(pop);
+        //Population pop = new Population(df);
+        //System.out.println(pop);
 
         //new LinearRegressionCompletion().Complete(df, "InfestationRate", "Parasites");
 

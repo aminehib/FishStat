@@ -137,7 +137,7 @@ public class DataFrame<T extends Data>  {
 
     public ArrayList<Double> getColumn(String column ){
         ArrayList<Double> x = null ;
-        
+            String[] cols = {"Length","Weight","Size","Parasites" ,"InfestationRate"};
              switch(column){
             case "Length":
                 x = getLengths() ;
@@ -158,6 +158,8 @@ public class DataFrame<T extends Data>  {
              case "InfestationRate":
                 x = getInfestationRates() ;
                 break ;
+            
+            default:throw new InvalidAttribute(column, cols) ;
         }
         return x ; 
     }

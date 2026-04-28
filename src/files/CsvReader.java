@@ -58,7 +58,7 @@ public class CsvReader {
 
             
             while( (line = buffer.readLine() ) != null){
-            
+            if(line.equals(""))continue;
         
                 Fish poisson = null;
                 Population population = null;
