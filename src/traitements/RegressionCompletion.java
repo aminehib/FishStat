@@ -2,10 +2,13 @@ package traitements;
 
 import java.util.ArrayList;
 
-import model.*;
-import tools.*;
+import model.DataFrame;
+import model.Fish;
+import tools.LinearRegression;
+import tools.Pearson;
+import tools.RegressionPoly2;
 
-public class LinearRegressionCompletion extends Traitement {
+public class RegressionCompletion extends Traitement {
 
     private static String[] cols = {"Length","Weight","Size","Total_parasites" ,"InfestationRate"};
 
@@ -58,9 +61,9 @@ public class LinearRegressionCompletion extends Traitement {
             return ;
         } ;
         
-        LinearRegression model= new LinearRegression(x, y) ;
+        RegressionPoly2 model= new RegressionPoly2(x, y) ;
 
-        if(model.getCoeff() == null || model.getIntercept() == null){
+        if(model.getCoeffs()[0] == null || model.getCoeffs()[1] == null || model.getIntercept() == null){
             return ;
         } ;
 
@@ -103,4 +106,5 @@ public class LinearRegressionCompletion extends Traitement {
 
     }
 
+    
 }

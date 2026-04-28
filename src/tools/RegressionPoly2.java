@@ -8,6 +8,17 @@ public class RegressionPoly2 {
     private Double b  = null ;
     private Double c  = null ;
 
+    public Double[] getCoeffs(){
+        Double[] coeffs  = {a,b};
+        return coeffs;
+    }
+
+    public Double getIntercept(){
+        return c ;
+    }
+
+
+
     public  RegressionPoly2(ArrayList<Double> x , ArrayList<Double> y){
 
         if(x.size() != y.size())return ;

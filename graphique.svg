@@ -1,351 +1,711 @@
 <?xml version="1.0" encoding="utf-8"?>
-<svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="800" height="800">
-<line x1="50.0" y1="50.0" x2="750.0" y2="50.0" stroke="black" stroke-width="1" />
-<text x="25.0" y="50.0" font-family="Verdana" font-size="7.0" text-anchor="middle"  dominant-baseline="middle" fill="black" >
+<svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="800" height="1000">
+<line x1="50.0" y1="50.0" x2="140.0" y2="50.0" stroke="black" stroke-width="1" />
+<text x="25.0" y="50.0" font-family="Verdana" font-size="0.9" text-anchor="middle"  dominant-baseline="middle" fill="black" >
 1.00
 </text>
-<line x1="50.0" y1="120.0" x2="750.0" y2="120.0" stroke="black" stroke-width="1" />
-<text x="25.0" y="120.0" font-family="Verdana" font-size="7.0" text-anchor="middle"  dominant-baseline="middle" fill="black" >
+<line x1="50.0" y1="59.0" x2="140.0" y2="59.0" stroke="black" stroke-width="1" />
+<text x="25.0" y="59.0" font-family="Verdana" font-size="0.9" text-anchor="middle"  dominant-baseline="middle" fill="black" >
+0.99
+</text>
+<line x1="50.0" y1="68.0" x2="140.0" y2="68.0" stroke="black" stroke-width="1" />
+<text x="25.0" y="68.0" font-family="Verdana" font-size="0.9" text-anchor="middle"  dominant-baseline="middle" fill="black" >
+0.98
+</text>
+<line x1="50.0" y1="77.0" x2="140.0" y2="77.0" stroke="black" stroke-width="1" />
+<text x="25.0" y="77.0" font-family="Verdana" font-size="0.9" text-anchor="middle"  dominant-baseline="middle" fill="black" >
+0.97
+</text>
+<line x1="50.0" y1="86.0" x2="140.0" y2="86.0" stroke="black" stroke-width="1" />
+<text x="25.0" y="86.0" font-family="Verdana" font-size="0.9" text-anchor="middle"  dominant-baseline="middle" fill="black" >
+0.96
+</text>
+<line x1="50.0" y1="95.0" x2="140.0" y2="95.0" stroke="black" stroke-width="1" />
+<text x="25.0" y="95.0" font-family="Verdana" font-size="0.9" text-anchor="middle"  dominant-baseline="middle" fill="black" >
+0.95
+</text>
+<line x1="50.0" y1="104.0" x2="140.0" y2="104.0" stroke="black" stroke-width="1" />
+<text x="25.0" y="104.0" font-family="Verdana" font-size="0.9" text-anchor="middle"  dominant-baseline="middle" fill="black" >
+0.94
+</text>
+<line x1="50.0" y1="113.0" x2="140.0" y2="113.0" stroke="black" stroke-width="1" />
+<text x="25.0" y="113.0" font-family="Verdana" font-size="0.9" text-anchor="middle"  dominant-baseline="middle" fill="black" >
+0.93
+</text>
+<line x1="50.0" y1="122.0" x2="140.0" y2="122.0" stroke="black" stroke-width="1" />
+<text x="25.0" y="122.0" font-family="Verdana" font-size="0.9" text-anchor="middle"  dominant-baseline="middle" fill="black" >
+0.92
+</text>
+<line x1="50.0" y1="131.0" x2="140.0" y2="131.0" stroke="black" stroke-width="1" />
+<text x="25.0" y="131.0" font-family="Verdana" font-size="0.9" text-anchor="middle"  dominant-baseline="middle" fill="black" >
+0.91
+</text>
+<line x1="50.0" y1="140.0" x2="140.0" y2="140.0" stroke="black" stroke-width="1" />
+<text x="25.0" y="140.0" font-family="Verdana" font-size="0.9" text-anchor="middle"  dominant-baseline="middle" fill="black" >
 0.90
 </text>
-<line x1="50.0" y1="190.0" x2="750.0" y2="190.0" stroke="black" stroke-width="1" />
-<text x="25.0" y="190.0" font-family="Verdana" font-size="7.0" text-anchor="middle"  dominant-baseline="middle" fill="black" >
+<line x1="50.0" y1="149.0" x2="140.0" y2="149.0" stroke="black" stroke-width="1" />
+<text x="25.0" y="149.0" font-family="Verdana" font-size="0.9" text-anchor="middle"  dominant-baseline="middle" fill="black" >
+0.89
+</text>
+<line x1="50.0" y1="158.0" x2="140.0" y2="158.0" stroke="black" stroke-width="1" />
+<text x="25.0" y="158.0" font-family="Verdana" font-size="0.9" text-anchor="middle"  dominant-baseline="middle" fill="black" >
+0.88
+</text>
+<line x1="50.0" y1="167.0" x2="140.0" y2="167.0" stroke="black" stroke-width="1" />
+<text x="25.0" y="167.0" font-family="Verdana" font-size="0.9" text-anchor="middle"  dominant-baseline="middle" fill="black" >
+0.87
+</text>
+<line x1="50.0" y1="176.0" x2="140.0" y2="176.0" stroke="black" stroke-width="1" />
+<text x="25.0" y="176.0" font-family="Verdana" font-size="0.9" text-anchor="middle"  dominant-baseline="middle" fill="black" >
+0.86
+</text>
+<line x1="50.0" y1="185.0" x2="140.0" y2="185.0" stroke="black" stroke-width="1" />
+<text x="25.0" y="185.0" font-family="Verdana" font-size="0.9" text-anchor="middle"  dominant-baseline="middle" fill="black" >
+0.85
+</text>
+<line x1="50.0" y1="194.0" x2="140.0" y2="194.0" stroke="black" stroke-width="1" />
+<text x="25.0" y="194.0" font-family="Verdana" font-size="0.9" text-anchor="middle"  dominant-baseline="middle" fill="black" >
+0.84
+</text>
+<line x1="50.0" y1="203.0" x2="140.0" y2="203.0" stroke="black" stroke-width="1" />
+<text x="25.0" y="203.0" font-family="Verdana" font-size="0.9" text-anchor="middle"  dominant-baseline="middle" fill="black" >
+0.83
+</text>
+<line x1="50.0" y1="212.0" x2="140.0" y2="212.0" stroke="black" stroke-width="1" />
+<text x="25.0" y="212.0" font-family="Verdana" font-size="0.9" text-anchor="middle"  dominant-baseline="middle" fill="black" >
+0.82
+</text>
+<line x1="50.0" y1="221.0" x2="140.0" y2="221.0" stroke="black" stroke-width="1" />
+<text x="25.0" y="221.0" font-family="Verdana" font-size="0.9" text-anchor="middle"  dominant-baseline="middle" fill="black" >
+0.81
+</text>
+<line x1="50.0" y1="230.0" x2="140.0" y2="230.0" stroke="black" stroke-width="1" />
+<text x="25.0" y="230.0" font-family="Verdana" font-size="0.9" text-anchor="middle"  dominant-baseline="middle" fill="black" >
 0.80
 </text>
-<line x1="50.0" y1="260.0" x2="750.0" y2="260.0" stroke="black" stroke-width="1" />
-<text x="25.0" y="260.0" font-family="Verdana" font-size="7.0" text-anchor="middle"  dominant-baseline="middle" fill="black" >
+<line x1="50.0" y1="239.0" x2="140.0" y2="239.0" stroke="black" stroke-width="1" />
+<text x="25.0" y="239.0" font-family="Verdana" font-size="0.9" text-anchor="middle"  dominant-baseline="middle" fill="black" >
+0.79
+</text>
+<line x1="50.0" y1="248.0" x2="140.0" y2="248.0" stroke="black" stroke-width="1" />
+<text x="25.0" y="248.0" font-family="Verdana" font-size="0.9" text-anchor="middle"  dominant-baseline="middle" fill="black" >
+0.78
+</text>
+<line x1="50.0" y1="257.0" x2="140.0" y2="257.0" stroke="black" stroke-width="1" />
+<text x="25.0" y="257.0" font-family="Verdana" font-size="0.9" text-anchor="middle"  dominant-baseline="middle" fill="black" >
+0.77
+</text>
+<line x1="50.0" y1="266.0" x2="140.0" y2="266.0" stroke="black" stroke-width="1" />
+<text x="25.0" y="266.0" font-family="Verdana" font-size="0.9" text-anchor="middle"  dominant-baseline="middle" fill="black" >
+0.76
+</text>
+<line x1="50.0" y1="275.0" x2="140.0" y2="275.0" stroke="black" stroke-width="1" />
+<text x="25.0" y="275.0" font-family="Verdana" font-size="0.9" text-anchor="middle"  dominant-baseline="middle" fill="black" >
+0.75
+</text>
+<line x1="50.0" y1="284.0" x2="140.0" y2="284.0" stroke="black" stroke-width="1" />
+<text x="25.0" y="284.0" font-family="Verdana" font-size="0.9" text-anchor="middle"  dominant-baseline="middle" fill="black" >
+0.74
+</text>
+<line x1="50.0" y1="293.0" x2="140.0" y2="293.0" stroke="black" stroke-width="1" />
+<text x="25.0" y="293.0" font-family="Verdana" font-size="0.9" text-anchor="middle"  dominant-baseline="middle" fill="black" >
+0.73
+</text>
+<line x1="50.0" y1="302.0" x2="140.0" y2="302.0" stroke="black" stroke-width="1" />
+<text x="25.0" y="302.0" font-family="Verdana" font-size="0.9" text-anchor="middle"  dominant-baseline="middle" fill="black" >
+0.72
+</text>
+<line x1="50.0" y1="311.0" x2="140.0" y2="311.0" stroke="black" stroke-width="1" />
+<text x="25.0" y="311.0" font-family="Verdana" font-size="0.9" text-anchor="middle"  dominant-baseline="middle" fill="black" >
+0.71
+</text>
+<line x1="50.0" y1="320.0" x2="140.0" y2="320.0" stroke="black" stroke-width="1" />
+<text x="25.0" y="320.0" font-family="Verdana" font-size="0.9" text-anchor="middle"  dominant-baseline="middle" fill="black" >
 0.70
 </text>
-<line x1="50.0" y1="330.0" x2="750.0" y2="330.0" stroke="black" stroke-width="1" />
-<text x="25.0" y="330.0" font-family="Verdana" font-size="7.0" text-anchor="middle"  dominant-baseline="middle" fill="black" >
+<line x1="50.0" y1="329.0" x2="140.0" y2="329.0" stroke="black" stroke-width="1" />
+<text x="25.0" y="329.0" font-family="Verdana" font-size="0.9" text-anchor="middle"  dominant-baseline="middle" fill="black" >
+0.69
+</text>
+<line x1="50.0" y1="338.0" x2="140.0" y2="338.0" stroke="black" stroke-width="1" />
+<text x="25.0" y="338.0" font-family="Verdana" font-size="0.9" text-anchor="middle"  dominant-baseline="middle" fill="black" >
+0.68
+</text>
+<line x1="50.0" y1="347.0" x2="140.0" y2="347.0" stroke="black" stroke-width="1" />
+<text x="25.0" y="347.0" font-family="Verdana" font-size="0.9" text-anchor="middle"  dominant-baseline="middle" fill="black" >
+0.67
+</text>
+<line x1="50.0" y1="356.0" x2="140.0" y2="356.0" stroke="black" stroke-width="1" />
+<text x="25.0" y="356.0" font-family="Verdana" font-size="0.9" text-anchor="middle"  dominant-baseline="middle" fill="black" >
+0.66
+</text>
+<line x1="50.0" y1="365.0" x2="140.0" y2="365.0" stroke="black" stroke-width="1" />
+<text x="25.0" y="365.0" font-family="Verdana" font-size="0.9" text-anchor="middle"  dominant-baseline="middle" fill="black" >
+0.65
+</text>
+<line x1="50.0" y1="374.0" x2="140.0" y2="374.0" stroke="black" stroke-width="1" />
+<text x="25.0" y="374.0" font-family="Verdana" font-size="0.9" text-anchor="middle"  dominant-baseline="middle" fill="black" >
+0.64
+</text>
+<line x1="50.0" y1="383.0" x2="140.0" y2="383.0" stroke="black" stroke-width="1" />
+<text x="25.0" y="383.0" font-family="Verdana" font-size="0.9" text-anchor="middle"  dominant-baseline="middle" fill="black" >
+0.63
+</text>
+<line x1="50.0" y1="392.0" x2="140.0" y2="392.0" stroke="black" stroke-width="1" />
+<text x="25.0" y="392.0" font-family="Verdana" font-size="0.9" text-anchor="middle"  dominant-baseline="middle" fill="black" >
+0.62
+</text>
+<line x1="50.0" y1="401.0" x2="140.0" y2="401.0" stroke="black" stroke-width="1" />
+<text x="25.0" y="401.0" font-family="Verdana" font-size="0.9" text-anchor="middle"  dominant-baseline="middle" fill="black" >
+0.61
+</text>
+<line x1="50.0" y1="410.0" x2="140.0" y2="410.0" stroke="black" stroke-width="1" />
+<text x="25.0" y="410.0" font-family="Verdana" font-size="0.9" text-anchor="middle"  dominant-baseline="middle" fill="black" >
 0.60
 </text>
-<line x1="50.0" y1="400.0" x2="750.0" y2="400.0" stroke="black" stroke-width="1" />
-<text x="25.0" y="400.0" font-family="Verdana" font-size="7.0" text-anchor="middle"  dominant-baseline="middle" fill="black" >
+<line x1="50.0" y1="419.0" x2="140.0" y2="419.0" stroke="black" stroke-width="1" />
+<text x="25.0" y="419.0" font-family="Verdana" font-size="0.9" text-anchor="middle"  dominant-baseline="middle" fill="black" >
+0.59
+</text>
+<line x1="50.0" y1="428.0" x2="140.0" y2="428.0" stroke="black" stroke-width="1" />
+<text x="25.0" y="428.0" font-family="Verdana" font-size="0.9" text-anchor="middle"  dominant-baseline="middle" fill="black" >
+0.58
+</text>
+<line x1="50.0" y1="437.0" x2="140.0" y2="437.0" stroke="black" stroke-width="1" />
+<text x="25.0" y="437.0" font-family="Verdana" font-size="0.9" text-anchor="middle"  dominant-baseline="middle" fill="black" >
+0.57
+</text>
+<line x1="50.0" y1="446.0" x2="140.0" y2="446.0" stroke="black" stroke-width="1" />
+<text x="25.0" y="446.0" font-family="Verdana" font-size="0.9" text-anchor="middle"  dominant-baseline="middle" fill="black" >
+0.56
+</text>
+<line x1="50.0" y1="455.0" x2="140.0" y2="455.0" stroke="black" stroke-width="1" />
+<text x="25.0" y="455.0" font-family="Verdana" font-size="0.9" text-anchor="middle"  dominant-baseline="middle" fill="black" >
+0.55
+</text>
+<line x1="50.0" y1="464.0" x2="140.0" y2="464.0" stroke="black" stroke-width="1" />
+<text x="25.0" y="464.0" font-family="Verdana" font-size="0.9" text-anchor="middle"  dominant-baseline="middle" fill="black" >
+0.54
+</text>
+<line x1="50.0" y1="473.0" x2="140.0" y2="473.0" stroke="black" stroke-width="1" />
+<text x="25.0" y="473.0" font-family="Verdana" font-size="0.9" text-anchor="middle"  dominant-baseline="middle" fill="black" >
+0.53
+</text>
+<line x1="50.0" y1="482.0" x2="140.0" y2="482.0" stroke="black" stroke-width="1" />
+<text x="25.0" y="482.0" font-family="Verdana" font-size="0.9" text-anchor="middle"  dominant-baseline="middle" fill="black" >
+0.52
+</text>
+<line x1="50.0" y1="491.0" x2="140.0" y2="491.0" stroke="black" stroke-width="1" />
+<text x="25.0" y="491.0" font-family="Verdana" font-size="0.9" text-anchor="middle"  dominant-baseline="middle" fill="black" >
+0.51
+</text>
+<line x1="50.0" y1="500.0" x2="140.0" y2="500.0" stroke="black" stroke-width="1" />
+<text x="25.0" y="500.0" font-family="Verdana" font-size="0.9" text-anchor="middle"  dominant-baseline="middle" fill="black" >
 0.50
 </text>
-<line x1="50.0" y1="470.0" x2="750.0" y2="470.0" stroke="black" stroke-width="1" />
-<text x="25.0" y="470.0" font-family="Verdana" font-size="7.0" text-anchor="middle"  dominant-baseline="middle" fill="black" >
+<line x1="50.0" y1="509.0" x2="140.0" y2="509.0" stroke="black" stroke-width="1" />
+<text x="25.0" y="509.0" font-family="Verdana" font-size="0.9" text-anchor="middle"  dominant-baseline="middle" fill="black" >
+0.49
+</text>
+<line x1="50.0" y1="518.0" x2="140.0" y2="518.0" stroke="black" stroke-width="1" />
+<text x="25.0" y="518.0" font-family="Verdana" font-size="0.9" text-anchor="middle"  dominant-baseline="middle" fill="black" >
+0.48
+</text>
+<line x1="50.0" y1="527.0" x2="140.0" y2="527.0" stroke="black" stroke-width="1" />
+<text x="25.0" y="527.0" font-family="Verdana" font-size="0.9" text-anchor="middle"  dominant-baseline="middle" fill="black" >
+0.47
+</text>
+<line x1="50.0" y1="536.0" x2="140.0" y2="536.0" stroke="black" stroke-width="1" />
+<text x="25.0" y="536.0" font-family="Verdana" font-size="0.9" text-anchor="middle"  dominant-baseline="middle" fill="black" >
+0.46
+</text>
+<line x1="50.0" y1="545.0" x2="140.0" y2="545.0" stroke="black" stroke-width="1" />
+<text x="25.0" y="545.0" font-family="Verdana" font-size="0.9" text-anchor="middle"  dominant-baseline="middle" fill="black" >
+0.45
+</text>
+<line x1="50.0" y1="554.0" x2="140.0" y2="554.0" stroke="black" stroke-width="1" />
+<text x="25.0" y="554.0" font-family="Verdana" font-size="0.9" text-anchor="middle"  dominant-baseline="middle" fill="black" >
+0.44
+</text>
+<line x1="50.0" y1="563.0" x2="140.0" y2="563.0" stroke="black" stroke-width="1" />
+<text x="25.0" y="563.0" font-family="Verdana" font-size="0.9" text-anchor="middle"  dominant-baseline="middle" fill="black" >
+0.43
+</text>
+<line x1="50.0" y1="572.0" x2="140.0" y2="572.0" stroke="black" stroke-width="1" />
+<text x="25.0" y="572.0" font-family="Verdana" font-size="0.9" text-anchor="middle"  dominant-baseline="middle" fill="black" >
+0.42
+</text>
+<line x1="50.0" y1="581.0" x2="140.0" y2="581.0" stroke="black" stroke-width="1" />
+<text x="25.0" y="581.0" font-family="Verdana" font-size="0.9" text-anchor="middle"  dominant-baseline="middle" fill="black" >
+0.41
+</text>
+<line x1="50.0" y1="590.0" x2="140.0" y2="590.0" stroke="black" stroke-width="1" />
+<text x="25.0" y="590.0" font-family="Verdana" font-size="0.9" text-anchor="middle"  dominant-baseline="middle" fill="black" >
 0.40
 </text>
-<line x1="50.0" y1="540.0" x2="750.0" y2="540.0" stroke="black" stroke-width="1" />
-<text x="25.0" y="540.0" font-family="Verdana" font-size="7.0" text-anchor="middle"  dominant-baseline="middle" fill="black" >
+<line x1="50.0" y1="599.0" x2="140.0" y2="599.0" stroke="black" stroke-width="1" />
+<text x="25.0" y="599.0" font-family="Verdana" font-size="0.9" text-anchor="middle"  dominant-baseline="middle" fill="black" >
+0.39
+</text>
+<line x1="50.0" y1="608.0" x2="140.0" y2="608.0" stroke="black" stroke-width="1" />
+<text x="25.0" y="608.0" font-family="Verdana" font-size="0.9" text-anchor="middle"  dominant-baseline="middle" fill="black" >
+0.38
+</text>
+<line x1="50.0" y1="617.0" x2="140.0" y2="617.0" stroke="black" stroke-width="1" />
+<text x="25.0" y="617.0" font-family="Verdana" font-size="0.9" text-anchor="middle"  dominant-baseline="middle" fill="black" >
+0.37
+</text>
+<line x1="50.0" y1="626.0" x2="140.0" y2="626.0" stroke="black" stroke-width="1" />
+<text x="25.0" y="626.0" font-family="Verdana" font-size="0.9" text-anchor="middle"  dominant-baseline="middle" fill="black" >
+0.36
+</text>
+<line x1="50.0" y1="635.0" x2="140.0" y2="635.0" stroke="black" stroke-width="1" />
+<text x="25.0" y="635.0" font-family="Verdana" font-size="0.9" text-anchor="middle"  dominant-baseline="middle" fill="black" >
+0.35
+</text>
+<line x1="50.0" y1="644.0" x2="140.0" y2="644.0" stroke="black" stroke-width="1" />
+<text x="25.0" y="644.0" font-family="Verdana" font-size="0.9" text-anchor="middle"  dominant-baseline="middle" fill="black" >
+0.34
+</text>
+<line x1="50.0" y1="653.0" x2="140.0" y2="653.0" stroke="black" stroke-width="1" />
+<text x="25.0" y="653.0" font-family="Verdana" font-size="0.9" text-anchor="middle"  dominant-baseline="middle" fill="black" >
+0.33
+</text>
+<line x1="50.0" y1="662.0" x2="140.0" y2="662.0" stroke="black" stroke-width="1" />
+<text x="25.0" y="662.0" font-family="Verdana" font-size="0.9" text-anchor="middle"  dominant-baseline="middle" fill="black" >
+0.32
+</text>
+<line x1="50.0" y1="671.0" x2="140.0" y2="671.0" stroke="black" stroke-width="1" />
+<text x="25.0" y="671.0" font-family="Verdana" font-size="0.9" text-anchor="middle"  dominant-baseline="middle" fill="black" >
+0.31
+</text>
+<line x1="50.0" y1="680.0" x2="140.0" y2="680.0" stroke="black" stroke-width="1" />
+<text x="25.0" y="680.0" font-family="Verdana" font-size="0.9" text-anchor="middle"  dominant-baseline="middle" fill="black" >
 0.30
 </text>
-<line x1="50.0" y1="610.0" x2="750.0" y2="610.0" stroke="black" stroke-width="1" />
-<text x="25.0" y="610.0" font-family="Verdana" font-size="7.0" text-anchor="middle"  dominant-baseline="middle" fill="black" >
+<line x1="50.0" y1="689.0" x2="140.0" y2="689.0" stroke="black" stroke-width="1" />
+<text x="25.0" y="689.0" font-family="Verdana" font-size="0.9" text-anchor="middle"  dominant-baseline="middle" fill="black" >
+0.29
+</text>
+<line x1="50.0" y1="698.0" x2="140.0" y2="698.0" stroke="black" stroke-width="1" />
+<text x="25.0" y="698.0" font-family="Verdana" font-size="0.9" text-anchor="middle"  dominant-baseline="middle" fill="black" >
+0.28
+</text>
+<line x1="50.0" y1="707.0" x2="140.0" y2="707.0" stroke="black" stroke-width="1" />
+<text x="25.0" y="707.0" font-family="Verdana" font-size="0.9" text-anchor="middle"  dominant-baseline="middle" fill="black" >
+0.27
+</text>
+<line x1="50.0" y1="716.0" x2="140.0" y2="716.0" stroke="black" stroke-width="1" />
+<text x="25.0" y="716.0" font-family="Verdana" font-size="0.9" text-anchor="middle"  dominant-baseline="middle" fill="black" >
+0.26
+</text>
+<line x1="50.0" y1="725.0" x2="140.0" y2="725.0" stroke="black" stroke-width="1" />
+<text x="25.0" y="725.0" font-family="Verdana" font-size="0.9" text-anchor="middle"  dominant-baseline="middle" fill="black" >
+0.25
+</text>
+<line x1="50.0" y1="734.0" x2="140.0" y2="734.0" stroke="black" stroke-width="1" />
+<text x="25.0" y="734.0" font-family="Verdana" font-size="0.9" text-anchor="middle"  dominant-baseline="middle" fill="black" >
+0.24
+</text>
+<line x1="50.0" y1="743.0" x2="140.0" y2="743.0" stroke="black" stroke-width="1" />
+<text x="25.0" y="743.0" font-family="Verdana" font-size="0.9" text-anchor="middle"  dominant-baseline="middle" fill="black" >
+0.23
+</text>
+<line x1="50.0" y1="752.0" x2="140.0" y2="752.0" stroke="black" stroke-width="1" />
+<text x="25.0" y="752.0" font-family="Verdana" font-size="0.9" text-anchor="middle"  dominant-baseline="middle" fill="black" >
+0.22
+</text>
+<line x1="50.0" y1="761.0" x2="140.0" y2="761.0" stroke="black" stroke-width="1" />
+<text x="25.0" y="761.0" font-family="Verdana" font-size="0.9" text-anchor="middle"  dominant-baseline="middle" fill="black" >
+0.21
+</text>
+<line x1="50.0" y1="770.0" x2="140.0" y2="770.0" stroke="black" stroke-width="1" />
+<text x="25.0" y="770.0" font-family="Verdana" font-size="0.9" text-anchor="middle"  dominant-baseline="middle" fill="black" >
 0.20
 </text>
-<line x1="50.0" y1="680.0" x2="750.0" y2="680.0" stroke="black" stroke-width="1" />
-<text x="25.0" y="680.0" font-family="Verdana" font-size="7.0" text-anchor="middle"  dominant-baseline="middle" fill="black" >
+<line x1="50.0" y1="779.0" x2="140.0" y2="779.0" stroke="black" stroke-width="1" />
+<text x="25.0" y="779.0" font-family="Verdana" font-size="0.9" text-anchor="middle"  dominant-baseline="middle" fill="black" >
+0.19
+</text>
+<line x1="50.0" y1="788.0" x2="140.0" y2="788.0" stroke="black" stroke-width="1" />
+<text x="25.0" y="788.0" font-family="Verdana" font-size="0.9" text-anchor="middle"  dominant-baseline="middle" fill="black" >
+0.18
+</text>
+<line x1="50.0" y1="797.0" x2="140.0" y2="797.0" stroke="black" stroke-width="1" />
+<text x="25.0" y="797.0" font-family="Verdana" font-size="0.9" text-anchor="middle"  dominant-baseline="middle" fill="black" >
+0.17
+</text>
+<line x1="50.0" y1="806.0" x2="140.0" y2="806.0" stroke="black" stroke-width="1" />
+<text x="25.0" y="806.0" font-family="Verdana" font-size="0.9" text-anchor="middle"  dominant-baseline="middle" fill="black" >
+0.16
+</text>
+<line x1="50.0" y1="815.0" x2="140.0" y2="815.0" stroke="black" stroke-width="1" />
+<text x="25.0" y="815.0" font-family="Verdana" font-size="0.9" text-anchor="middle"  dominant-baseline="middle" fill="black" >
+0.15
+</text>
+<line x1="50.0" y1="824.0" x2="140.0" y2="824.0" stroke="black" stroke-width="1" />
+<text x="25.0" y="824.0" font-family="Verdana" font-size="0.9" text-anchor="middle"  dominant-baseline="middle" fill="black" >
+0.14
+</text>
+<line x1="50.0" y1="833.0" x2="140.0" y2="833.0" stroke="black" stroke-width="1" />
+<text x="25.0" y="833.0" font-family="Verdana" font-size="0.9" text-anchor="middle"  dominant-baseline="middle" fill="black" >
+0.13
+</text>
+<line x1="50.0" y1="842.0" x2="140.0" y2="842.0" stroke="black" stroke-width="1" />
+<text x="25.0" y="842.0" font-family="Verdana" font-size="0.9" text-anchor="middle"  dominant-baseline="middle" fill="black" >
+0.12
+</text>
+<line x1="50.0" y1="851.0" x2="140.0" y2="851.0" stroke="black" stroke-width="1" />
+<text x="25.0" y="851.0" font-family="Verdana" font-size="0.9" text-anchor="middle"  dominant-baseline="middle" fill="black" >
+0.11
+</text>
+<line x1="50.0" y1="860.0" x2="140.0" y2="860.0" stroke="black" stroke-width="1" />
+<text x="25.0" y="860.0" font-family="Verdana" font-size="0.9" text-anchor="middle"  dominant-baseline="middle" fill="black" >
 0.10
 </text>
-<line x1="50.0" y1="750.0" x2="750.0" y2="750.0" stroke="black" stroke-width="1" />
-<text x="25.0" y="750.0" font-family="Verdana" font-size="7.0" text-anchor="middle"  dominant-baseline="middle" fill="black" >
+<line x1="50.0" y1="869.0" x2="140.0" y2="869.0" stroke="black" stroke-width="1" />
+<text x="25.0" y="869.0" font-family="Verdana" font-size="0.9" text-anchor="middle"  dominant-baseline="middle" fill="black" >
+0.09
+</text>
+<line x1="50.0" y1="878.0" x2="140.0" y2="878.0" stroke="black" stroke-width="1" />
+<text x="25.0" y="878.0" font-family="Verdana" font-size="0.9" text-anchor="middle"  dominant-baseline="middle" fill="black" >
+0.08
+</text>
+<line x1="50.0" y1="887.0" x2="140.0" y2="887.0" stroke="black" stroke-width="1" />
+<text x="25.0" y="887.0" font-family="Verdana" font-size="0.9" text-anchor="middle"  dominant-baseline="middle" fill="black" >
+0.07
+</text>
+<line x1="50.0" y1="896.0" x2="140.0" y2="896.0" stroke="black" stroke-width="1" />
+<text x="25.0" y="896.0" font-family="Verdana" font-size="0.9" text-anchor="middle"  dominant-baseline="middle" fill="black" >
+0.06
+</text>
+<line x1="50.0" y1="905.0" x2="140.0" y2="905.0" stroke="black" stroke-width="1" />
+<text x="25.0" y="905.0" font-family="Verdana" font-size="0.9" text-anchor="middle"  dominant-baseline="middle" fill="black" >
+0.05
+</text>
+<line x1="50.0" y1="914.0" x2="140.0" y2="914.0" stroke="black" stroke-width="1" />
+<text x="25.0" y="914.0" font-family="Verdana" font-size="0.9" text-anchor="middle"  dominant-baseline="middle" fill="black" >
+0.04
+</text>
+<line x1="50.0" y1="923.0" x2="140.0" y2="923.0" stroke="black" stroke-width="1" />
+<text x="25.0" y="923.0" font-family="Verdana" font-size="0.9" text-anchor="middle"  dominant-baseline="middle" fill="black" >
+0.03
+</text>
+<line x1="50.0" y1="932.0" x2="140.0" y2="932.0" stroke="black" stroke-width="1" />
+<text x="25.0" y="932.0" font-family="Verdana" font-size="0.9" text-anchor="middle"  dominant-baseline="middle" fill="black" >
+0.02
+</text>
+<line x1="50.0" y1="941.0" x2="140.0" y2="941.0" stroke="black" stroke-width="1" />
+<text x="25.0" y="941.0" font-family="Verdana" font-size="0.9" text-anchor="middle"  dominant-baseline="middle" fill="black" >
+0.01
+</text>
+<line x1="50.0" y1="950.0" x2="140.0" y2="950.0" stroke="black" stroke-width="1" />
+<text x="25.0" y="950.0" font-family="Verdana" font-size="0.9" text-anchor="middle"  dominant-baseline="middle" fill="black" >
 0.00
 </text>
-<line x1="50.0" y1="50.0" x2="50.0" y2="750.0" stroke="black" stroke-width="1" />
-<text x="50.0" y="766.6666666666666" font-family="Verdana" font-size="7.0" text-anchor="middle"  dominant-baseline="middle" fill="black" >
+<line x1="50.0" y1="50.0" x2="50.0" y2="7050.0" stroke="black" stroke-width="1" />
+<text x="50.0" y="7066.666666666667" font-family="Verdana" font-size="7.0" text-anchor="middle"  dominant-baseline="middle" fill="black" >
 12.14
 </text>
-<line x1="120.0" y1="50.0" x2="120.0" y2="750.0" stroke="black" stroke-width="1" />
-<text x="120.0" y="766.6666666666666" font-family="Verdana" font-size="7.0" text-anchor="middle"  dominant-baseline="middle" fill="black" >
+<line x1="120.0" y1="50.0" x2="120.0" y2="7050.0" stroke="black" stroke-width="1" />
+<text x="120.0" y="7066.666666666667" font-family="Verdana" font-size="7.0" text-anchor="middle"  dominant-baseline="middle" fill="black" >
 25.68
 </text>
-<line x1="190.0" y1="50.0" x2="190.0" y2="750.0" stroke="black" stroke-width="1" />
-<text x="190.0" y="766.6666666666666" font-family="Verdana" font-size="7.0" text-anchor="middle"  dominant-baseline="middle" fill="black" >
+<line x1="190.0" y1="50.0" x2="190.0" y2="7050.0" stroke="black" stroke-width="1" />
+<text x="190.0" y="7066.666666666667" font-family="Verdana" font-size="7.0" text-anchor="middle"  dominant-baseline="middle" fill="black" >
 39.21
 </text>
-<line x1="260.0" y1="50.0" x2="260.0" y2="750.0" stroke="black" stroke-width="1" />
-<text x="260.0" y="766.6666666666666" font-family="Verdana" font-size="7.0" text-anchor="middle"  dominant-baseline="middle" fill="black" >
+<line x1="260.0" y1="50.0" x2="260.0" y2="7050.0" stroke="black" stroke-width="1" />
+<text x="260.0" y="7066.666666666667" font-family="Verdana" font-size="7.0" text-anchor="middle"  dominant-baseline="middle" fill="black" >
 52.75
 </text>
-<line x1="330.0" y1="50.0" x2="330.0" y2="750.0" stroke="black" stroke-width="1" />
-<text x="330.0" y="766.6666666666666" font-family="Verdana" font-size="7.0" text-anchor="middle"  dominant-baseline="middle" fill="black" >
+<line x1="330.0" y1="50.0" x2="330.0" y2="7050.0" stroke="black" stroke-width="1" />
+<text x="330.0" y="7066.666666666667" font-family="Verdana" font-size="7.0" text-anchor="middle"  dominant-baseline="middle" fill="black" >
 66.29
 </text>
-<line x1="400.0" y1="50.0" x2="400.0" y2="750.0" stroke="black" stroke-width="1" />
-<text x="400.0" y="766.6666666666666" font-family="Verdana" font-size="7.0" text-anchor="middle"  dominant-baseline="middle" fill="black" >
+<line x1="400.0" y1="50.0" x2="400.0" y2="7050.0" stroke="black" stroke-width="1" />
+<text x="400.0" y="7066.666666666667" font-family="Verdana" font-size="7.0" text-anchor="middle"  dominant-baseline="middle" fill="black" >
 79.82
 </text>
-<line x1="470.0" y1="50.0" x2="470.0" y2="750.0" stroke="black" stroke-width="1" />
-<text x="470.0" y="766.6666666666666" font-family="Verdana" font-size="7.0" text-anchor="middle"  dominant-baseline="middle" fill="black" >
+<line x1="470.0" y1="50.0" x2="470.0" y2="7050.0" stroke="black" stroke-width="1" />
+<text x="470.0" y="7066.666666666667" font-family="Verdana" font-size="7.0" text-anchor="middle"  dominant-baseline="middle" fill="black" >
 93.36
 </text>
-<line x1="540.0" y1="50.0" x2="540.0" y2="750.0" stroke="black" stroke-width="1" />
-<text x="540.0" y="766.6666666666666" font-family="Verdana" font-size="7.0" text-anchor="middle"  dominant-baseline="middle" fill="black" >
+<line x1="540.0" y1="50.0" x2="540.0" y2="7050.0" stroke="black" stroke-width="1" />
+<text x="540.0" y="7066.666666666667" font-family="Verdana" font-size="7.0" text-anchor="middle"  dominant-baseline="middle" fill="black" >
 106.90
 </text>
-<line x1="610.0" y1="50.0" x2="610.0" y2="750.0" stroke="black" stroke-width="1" />
-<text x="610.0" y="766.6666666666666" font-family="Verdana" font-size="7.0" text-anchor="middle"  dominant-baseline="middle" fill="black" >
+<line x1="610.0" y1="50.0" x2="610.0" y2="7050.0" stroke="black" stroke-width="1" />
+<text x="610.0" y="7066.666666666667" font-family="Verdana" font-size="7.0" text-anchor="middle"  dominant-baseline="middle" fill="black" >
 120.43
 </text>
-<line x1="680.0" y1="50.0" x2="680.0" y2="750.0" stroke="black" stroke-width="1" />
-<text x="680.0" y="766.6666666666666" font-family="Verdana" font-size="7.0" text-anchor="middle"  dominant-baseline="middle" fill="black" >
+<line x1="680.0" y1="50.0" x2="680.0" y2="7050.0" stroke="black" stroke-width="1" />
+<text x="680.0" y="7066.666666666667" font-family="Verdana" font-size="7.0" text-anchor="middle"  dominant-baseline="middle" fill="black" >
 133.97
 </text>
-<line x1="750.0" y1="50.0" x2="750.0" y2="750.0" stroke="black" stroke-width="1" />
-<text x="750.0" y="766.6666666666666" font-family="Verdana" font-size="7.0" text-anchor="middle"  dominant-baseline="middle" fill="black" >
+<line x1="750.0" y1="50.0" x2="750.0" y2="7050.0" stroke="black" stroke-width="1" />
+<text x="750.0" y="7066.666666666667" font-family="Verdana" font-size="7.0" text-anchor="middle"  dominant-baseline="middle" fill="black" >
 147.50
 </text>
-<circle cx ='50.000000' cy ='411.059335' r='4' fill ='blue' />
-<circle cx ='51.344133' cy ='411.037039' r='4' fill ='blue' />
-<circle cx ='52.006049' cy ='411.026060' r='4' fill ='blue' />
-<circle cx ='58.913936' cy ='410.911476' r='4' fill ='blue' />
-<circle cx ='68.652145' cy ='410.749945' r='4' fill ='blue' />
-<circle cx ='73.713856' cy ='410.665984' r='4' fill ='blue' />
-<circle cx ='75.675585' cy ='410.633444' r='4' fill ='blue' />
-<circle cx ='81.051259' cy ='410.544276' r='4' fill ='blue' />
-<circle cx ='89.900256' cy ='410.397494' r='4' fill ='blue' />
-<circle cx ='97.470904' cy ='410.271917' r='4' fill ='blue' />
-<circle cx ='106.883012' cy ='410.115795' r='4' fill ='blue' />
-<circle cx ='125.917699' cy ='409.800059' r='4' fill ='blue' />
-<circle cx ='137.832178' cy ='409.602429' r='4' fill ='blue' />
-<circle cx ='146.133160' cy ='409.464738' r='4' fill ='blue' />
-<circle cx ='148.037699' cy ='409.433147' r='4' fill ='blue' />
-<circle cx ='165.857074' cy ='409.137570' r='4' fill ='blue' />
-<circle cx ='166.287835' cy ='409.130425' r='4' fill ='blue' />
-<circle cx ='171.312867' cy ='409.047073' r='4' fill ='blue' />
-<circle cx ='172.375451' cy ='409.029447' r='4' fill ='blue' />
-<circle cx ='175.541775' cy ='408.976926' r='4' fill ='blue' />
-<circle cx ='188.557130' cy ='408.761035' r='4' fill ='blue' />
-<circle cx ='198.372040' cy ='408.598232' r='4' fill ='blue' />
-<circle cx ='214.241104' cy ='408.335006' r='4' fill ='blue' />
-<circle cx ='220.099215' cy ='408.237835' r='4' fill ='blue' />
-<circle cx ='220.251585' cy ='408.235308' r='4' fill ='blue' />
-<circle cx ='222.931674' cy ='408.190852' r='4' fill ='blue' />
-<circle cx ='227.757450' cy ='408.110805' r='4' fill ='blue' />
-<circle cx ='227.804110' cy ='408.110031' r='4' fill ='blue' />
-<circle cx ='232.066524' cy ='408.039329' r='4' fill ='blue' />
-<circle cx ='233.292850' cy ='408.018987' r='4' fill ='blue' />
-<circle cx ='235.514094' cy ='407.982143' r='4' fill ='blue' />
-<circle cx ='237.264856' cy ='407.953102' r='4' fill ='blue' />
-<circle cx ='241.318633' cy ='407.885860' r='4' fill ='blue' />
-<circle cx ='244.475689' cy ='407.833493' r='4' fill ='blue' />
-<circle cx ='252.707179' cy ='407.696954' r='4' fill ='blue' />
-<circle cx ='253.590125' cy ='407.682309' r='4' fill ='blue' />
-<circle cx ='260.241334' cy ='407.571982' r='4' fill ='blue' />
-<circle cx ='261.952682' cy ='407.543596' r='4' fill ='blue' />
-<circle cx ='264.379872' cy ='407.503335' r='4' fill ='blue' />
-<circle cx ='272.443281' cy ='407.369584' r='4' fill ='blue' />
-<circle cx ='274.910742' cy ='407.328655' r='4' fill ='blue' />
-<circle cx ='275.411987' cy ='407.320341' r='4' fill ='blue' />
-<circle cx ='276.499005' cy ='407.302310' r='4' fill ='blue' />
-<circle cx ='278.379669' cy ='407.271115' r='4' fill ='blue' />
-<circle cx ='282.581643' cy ='407.201415' r='4' fill ='blue' />
-<circle cx ='285.528541' cy ='407.152534' r='4' fill ='blue' />
-<circle cx ='288.747893' cy ='407.099133' r='4' fill ='blue' />
-<circle cx ='289.640626' cy ='407.084325' r='4' fill ='blue' />
-<circle cx ='291.111979' cy ='407.059919' r='4' fill ='blue' />
-<circle cx ='292.373028' cy ='407.039002' r='4' fill ='blue' />
-<circle cx ='308.741333' cy ='406.767495' r='4' fill ='blue' />
-<circle cx ='312.051573' cy ='406.712586' r='4' fill ='blue' />
-<circle cx ='324.672449' cy ='406.503239' r='4' fill ='blue' />
-<circle cx ='326.757942' cy ='406.468646' r='4' fill ='blue' />
-<circle cx ='327.662119' cy ='406.453648' r='4' fill ='blue' />
-<circle cx ='331.779616' cy ='406.385350' r='4' fill ='blue' />
-<circle cx ='336.506466' cy ='406.306944' r='4' fill ='blue' />
-<circle cx ='342.836923' cy ='406.201938' r='4' fill ='blue' />
-<circle cx ='345.508510' cy ='406.157624' r='4' fill ='blue' />
-<circle cx ='349.015180' cy ='406.099457' r='4' fill ='blue' />
-<circle cx ='352.784464' cy ='406.036935' r='4' fill ='blue' />
-<circle cx ='353.416962' cy ='406.026443' r='4' fill ='blue' />
-<circle cx ='354.342607' cy ='406.011089' r='4' fill ='blue' />
-<circle cx ='363.110322' cy ='405.865656' r='4' fill ='blue' />
-<circle cx ='363.574384' cy ='405.857958' r='4' fill ='blue' />
-<circle cx ='369.975196' cy ='405.751785' r='4' fill ='blue' />
-<circle cx ='375.338988' cy ='405.662814' r='4' fill ='blue' />
-<circle cx ='379.154924' cy ='405.599518' r='4' fill ='blue' />
-<circle cx ='379.412752' cy ='405.595241' r='4' fill ='blue' />
-<circle cx ='390.257576' cy ='405.415354' r='4' fill ='blue' />
-<circle cx ='390.499301' cy ='405.411344' r='4' fill ='blue' />
-<circle cx ='396.493913' cy ='405.311909' r='4' fill ='blue' />
-<circle cx ='407.296110' cy ='405.132729' r='4' fill ='blue' />
-<circle cx ='420.162561' cy ='404.919309' r='4' fill ='blue' />
-<circle cx ='420.162561' cy ='404.919309' r='4' fill ='blue' />
-<circle cx ='420.162561' cy ='404.919309' r='4' fill ='blue' />
-<circle cx ='420.162561' cy ='404.919309' r='4' fill ='blue' />
-<circle cx ='420.162561' cy ='404.919309' r='4' fill ='blue' />
-<circle cx ='420.162561' cy ='404.919309' r='4' fill ='blue' />
-<circle cx ='420.162561' cy ='404.919309' r='4' fill ='blue' />
-<circle cx ='420.162561' cy ='404.919309' r='4' fill ='blue' />
-<circle cx ='420.162561' cy ='404.919309' r='4' fill ='blue' />
-<circle cx ='420.162561' cy ='404.919309' r='4' fill ='blue' />
-<circle cx ='420.162561' cy ='404.919309' r='4' fill ='blue' />
-<circle cx ='420.162561' cy ='404.919309' r='4' fill ='blue' />
-<circle cx ='420.162561' cy ='404.919309' r='4' fill ='blue' />
-<circle cx ='420.162561' cy ='404.919309' r='4' fill ='blue' />
-<circle cx ='420.162561' cy ='404.919309' r='4' fill ='blue' />
-<circle cx ='420.162561' cy ='404.919309' r='4' fill ='blue' />
-<circle cx ='420.162561' cy ='404.919309' r='4' fill ='blue' />
-<circle cx ='420.162561' cy ='404.919309' r='4' fill ='blue' />
-<circle cx ='420.162561' cy ='404.919309' r='4' fill ='blue' />
-<circle cx ='420.162561' cy ='404.919309' r='4' fill ='blue' />
-<circle cx ='420.162561' cy ='404.919309' r='4' fill ='blue' />
-<circle cx ='420.162561' cy ='404.919309' r='4' fill ='blue' />
-<circle cx ='420.162561' cy ='404.919309' r='4' fill ='blue' />
-<circle cx ='420.162561' cy ='404.919309' r='4' fill ='blue' />
-<circle cx ='420.162561' cy ='404.919309' r='4' fill ='blue' />
-<circle cx ='420.162561' cy ='404.919309' r='4' fill ='blue' />
-<circle cx ='420.162561' cy ='404.919309' r='4' fill ='blue' />
-<circle cx ='420.162561' cy ='404.919309' r='4' fill ='blue' />
-<circle cx ='420.162561' cy ='404.919309' r='4' fill ='blue' />
-<circle cx ='420.162561' cy ='404.919309' r='4' fill ='blue' />
-<circle cx ='420.162561' cy ='404.919309' r='4' fill ='blue' />
-<circle cx ='420.162561' cy ='404.919309' r='4' fill ='blue' />
-<circle cx ='420.162561' cy ='404.919309' r='4' fill ='blue' />
-<circle cx ='420.162561' cy ='404.919309' r='4' fill ='blue' />
-<circle cx ='420.162561' cy ='404.919309' r='4' fill ='blue' />
-<circle cx ='420.162561' cy ='404.919309' r='4' fill ='blue' />
-<circle cx ='420.162561' cy ='404.919309' r='4' fill ='blue' />
-<circle cx ='420.162561' cy ='404.919309' r='4' fill ='blue' />
-<circle cx ='420.162561' cy ='404.919309' r='4' fill ='blue' />
-<circle cx ='420.162561' cy ='404.919309' r='4' fill ='blue' />
-<circle cx ='420.162561' cy ='404.919309' r='4' fill ='blue' />
-<circle cx ='420.162561' cy ='404.919309' r='4' fill ='blue' />
-<circle cx ='420.162561' cy ='404.919309' r='4' fill ='blue' />
-<circle cx ='420.162561' cy ='404.919309' r='4' fill ='blue' />
-<circle cx ='420.162561' cy ='404.919309' r='4' fill ='blue' />
-<circle cx ='420.162561' cy ='404.919309' r='4' fill ='blue' />
-<circle cx ='420.162561' cy ='404.919309' r='4' fill ='blue' />
-<circle cx ='420.162561' cy ='404.919309' r='4' fill ='blue' />
-<circle cx ='420.162561' cy ='404.919309' r='4' fill ='blue' />
-<circle cx ='420.162561' cy ='404.919309' r='4' fill ='blue' />
-<circle cx ='420.162561' cy ='404.919309' r='4' fill ='blue' />
-<circle cx ='420.162561' cy ='404.919309' r='4' fill ='blue' />
-<circle cx ='420.162561' cy ='404.919309' r='4' fill ='blue' />
-<circle cx ='420.162561' cy ='404.919309' r='4' fill ='blue' />
-<circle cx ='420.162561' cy ='404.919309' r='4' fill ='blue' />
-<circle cx ='420.162561' cy ='404.919309' r='4' fill ='blue' />
-<circle cx ='420.162561' cy ='404.919309' r='4' fill ='blue' />
-<circle cx ='420.162561' cy ='404.919309' r='4' fill ='blue' />
-<circle cx ='420.162561' cy ='404.919309' r='4' fill ='blue' />
-<circle cx ='420.162561' cy ='404.919309' r='4' fill ='blue' />
-<circle cx ='420.162561' cy ='404.919309' r='4' fill ='blue' />
-<circle cx ='420.162561' cy ='404.919309' r='4' fill ='blue' />
-<circle cx ='420.162561' cy ='404.919309' r='4' fill ='blue' />
-<circle cx ='420.162561' cy ='404.919309' r='4' fill ='blue' />
-<circle cx ='420.162561' cy ='404.919309' r='4' fill ='blue' />
-<circle cx ='420.162561' cy ='404.919309' r='4' fill ='blue' />
-<circle cx ='420.162561' cy ='404.919309' r='4' fill ='blue' />
-<circle cx ='420.162561' cy ='404.919309' r='4' fill ='blue' />
-<circle cx ='420.162561' cy ='404.919309' r='4' fill ='blue' />
-<circle cx ='420.162561' cy ='404.919309' r='4' fill ='blue' />
-<circle cx ='420.162561' cy ='404.919309' r='4' fill ='blue' />
-<circle cx ='420.162561' cy ='404.919309' r='4' fill ='blue' />
-<circle cx ='420.162561' cy ='404.919309' r='4' fill ='blue' />
-<circle cx ='420.162561' cy ='404.919309' r='4' fill ='blue' />
-<circle cx ='420.162561' cy ='404.919309' r='4' fill ='blue' />
-<circle cx ='420.162561' cy ='404.919309' r='4' fill ='blue' />
-<circle cx ='420.162561' cy ='404.919309' r='4' fill ='blue' />
-<circle cx ='420.162561' cy ='404.919309' r='4' fill ='blue' />
-<circle cx ='420.162561' cy ='404.919309' r='4' fill ='blue' />
-<circle cx ='420.162561' cy ='404.919309' r='4' fill ='blue' />
-<circle cx ='420.162561' cy ='404.919309' r='4' fill ='blue' />
-<circle cx ='420.162561' cy ='404.919309' r='4' fill ='blue' />
-<circle cx ='420.162561' cy ='404.919309' r='4' fill ='blue' />
-<circle cx ='420.162561' cy ='404.919309' r='4' fill ='blue' />
-<circle cx ='420.162561' cy ='404.919309' r='4' fill ='blue' />
-<circle cx ='420.162561' cy ='404.919309' r='4' fill ='blue' />
-<circle cx ='420.162561' cy ='404.919309' r='4' fill ='blue' />
-<circle cx ='420.162561' cy ='404.919309' r='4' fill ='blue' />
-<circle cx ='420.162561' cy ='404.919309' r='4' fill ='blue' />
-<circle cx ='420.162561' cy ='404.919309' r='4' fill ='blue' />
-<circle cx ='420.162561' cy ='404.919309' r='4' fill ='blue' />
-<circle cx ='420.162561' cy ='404.919309' r='4' fill ='blue' />
-<circle cx ='420.162561' cy ='404.919309' r='4' fill ='blue' />
-<circle cx ='420.162561' cy ='404.919309' r='4' fill ='blue' />
-<circle cx ='420.162561' cy ='404.919309' r='4' fill ='blue' />
-<circle cx ='420.162561' cy ='404.919309' r='4' fill ='blue' />
-<circle cx ='420.162561' cy ='404.919309' r='4' fill ='blue' />
-<circle cx ='420.162561' cy ='404.919309' r='4' fill ='blue' />
-<circle cx ='420.162561' cy ='404.919309' r='4' fill ='blue' />
-<circle cx ='420.162561' cy ='404.919309' r='4' fill ='blue' />
-<circle cx ='420.162561' cy ='404.919309' r='4' fill ='blue' />
-<circle cx ='420.162561' cy ='404.919309' r='4' fill ='blue' />
-<circle cx ='420.162561' cy ='404.919309' r='4' fill ='blue' />
-<circle cx ='427.762121' cy ='404.793252' r='4' fill ='blue' />
-<circle cx ='429.423694' cy ='404.765691' r='4' fill ='blue' />
-<circle cx ='431.713517' cy ='404.727709' r='4' fill ='blue' />
-<circle cx ='435.645981' cy ='404.662479' r='4' fill ='blue' />
-<circle cx ='439.116127' cy ='404.604919' r='4' fill ='blue' />
-<circle cx ='439.155954' cy ='404.604258' r='4' fill ='blue' />
-<circle cx ='439.208886' cy ='404.603380' r='4' fill ='blue' />
-<circle cx ='443.118698' cy ='404.538526' r='4' fill ='blue' />
-<circle cx ='448.725103' cy ='404.445531' r='4' fill ='blue' />
-<circle cx ='453.045145' cy ='404.373873' r='4' fill ='blue' />
-<circle cx ='454.031829' cy ='404.357506' r='4' fill ='blue' />
-<circle cx ='458.012222' cy ='404.291482' r='4' fill ='blue' />
-<circle cx ='459.331134' cy ='404.269605' r='4' fill ='blue' />
-<circle cx ='481.649647' cy ='403.899399' r='4' fill ='blue' />
-<circle cx ='484.789921' cy ='403.847310' r='4' fill ='blue' />
-<circle cx ='486.529467' cy ='403.818456' r='4' fill ='blue' />
-<circle cx ='492.093901' cy ='403.726156' r='4' fill ='blue' />
-<circle cx ='498.183872' cy ='403.625140' r='4' fill ='blue' />
-<circle cx ='499.618295' cy ='403.601346' r='4' fill ='blue' />
-<circle cx ='499.669683' cy ='403.600494' r='4' fill ='blue' />
-<circle cx ='501.021370' cy ='403.578073' r='4' fill ='blue' />
-<circle cx ='510.588307' cy ='403.419383' r='4' fill ='blue' />
-<circle cx ='513.656479' cy ='403.368490' r='4' fill ='blue' />
-<circle cx ='514.661879' cy ='403.351813' r='4' fill ='blue' />
-<circle cx ='523.260658' cy ='403.209181' r='4' fill ='blue' />
-<circle cx ='524.821047' cy ='403.183299' r='4' fill ='blue' />
-<circle cx ='525.460055' cy ='403.172699' r='4' fill ='blue' />
-<circle cx ='531.743795' cy ='403.068469' r='4' fill ='blue' />
-<circle cx ='534.102786' cy ='403.029339' r='4' fill ='blue' />
-<circle cx ='542.681374' cy ='402.887043' r='4' fill ='blue' />
-<circle cx ='552.164336' cy ='402.729745' r='4' fill ='blue' />
-<circle cx ='553.785014' cy ='402.702862' r='4' fill ='blue' />
-<circle cx ='560.873163' cy ='402.585289' r='4' fill ='blue' />
-<circle cx ='571.208989' cy ='402.413844' r='4' fill ='blue' />
-<circle cx ='577.599306' cy ='402.307846' r='4' fill ='blue' />
-<circle cx ='580.260789' cy ='402.263699' r='4' fill ='blue' />
-<circle cx ='595.345301' cy ='402.013486' r='4' fill ='blue' />
-<circle cx ='616.913776' cy ='401.655722' r='4' fill ='blue' />
-<circle cx ='618.799169' cy ='401.624448' r='4' fill ='blue' />
-<circle cx ='620.385042' cy ='401.598143' r='4' fill ='blue' />
-<circle cx ='623.116817' cy ='401.552830' r='4' fill ='blue' />
-<circle cx ='624.990554' cy ='401.521749' r='4' fill ='blue' />
-<circle cx ='626.223604' cy ='401.501296' r='4' fill ='blue' />
-<circle cx ='630.008406' cy ='401.438516' r='4' fill ='blue' />
-<circle cx ='632.900726' cy ='401.390540' r='4' fill ='blue' />
-<circle cx ='633.054669' cy ='401.387987' r='4' fill ='blue' />
-<circle cx ='648.536187' cy ='401.131189' r='4' fill ='blue' />
-<circle cx ='651.894103' cy ='401.075490' r='4' fill ='blue' />
-<circle cx ='654.983591' cy ='401.024243' r='4' fill ='blue' />
-<circle cx ='658.890129' cy ='400.959444' r='4' fill ='blue' />
-<circle cx ='660.363097' cy ='400.935012' r='4' fill ='blue' />
-<circle cx ='661.844246' cy ='400.910443' r='4' fill ='blue' />
-<circle cx ='677.939799' cy ='400.643460' r='4' fill ='blue' />
-<circle cx ='678.560750' cy ='400.633160' r='4' fill ='blue' />
-<circle cx ='680.821864' cy ='400.595654' r='4' fill ='blue' />
-<circle cx ='681.656588' cy ='400.581808' r='4' fill ='blue' />
-<circle cx ='694.926381' cy ='400.361697' r='4' fill ='blue' />
-<circle cx ='701.525509' cy ='400.252235' r='4' fill ='blue' />
-<circle cx ='715.571116' cy ='400.019255' r='4' fill ='blue' />
-<circle cx ='716.310307' cy ='400.006994' r='4' fill ='blue' />
-<circle cx ='717.043824' cy ='399.994827' r='4' fill ='blue' />
-<circle cx ='719.567140' cy ='399.952972' r='4' fill ='blue' />
-<circle cx ='719.849368' cy ='399.948290' r='4' fill ='blue' />
-<circle cx ='722.288013' cy ='399.907840' r='4' fill ='blue' />
-<circle cx ='722.548644' cy ='399.903516' r='4' fill ='blue' />
-<circle cx ='728.934419' cy ='399.797593' r='4' fill ='blue' />
-<circle cx ='737.873892' cy ='399.649311' r='4' fill ='blue' />
-<circle cx ='740.854934' cy ='399.599863' r='4' fill ='blue' />
-<circle cx ='745.979401' cy ='399.514862' r='4' fill ='blue' />
-<circle cx ='747.628581' cy ='399.487506' r='4' fill ='blue' />
-<circle cx ='748.075768' cy ='399.480088' r='4' fill ='blue' />
-<circle cx ='748.670204' cy ='399.470228' r='4' fill ='blue' />
-<circle cx ='749.762926' cy ='399.452103' r='4' fill ='blue' />
-<circle cx ='750.000000' cy ='399.448170' r='4' fill ='blue' />
+<circle cx ='50.000000' cy ='522.480127' r='4' fill ='blue' />
+<circle cx ='51.344133' cy ='522.448200' r='4' fill ='blue' />
+<circle cx ='52.006049' cy ='522.432478' r='4' fill ='blue' />
+<circle cx ='58.913936' cy ='522.268397' r='4' fill ='blue' />
+<circle cx ='68.652145' cy ='522.037088' r='4' fill ='blue' />
+<circle cx ='73.713856' cy ='521.916859' r='4' fill ='blue' />
+<circle cx ='75.675585' cy ='521.870262' r='4' fill ='blue' />
+<circle cx ='81.051259' cy ='521.742576' r='4' fill ='blue' />
+<circle cx ='89.900256' cy ='521.532388' r='4' fill ='blue' />
+<circle cx ='97.470904' cy ='521.352565' r='4' fill ='blue' />
+<circle cx ='106.883012' cy ='521.129002' r='4' fill ='blue' />
+<circle cx ='125.917699' cy ='520.676876' r='4' fill ='blue' />
+<circle cx ='137.832178' cy ='520.393875' r='4' fill ='blue' />
+<circle cx ='146.133160' cy ='520.196704' r='4' fill ='blue' />
+<circle cx ='148.037699' cy ='520.151466' r='4' fill ='blue' />
+<circle cx ='165.857074' cy ='519.728208' r='4' fill ='blue' />
+<circle cx ='166.287835' cy ='519.717976' r='4' fill ='blue' />
+<circle cx ='171.312867' cy ='519.598618' r='4' fill ='blue' />
+<circle cx ='172.375451' cy ='519.573379' r='4' fill ='blue' />
+<circle cx ='175.541775' cy ='519.498170' r='4' fill ='blue' />
+<circle cx ='188.557130' cy ='519.189020' r='4' fill ='blue' />
+<circle cx ='198.372040' cy ='518.955890' r='4' fill ='blue' />
+<circle cx ='214.241104' cy ='518.578956' r='4' fill ='blue' />
+<circle cx ='220.099215' cy ='518.439810' r='4' fill ='blue' />
+<circle cx ='220.251585' cy ='518.436191' r='4' fill ='blue' />
+<circle cx ='222.931674' cy ='518.372532' r='4' fill ='blue' />
+<circle cx ='227.757450' cy ='518.257907' r='4' fill ='blue' />
+<circle cx ='227.804110' cy ='518.256798' r='4' fill ='blue' />
+<circle cx ='232.066524' cy ='518.155554' r='4' fill ='blue' />
+<circle cx ='233.292850' cy ='518.126426' r='4' fill ='blue' />
+<circle cx ='235.514094' cy ='518.073665' r='4' fill ='blue' />
+<circle cx ='237.264856' cy ='518.032080' r='4' fill ='blue' />
+<circle cx ='241.318633' cy ='517.935792' r='4' fill ='blue' />
+<circle cx ='244.475689' cy ='517.860803' r='4' fill ='blue' />
+<circle cx ='252.707179' cy ='517.665283' r='4' fill ='blue' />
+<circle cx ='253.590125' cy ='517.644311' r='4' fill ='blue' />
+<circle cx ='260.241334' cy ='517.486326' r='4' fill ='blue' />
+<circle cx ='261.952682' cy ='517.445677' r='4' fill ='blue' />
+<circle cx ='264.379872' cy ='517.388025' r='4' fill ='blue' />
+<circle cx ='272.443281' cy ='517.196497' r='4' fill ='blue' />
+<circle cx ='274.910742' cy ='517.137888' r='4' fill ='blue' />
+<circle cx ='275.411987' cy ='517.125982' r='4' fill ='blue' />
+<circle cx ='276.499005' cy ='517.100163' r='4' fill ='blue' />
+<circle cx ='278.379669' cy ='517.055492' r='4' fill ='blue' />
+<circle cx ='282.581643' cy ='516.955684' r='4' fill ='blue' />
+<circle cx ='285.528541' cy ='516.885687' r='4' fill ='blue' />
+<circle cx ='288.747893' cy ='516.809219' r='4' fill ='blue' />
+<circle cx ='289.640626' cy ='516.788014' r='4' fill ='blue' />
+<circle cx ='291.111979' cy ='516.753065' r='4' fill ='blue' />
+<circle cx ='292.373028' cy ='516.723112' r='4' fill ='blue' />
+<circle cx ='308.741333' cy ='516.334320' r='4' fill ='blue' />
+<circle cx ='312.051573' cy ='516.255693' r='4' fill ='blue' />
+<circle cx ='324.672449' cy ='515.955913' r='4' fill ='blue' />
+<circle cx ='326.757942' cy ='515.906377' r='4' fill ='blue' />
+<circle cx ='327.662119' cy ='515.884900' r='4' fill ='blue' />
+<circle cx ='331.779616' cy ='515.787099' r='4' fill ='blue' />
+<circle cx ='336.506466' cy ='515.674823' r='4' fill ='blue' />
+<circle cx ='342.836923' cy ='515.524458' r='4' fill ='blue' />
+<circle cx ='345.508510' cy ='515.461000' r='4' fill ='blue' />
+<circle cx ='349.015180' cy ='515.377707' r='4' fill ='blue' />
+<circle cx ='352.784464' cy ='515.288177' r='4' fill ='blue' />
+<circle cx ='353.416962' cy ='515.273153' r='4' fill ='blue' />
+<circle cx ='354.342607' cy ='515.251167' r='4' fill ='blue' />
+<circle cx ='363.110322' cy ='515.042910' r='4' fill ='blue' />
+<circle cx ='363.574384' cy ='515.031887' r='4' fill ='blue' />
+<circle cx ='369.975196' cy ='514.879850' r='4' fill ='blue' />
+<circle cx ='375.338988' cy ='514.752446' r='4' fill ='blue' />
+<circle cx ='379.154924' cy ='514.661807' r='4' fill ='blue' />
+<circle cx ='379.412752' cy ='514.655683' r='4' fill ='blue' />
+<circle cx ='390.257576' cy ='514.398089' r='4' fill ='blue' />
+<circle cx ='390.499301' cy ='514.392347' r='4' fill ='blue' />
+<circle cx ='396.493913' cy ='514.249959' r='4' fill ='blue' />
+<circle cx ='407.296110' cy ='513.993378' r='4' fill ='blue' />
+<circle cx ='418.223629' cy ='513.733820' r='4' fill ='blue' />
+<circle cx ='418.223629' cy ='513.733820' r='4' fill ='blue' />
+<circle cx ='418.223629' cy ='513.733820' r='4' fill ='blue' />
+<circle cx ='418.223629' cy ='513.733820' r='4' fill ='blue' />
+<circle cx ='418.223629' cy ='513.733820' r='4' fill ='blue' />
+<circle cx ='418.223629' cy ='513.733820' r='4' fill ='blue' />
+<circle cx ='418.223629' cy ='513.733820' r='4' fill ='blue' />
+<circle cx ='418.223629' cy ='513.733820' r='4' fill ='blue' />
+<circle cx ='418.223629' cy ='513.733820' r='4' fill ='blue' />
+<circle cx ='418.223629' cy ='513.733820' r='4' fill ='blue' />
+<circle cx ='418.223629' cy ='513.733820' r='4' fill ='blue' />
+<circle cx ='418.223629' cy ='513.733820' r='4' fill ='blue' />
+<circle cx ='418.223629' cy ='513.733820' r='4' fill ='blue' />
+<circle cx ='418.223629' cy ='513.733820' r='4' fill ='blue' />
+<circle cx ='418.223629' cy ='513.733820' r='4' fill ='blue' />
+<circle cx ='418.223629' cy ='513.733820' r='4' fill ='blue' />
+<circle cx ='418.223629' cy ='513.733820' r='4' fill ='blue' />
+<circle cx ='418.223629' cy ='513.733820' r='4' fill ='blue' />
+<circle cx ='418.223629' cy ='513.733820' r='4' fill ='blue' />
+<circle cx ='418.223629' cy ='513.733820' r='4' fill ='blue' />
+<circle cx ='418.223629' cy ='513.733820' r='4' fill ='blue' />
+<circle cx ='418.223629' cy ='513.733820' r='4' fill ='blue' />
+<circle cx ='418.223629' cy ='513.733820' r='4' fill ='blue' />
+<circle cx ='418.223629' cy ='513.733820' r='4' fill ='blue' />
+<circle cx ='418.223629' cy ='513.733820' r='4' fill ='blue' />
+<circle cx ='418.223629' cy ='513.733820' r='4' fill ='blue' />
+<circle cx ='418.223629' cy ='513.733820' r='4' fill ='blue' />
+<circle cx ='418.223629' cy ='513.733820' r='4' fill ='blue' />
+<circle cx ='418.223629' cy ='513.733820' r='4' fill ='blue' />
+<circle cx ='418.223629' cy ='513.733820' r='4' fill ='blue' />
+<circle cx ='418.223629' cy ='513.733820' r='4' fill ='blue' />
+<circle cx ='418.223629' cy ='513.733820' r='4' fill ='blue' />
+<circle cx ='418.223629' cy ='513.733820' r='4' fill ='blue' />
+<circle cx ='418.223629' cy ='513.733820' r='4' fill ='blue' />
+<circle cx ='418.223629' cy ='513.733820' r='4' fill ='blue' />
+<circle cx ='418.223629' cy ='513.733820' r='4' fill ='blue' />
+<circle cx ='421.223871' cy ='513.662556' r='4' fill ='blue' />
+<circle cx ='421.223871' cy ='513.662556' r='4' fill ='blue' />
+<circle cx ='421.223871' cy ='513.662556' r='4' fill ='blue' />
+<circle cx ='421.223871' cy ='513.662556' r='4' fill ='blue' />
+<circle cx ='421.223871' cy ='513.662556' r='4' fill ='blue' />
+<circle cx ='421.223871' cy ='513.662556' r='4' fill ='blue' />
+<circle cx ='421.223871' cy ='513.662556' r='4' fill ='blue' />
+<circle cx ='421.223871' cy ='513.662556' r='4' fill ='blue' />
+<circle cx ='421.223871' cy ='513.662556' r='4' fill ='blue' />
+<circle cx ='421.223871' cy ='513.662556' r='4' fill ='blue' />
+<circle cx ='421.223871' cy ='513.662556' r='4' fill ='blue' />
+<circle cx ='421.223871' cy ='513.662556' r='4' fill ='blue' />
+<circle cx ='421.223871' cy ='513.662556' r='4' fill ='blue' />
+<circle cx ='421.223871' cy ='513.662556' r='4' fill ='blue' />
+<circle cx ='421.223871' cy ='513.662556' r='4' fill ='blue' />
+<circle cx ='421.223871' cy ='513.662556' r='4' fill ='blue' />
+<circle cx ='421.223871' cy ='513.662556' r='4' fill ='blue' />
+<circle cx ='421.223871' cy ='513.662556' r='4' fill ='blue' />
+<circle cx ='421.223871' cy ='513.662556' r='4' fill ='blue' />
+<circle cx ='421.223871' cy ='513.662556' r='4' fill ='blue' />
+<circle cx ='421.223871' cy ='513.662556' r='4' fill ='blue' />
+<circle cx ='421.223871' cy ='513.662556' r='4' fill ='blue' />
+<circle cx ='421.223871' cy ='513.662556' r='4' fill ='blue' />
+<circle cx ='421.223871' cy ='513.662556' r='4' fill ='blue' />
+<circle cx ='421.223871' cy ='513.662556' r='4' fill ='blue' />
+<circle cx ='421.223871' cy ='513.662556' r='4' fill ='blue' />
+<circle cx ='421.223871' cy ='513.662556' r='4' fill ='blue' />
+<circle cx ='421.223871' cy ='513.662556' r='4' fill ='blue' />
+<circle cx ='421.223871' cy ='513.662556' r='4' fill ='blue' />
+<circle cx ='421.223871' cy ='513.662556' r='4' fill ='blue' />
+<circle cx ='421.223871' cy ='513.662556' r='4' fill ='blue' />
+<circle cx ='421.223871' cy ='513.662556' r='4' fill ='blue' />
+<circle cx ='421.223871' cy ='513.662556' r='4' fill ='blue' />
+<circle cx ='421.223871' cy ='513.662556' r='4' fill ='blue' />
+<circle cx ='421.223871' cy ='513.662556' r='4' fill ='blue' />
+<circle cx ='421.223871' cy ='513.662556' r='4' fill ='blue' />
+<circle cx ='421.223871' cy ='513.662556' r='4' fill ='blue' />
+<circle cx ='421.223871' cy ='513.662556' r='4' fill ='blue' />
+<circle cx ='421.223871' cy ='513.662556' r='4' fill ='blue' />
+<circle cx ='421.223871' cy ='513.662556' r='4' fill ='blue' />
+<circle cx ='421.223871' cy ='513.662556' r='4' fill ='blue' />
+<circle cx ='421.223871' cy ='513.662556' r='4' fill ='blue' />
+<circle cx ='421.223871' cy ='513.662556' r='4' fill ='blue' />
+<circle cx ='421.223871' cy ='513.662556' r='4' fill ='blue' />
+<circle cx ='421.223871' cy ='513.662556' r='4' fill ='blue' />
+<circle cx ='421.223871' cy ='513.662556' r='4' fill ='blue' />
+<circle cx ='421.223871' cy ='513.662556' r='4' fill ='blue' />
+<circle cx ='421.223871' cy ='513.662556' r='4' fill ='blue' />
+<circle cx ='421.223871' cy ='513.662556' r='4' fill ='blue' />
+<circle cx ='421.223871' cy ='513.662556' r='4' fill ='blue' />
+<circle cx ='421.223871' cy ='513.662556' r='4' fill ='blue' />
+<circle cx ='421.223871' cy ='513.662556' r='4' fill ='blue' />
+<circle cx ='421.223871' cy ='513.662556' r='4' fill ='blue' />
+<circle cx ='421.223871' cy ='513.662556' r='4' fill ='blue' />
+<circle cx ='421.223871' cy ='513.662556' r='4' fill ='blue' />
+<circle cx ='421.223871' cy ='513.662556' r='4' fill ='blue' />
+<circle cx ='421.223871' cy ='513.662556' r='4' fill ='blue' />
+<circle cx ='421.223871' cy ='513.662556' r='4' fill ='blue' />
+<circle cx ='421.223871' cy ='513.662556' r='4' fill ='blue' />
+<circle cx ='421.223871' cy ='513.662556' r='4' fill ='blue' />
+<circle cx ='421.223871' cy ='513.662556' r='4' fill ='blue' />
+<circle cx ='421.223871' cy ='513.662556' r='4' fill ='blue' />
+<circle cx ='421.223871' cy ='513.662556' r='4' fill ='blue' />
+<circle cx ='421.223871' cy ='513.662556' r='4' fill ='blue' />
+<circle cx ='421.223871' cy ='513.662556' r='4' fill ='blue' />
+<circle cx ='421.223871' cy ='513.662556' r='4' fill ='blue' />
+<circle cx ='421.223871' cy ='513.662556' r='4' fill ='blue' />
+<circle cx ='427.762121' cy ='513.507255' r='4' fill ='blue' />
+<circle cx ='429.423694' cy ='513.467788' r='4' fill ='blue' />
+<circle cx ='431.713517' cy ='513.413398' r='4' fill ='blue' />
+<circle cx ='435.645981' cy ='513.319992' r='4' fill ='blue' />
+<circle cx ='439.116127' cy ='513.237566' r='4' fill ='blue' />
+<circle cx ='439.155954' cy ='513.236620' r='4' fill ='blue' />
+<circle cx ='439.208886' cy ='513.235363' r='4' fill ='blue' />
+<circle cx ='443.118698' cy ='513.142494' r='4' fill ='blue' />
+<circle cx ='448.725103' cy ='513.009327' r='4' fill ='blue' />
+<circle cx ='453.045145' cy ='512.906714' r='4' fill ='blue' />
+<circle cx ='454.031829' cy ='512.883278' r='4' fill ='blue' />
+<circle cx ='458.012222' cy ='512.788733' r='4' fill ='blue' />
+<circle cx ='459.331134' cy ='512.757405' r='4' fill ='blue' />
+<circle cx ='481.649647' cy ='512.227280' r='4' fill ='blue' />
+<circle cx ='484.789921' cy ='512.152690' r='4' fill ='blue' />
+<circle cx ='486.529467' cy ='512.111371' r='4' fill ='blue' />
+<circle cx ='492.093901' cy ='511.979201' r='4' fill ='blue' />
+<circle cx ='498.183872' cy ='511.834547' r='4' fill ='blue' />
+<circle cx ='499.618295' cy ='511.800476' r='4' fill ='blue' />
+<circle cx ='499.669683' cy ='511.799255' r='4' fill ='blue' />
+<circle cx ='501.021370' cy ='511.767149' r='4' fill ='blue' />
+<circle cx ='510.588307' cy ='511.539909' r='4' fill ='blue' />
+<circle cx ='513.656479' cy ='511.467031' r='4' fill ='blue' />
+<circle cx ='514.661879' cy ='511.443150' r='4' fill ='blue' />
+<circle cx ='523.260658' cy ='511.238906' r='4' fill ='blue' />
+<circle cx ='524.821047' cy ='511.201842' r='4' fill ='blue' />
+<circle cx ='525.460055' cy ='511.186664' r='4' fill ='blue' />
+<circle cx ='531.743795' cy ='511.037408' r='4' fill ='blue' />
+<circle cx ='534.102786' cy ='510.981376' r='4' fill ='blue' />
+<circle cx ='542.681374' cy ='510.777611' r='4' fill ='blue' />
+<circle cx ='552.164336' cy ='510.552365' r='4' fill ='blue' />
+<circle cx ='553.785014' cy ='510.513870' r='4' fill ='blue' />
+<circle cx ='560.873163' cy ='510.345507' r='4' fill ='blue' />
+<circle cx ='571.208989' cy ='510.100003' r='4' fill ='blue' />
+<circle cx ='577.599306' cy ='509.948216' r='4' fill ='blue' />
+<circle cx ='580.260789' cy ='509.884999' r='4' fill ='blue' />
+<circle cx ='595.345301' cy ='509.526701' r='4' fill ='blue' />
+<circle cx ='616.913776' cy ='509.014391' r='4' fill ='blue' />
+<circle cx ='618.799169' cy ='508.969608' r='4' fill ='blue' />
+<circle cx ='620.385042' cy ='508.931939' r='4' fill ='blue' />
+<circle cx ='623.116817' cy ='508.867052' r='4' fill ='blue' />
+<circle cx ='624.990554' cy ='508.822546' r='4' fill ='blue' />
+<circle cx ='626.223604' cy ='508.793257' r='4' fill ='blue' />
+<circle cx ='630.008406' cy ='508.703358' r='4' fill ='blue' />
+<circle cx ='632.900726' cy ='508.634658' r='4' fill ='blue' />
+<circle cx ='633.054669' cy ='508.631001' r='4' fill ='blue' />
+<circle cx ='648.536187' cy ='508.263273' r='4' fill ='blue' />
+<circle cx ='651.894103' cy ='508.183514' r='4' fill ='blue' />
+<circle cx ='654.983591' cy ='508.110130' r='4' fill ='blue' />
+<circle cx ='658.890129' cy ='508.017339' r='4' fill ='blue' />
+<circle cx ='660.363097' cy ='507.982352' r='4' fill ='blue' />
+<circle cx ='661.844246' cy ='507.947171' r='4' fill ='blue' />
+<circle cx ='677.939799' cy ='507.564858' r='4' fill ='blue' />
+<circle cx ='678.560750' cy ='507.550108' r='4' fill ='blue' />
+<circle cx ='680.821864' cy ='507.496401' r='4' fill ='blue' />
+<circle cx ='681.656588' cy ='507.476574' r='4' fill ='blue' />
+<circle cx ='694.926381' cy ='507.161380' r='4' fill ='blue' />
+<circle cx ='701.525509' cy ='507.004633' r='4' fill ='blue' />
+<circle cx ='715.571116' cy ='506.671012' r='4' fill ='blue' />
+<circle cx ='716.310307' cy ='506.653454' r='4' fill ='blue' />
+<circle cx ='717.043824' cy ='506.636031' r='4' fill ='blue' />
+<circle cx ='719.567140' cy ='506.576096' r='4' fill ='blue' />
+<circle cx ='719.849368' cy ='506.569392' r='4' fill ='blue' />
+<circle cx ='722.288013' cy ='506.511468' r='4' fill ='blue' />
+<circle cx ='722.548644' cy ='506.505277' r='4' fill ='blue' />
+<circle cx ='728.934419' cy ='506.353598' r='4' fill ='blue' />
+<circle cx ='737.873892' cy ='506.141261' r='4' fill ='blue' />
+<circle cx ='740.854934' cy ='506.070453' r='4' fill ='blue' />
+<circle cx ='745.979401' cy ='505.948733' r='4' fill ='blue' />
+<circle cx ='747.628581' cy ='505.909561' r='4' fill ='blue' />
+<circle cx ='748.075768' cy ='505.898939' r='4' fill ='blue' />
+<circle cx ='748.670204' cy ='505.884819' r='4' fill ='blue' />
+<circle cx ='749.762926' cy ='505.858864' r='4' fill ='blue' />
+<circle cx ='750.000000' cy ='505.853233' r='4' fill ='blue' />
 <text x="350.0" y="25.0" font-family="Verdana" font-size="50.0" text-anchor="middle"  dominant-baseline="middle" fill="green" >
 Graphe de la régression
 </text>
 <text x="350.0" y="784.0" font-family="Verdana" font-size="16.0" text-anchor="middle"  dominant-baseline="middle" fill="blue" >
 x(....)
 </text>
-<text x="16.0" y="350.0" font-family="Verdana" font-size="16.0" text-anchor="middle"  dominant-baseline="middle" fill="blue" >
+<text x="16.0" y="450.0" font-family="Verdana" font-size="16.0" text-anchor="middle"  dominant-baseline="middle" fill="blue" >
 y(.....)
 </text>
-<polyline points = '50.000000,411.059335 51.344133,411.037039 52.006049,411.026060 58.913936,410.911476 68.652145,410.749945 73.713856,410.665984 75.675585,410.633444 81.051259,410.544276 89.900256,410.397494 97.470904,410.271917 106.883012,410.115795 125.917699,409.800059 137.832178,409.602429 146.133160,409.464738 148.037699,409.433147 165.857074,409.137570 166.287835,409.130425 171.312867,409.047073 172.375451,409.029447 175.541775,408.976926 188.557130,408.761035 198.372040,408.598232 214.241104,408.335006 220.099215,408.237835 220.251585,408.235308 222.931674,408.190852 227.757450,408.110805 227.804110,408.110031 232.066524,408.039329 233.292850,408.018987 235.514094,407.982143 237.264856,407.953102 241.318633,407.885860 244.475689,407.833493 252.707179,407.696954 253.590125,407.682309 260.241334,407.571982 261.952682,407.543596 264.379872,407.503335 272.443281,407.369584 274.910742,407.328655 275.411987,407.320341 276.499005,407.302310 278.379669,407.271115 282.581643,407.201415 285.528541,407.152534 288.747893,407.099133 289.640626,407.084325 291.111979,407.059919 292.373028,407.039002 308.741333,406.767495 312.051573,406.712586 324.672449,406.503239 326.757942,406.468646 327.662119,406.453648 331.779616,406.385350 336.506466,406.306944 342.836923,406.201938 345.508510,406.157624 349.015180,406.099457 352.784464,406.036935 353.416962,406.026443 354.342607,406.011089 363.110322,405.865656 363.574384,405.857958 369.975196,405.751785 375.338988,405.662814 379.154924,405.599518 379.412752,405.595241 390.257576,405.415354 390.499301,405.411344 396.493913,405.311909 407.296110,405.132729 420.162561,404.919309 420.162561,404.919309 420.162561,404.919309 420.162561,404.919309 420.162561,404.919309 420.162561,404.919309 420.162561,404.919309 420.162561,404.919309 420.162561,404.919309 420.162561,404.919309 420.162561,404.919309 420.162561,404.919309 420.162561,404.919309 420.162561,404.919309 420.162561,404.919309 420.162561,404.919309 420.162561,404.919309 420.162561,404.919309 420.162561,404.919309 420.162561,404.919309 420.162561,404.919309 420.162561,404.919309 420.162561,404.919309 420.162561,404.919309 420.162561,404.919309 420.162561,404.919309 420.162561,404.919309 420.162561,404.919309 420.162561,404.919309 420.162561,404.919309 420.162561,404.919309 420.162561,404.919309 420.162561,404.919309 420.162561,404.919309 420.162561,404.919309 420.162561,404.919309 420.162561,404.919309 420.162561,404.919309 420.162561,404.919309 420.162561,404.919309 420.162561,404.919309 420.162561,404.919309 420.162561,404.919309 420.162561,404.919309 420.162561,404.919309 420.162561,404.919309 420.162561,404.919309 420.162561,404.919309 420.162561,404.919309 420.162561,404.919309 420.162561,404.919309 420.162561,404.919309 420.162561,404.919309 420.162561,404.919309 420.162561,404.919309 420.162561,404.919309 420.162561,404.919309 420.162561,404.919309 420.162561,404.919309 420.162561,404.919309 420.162561,404.919309 420.162561,404.919309 420.162561,404.919309 420.162561,404.919309 420.162561,404.919309 420.162561,404.919309 420.162561,404.919309 420.162561,404.919309 420.162561,404.919309 420.162561,404.919309 420.162561,404.919309 420.162561,404.919309 420.162561,404.919309 420.162561,404.919309 420.162561,404.919309 420.162561,404.919309 420.162561,404.919309 420.162561,404.919309 420.162561,404.919309 420.162561,404.919309 420.162561,404.919309 420.162561,404.919309 420.162561,404.919309 420.162561,404.919309 420.162561,404.919309 420.162561,404.919309 420.162561,404.919309 420.162561,404.919309 420.162561,404.919309 420.162561,404.919309 420.162561,404.919309 420.162561,404.919309 420.162561,404.919309 420.162561,404.919309 420.162561,404.919309 420.162561,404.919309 420.162561,404.919309 420.162561,404.919309 420.162561,404.919309 420.162561,404.919309 420.162561,404.919309 420.162561,404.919309 420.162561,404.919309 427.762121,404.793252 429.423694,404.765691 431.713517,404.727709 435.645981,404.662479 439.116127,404.604919 439.155954,404.604258 439.208886,404.603380 443.118698,404.538526 448.725103,404.445531 453.045145,404.373873 454.031829,404.357506 458.012222,404.291482 459.331134,404.269605 481.649647,403.899399 484.789921,403.847310 486.529467,403.818456 492.093901,403.726156 498.183872,403.625140 499.618295,403.601346 499.669683,403.600494 501.021370,403.578073 510.588307,403.419383 513.656479,403.368490 514.661879,403.351813 523.260658,403.209181 524.821047,403.183299 525.460055,403.172699 531.743795,403.068469 534.102786,403.029339 542.681374,402.887043 552.164336,402.729745 553.785014,402.702862 560.873163,402.585289 571.208989,402.413844 577.599306,402.307846 580.260789,402.263699 595.345301,402.013486 616.913776,401.655722 618.799169,401.624448 620.385042,401.598143 623.116817,401.552830 624.990554,401.521749 626.223604,401.501296 630.008406,401.438516 632.900726,401.390540 633.054669,401.387987 648.536187,401.131189 651.894103,401.075490 654.983591,401.024243 658.890129,400.959444 660.363097,400.935012 661.844246,400.910443 677.939799,400.643460 678.560750,400.633160 680.821864,400.595654 681.656588,400.581808 694.926381,400.361697 701.525509,400.252235 715.571116,400.019255 716.310307,400.006994 717.043824,399.994827 719.567140,399.952972 719.849368,399.948290 722.288013,399.907840 722.548644,399.903516 728.934419,399.797593 737.873892,399.649311 740.854934,399.599863 745.979401,399.514862 747.628581,399.487506 748.075768,399.480088 748.670204,399.470228 749.762926,399.452103 750.000000,399.448170 ' stroke='red' stroke-width='2' fill='none'/>
+<polyline points = '50.000000,522.480127 51.344133,522.448200 52.006049,522.432478 58.913936,522.268397 68.652145,522.037088 73.713856,521.916859 75.675585,521.870262 81.051259,521.742576 89.900256,521.532388 97.470904,521.352565 106.883012,521.129002 125.917699,520.676876 137.832178,520.393875 146.133160,520.196704 148.037699,520.151466 165.857074,519.728208 166.287835,519.717976 171.312867,519.598618 172.375451,519.573379 175.541775,519.498170 188.557130,519.189020 198.372040,518.955890 214.241104,518.578956 220.099215,518.439810 220.251585,518.436191 222.931674,518.372532 227.757450,518.257907 227.804110,518.256798 232.066524,518.155554 233.292850,518.126426 235.514094,518.073665 237.264856,518.032080 241.318633,517.935792 244.475689,517.860803 252.707179,517.665283 253.590125,517.644311 260.241334,517.486326 261.952682,517.445677 264.379872,517.388025 272.443281,517.196497 274.910742,517.137888 275.411987,517.125982 276.499005,517.100163 278.379669,517.055492 282.581643,516.955684 285.528541,516.885687 288.747893,516.809219 289.640626,516.788014 291.111979,516.753065 292.373028,516.723112 308.741333,516.334320 312.051573,516.255693 324.672449,515.955913 326.757942,515.906377 327.662119,515.884900 331.779616,515.787099 336.506466,515.674823 342.836923,515.524458 345.508510,515.461000 349.015180,515.377707 352.784464,515.288177 353.416962,515.273153 354.342607,515.251167 363.110322,515.042910 363.574384,515.031887 369.975196,514.879850 375.338988,514.752446 379.154924,514.661807 379.412752,514.655683 390.257576,514.398089 390.499301,514.392347 396.493913,514.249959 407.296110,513.993378 418.223629,513.733820 418.223629,513.733820 418.223629,513.733820 418.223629,513.733820 418.223629,513.733820 418.223629,513.733820 418.223629,513.733820 418.223629,513.733820 418.223629,513.733820 418.223629,513.733820 418.223629,513.733820 418.223629,513.733820 418.223629,513.733820 418.223629,513.733820 418.223629,513.733820 418.223629,513.733820 418.223629,513.733820 418.223629,513.733820 418.223629,513.733820 418.223629,513.733820 418.223629,513.733820 418.223629,513.733820 418.223629,513.733820 418.223629,513.733820 418.223629,513.733820 418.223629,513.733820 418.223629,513.733820 418.223629,513.733820 418.223629,513.733820 418.223629,513.733820 418.223629,513.733820 418.223629,513.733820 418.223629,513.733820 418.223629,513.733820 418.223629,513.733820 418.223629,513.733820 421.223871,513.662556 421.223871,513.662556 421.223871,513.662556 421.223871,513.662556 421.223871,513.662556 421.223871,513.662556 421.223871,513.662556 421.223871,513.662556 421.223871,513.662556 421.223871,513.662556 421.223871,513.662556 421.223871,513.662556 421.223871,513.662556 421.223871,513.662556 421.223871,513.662556 421.223871,513.662556 421.223871,513.662556 421.223871,513.662556 421.223871,513.662556 421.223871,513.662556 421.223871,513.662556 421.223871,513.662556 421.223871,513.662556 421.223871,513.662556 421.223871,513.662556 421.223871,513.662556 421.223871,513.662556 421.223871,513.662556 421.223871,513.662556 421.223871,513.662556 421.223871,513.662556 421.223871,513.662556 421.223871,513.662556 421.223871,513.662556 421.223871,513.662556 421.223871,513.662556 421.223871,513.662556 421.223871,513.662556 421.223871,513.662556 421.223871,513.662556 421.223871,513.662556 421.223871,513.662556 421.223871,513.662556 421.223871,513.662556 421.223871,513.662556 421.223871,513.662556 421.223871,513.662556 421.223871,513.662556 421.223871,513.662556 421.223871,513.662556 421.223871,513.662556 421.223871,513.662556 421.223871,513.662556 421.223871,513.662556 421.223871,513.662556 421.223871,513.662556 421.223871,513.662556 421.223871,513.662556 421.223871,513.662556 421.223871,513.662556 421.223871,513.662556 421.223871,513.662556 421.223871,513.662556 421.223871,513.662556 421.223871,513.662556 421.223871,513.662556 421.223871,513.662556 427.762121,513.507255 429.423694,513.467788 431.713517,513.413398 435.645981,513.319992 439.116127,513.237566 439.155954,513.236620 439.208886,513.235363 443.118698,513.142494 448.725103,513.009327 453.045145,512.906714 454.031829,512.883278 458.012222,512.788733 459.331134,512.757405 481.649647,512.227280 484.789921,512.152690 486.529467,512.111371 492.093901,511.979201 498.183872,511.834547 499.618295,511.800476 499.669683,511.799255 501.021370,511.767149 510.588307,511.539909 513.656479,511.467031 514.661879,511.443150 523.260658,511.238906 524.821047,511.201842 525.460055,511.186664 531.743795,511.037408 534.102786,510.981376 542.681374,510.777611 552.164336,510.552365 553.785014,510.513870 560.873163,510.345507 571.208989,510.100003 577.599306,509.948216 580.260789,509.884999 595.345301,509.526701 616.913776,509.014391 618.799169,508.969608 620.385042,508.931939 623.116817,508.867052 624.990554,508.822546 626.223604,508.793257 630.008406,508.703358 632.900726,508.634658 633.054669,508.631001 648.536187,508.263273 651.894103,508.183514 654.983591,508.110130 658.890129,508.017339 660.363097,507.982352 661.844246,507.947171 677.939799,507.564858 678.560750,507.550108 680.821864,507.496401 681.656588,507.476574 694.926381,507.161380 701.525509,507.004633 715.571116,506.671012 716.310307,506.653454 717.043824,506.636031 719.567140,506.576096 719.849368,506.569392 722.288013,506.511468 722.548644,506.505277 728.934419,506.353598 737.873892,506.141261 740.854934,506.070453 745.979401,505.948733 747.628581,505.909561 748.075768,505.898939 748.670204,505.884819 749.762926,505.858864 750.000000,505.853233 ' stroke='red' stroke-width='2' fill='none'/>
 </svg>

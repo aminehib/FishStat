@@ -1,138 +1,99 @@
 package tools;
 
 import java.util.*;
-
 import model.*;
 
 public class KMeans {
 
-    public static ArrayList<Integer> Kmeans(Coords[] init_centers, int max_iter , double epsilon ,DataFrame<Fish> df , String X , String Y){
+    public static ArrayList<Integer> Kmeans(Coords[] init_centers, int max_iter, double epsilon, DataFrame<Fish> df, String X, String Y) {
 
-        if(init_centers.length == 0 )return null  ;
+        if (init_centers == null || init_centers.length == 0) return null;
 
-        ArrayList<Double> x = null ;
-        ArrayList<Double> y = null ;
-        ArrayList<Integer> labels = new ArrayList<>() ;
-        ArrayList<Double> dist = new ArrayList<>() ;
-        
-
-        Coords[] previous_centers = new Coords[init_centers.length]  ;
+        ArrayList<Double> x = df.getColumn(X);
+        ArrayList<Double> y = df.getColumn(Y) ;
 
 
+        if (x == null || y == null) return null;
 
-        switch(X){
-            case "Length":
-                x = df.getLengths() ;
-                break ;
-            
-             case "Weight":
-                x = df.getWeights() ;
-                break ;
+        int nPoints = x.size();
+        ArrayList<Integer> labels = new ArrayList<>();
+        ArrayList<Double> dist = new ArrayList<>();
 
-             case "Size":
-                x = df.getSizes() ;
-                break ;
-
-            case "Parasites":
-                x = df.getParasites();
-                break ;
-            
-             case "InfestationRate":
-                x = df.getInfestationRates() ;
-                break ;
-            
-        }
-
-        switch(Y){
-            case "Length":
-                y = df.getLengths() ;
-                break ;
-            
-             case "Weight":
-                y = df.getWeights() ;
-                break ;
-
-             case "Size":
-                y = df.getSizes() ;
-                break ;
-            
-            case  "Parasites":
-                y = df.getParasites() ;
-            
-             case "InfestationRate":
-                y = df.getInfestationRates() ;
-                break ;
-            
-        }
-        for(int i = 0 ; i < x.size() ; i++){
+        for (int i = 0; i < nPoints; i++) {
             labels.add(-1);
-            dist.add(Double.MAX_VALUE) ;
+            dist.add(Double.MAX_VALUE);
         }
 
-        Coords[] coords = Coords.init_Coords(x, y) ;
-
-        int iter = 0 ;
+        Coords[] coords = Coords.init_Coords(x, y);
 
         
-        while(iter < max_iter && !stop(init_centers , previous_centers , epsilon)){
-            iter ++ ;
-            
-            int K = 0 ;
-            for(Coords center : init_centers){
-                System.out.println("pour : " + K);
-
-                previous_centers[K] = center ;
-            
-                for(int i = 0 ; i < coords.length ; i++){
-                    if(dist.get(i) > Coords.distance(center,coords[i])){
-                        dist.set(i , Coords.distance(center,coords[i]));
-                        labels.set(i,K) ;
-                    }
-                }
-                
-                K++ ;
-            }
-
-            K =  0 ;
-
-            for(Coords center : init_centers){
-                System.out.println("pour : " + K);
-
-                previous_centers[K] = center ;
-                int n  = 0 ;
-                double mx = 0 ;
-                double my = 0  ;
-                for(int i = 0 ; i < coords.length ; i++){
-                   
-                    if(labels.get(i) == K){
-                        n++ ;
-                        if(coords[i].getX() != null){
-                            mx += coords[i].getX() ;
-                        }
-                        if(coords[i].getY() != null){
-                            my += coords[i].getY() ;
-                        }
-                    }
-                }
-                mx = mx / n ;
-                my = my / n ;
-                center.setX(mx);
-                center.setY(my);
-                K++ ;
-            }
-            
-        
+        Coords[] previous_centers = new Coords[init_centers.length];
+        for (int i = 0; i < init_centers.length; i++) {
+            previous_centers[i] = new Coords(init_centers[i].getX(), init_centers[i].getY());
         }
 
-        return labels ;
+        int iter = 0;
 
-    }
+        while (iter < max_iter) {
+            iter++;
 
-    private static boolean stop(Coords[] x , Coords[] y , double critere){
-        for(int i = 0 ; i < x.length ; i++){
-            if(Coords.distance(x[i],y[i] ) > critere )return false ;
+            
+            for (int i = 0; i < dist.size(); i++) {
+                dist.set(i, Double.MAX_VALUE);
+            }
+
+            
+            for (int i = 0; i < init_centers.length; i++) {
+                previous_centers[i] = new Coords(init_centers[i].getX(), init_centers[i].getY());
+            }
+
+            for (int k = 0; k < init_centers.length; k++) {
+                Coords center = init_centers[k];
+
+                for (int i = 0; i < coords.length; i++) {
+                    double d = Coords.distance(center, coords[i]);
+
+                    if (d < dist.get(i)) {
+                        dist.set(i, d);
+                        labels.set(i, k);
+                    }
+                }
+            }
+
+            for (int k = 0; k < init_centers.length; k++) {
+                double mx = 0;
+                double my = 0;
+                int count = 0;
+
+                for (int i = 0; i < coords.length; i++) {
+                    if (labels.get(i) == k) {
+                        mx += coords[i].getX();
+                        my += coords[i].getY();
+                        count++;
+                    }
+                }
+
+                if (count > 0) {
+                    init_centers[k].setX(mx / count);
+                    init_centers[k].setY(my / count);
+                }
+            }
+
+           
+            if (stop(init_centers, previous_centers, epsilon)) {
+                break;
+            }
         }
-        return true ;
+
+        return labels;
     }
-    
+
+    private static boolean stop(Coords[] current, Coords[] previous, double epsilon) {
+        for (int i = 0; i < current.length; i++) {
+            if (Coords.distance(current[i], previous[i]) > epsilon) {
+                return false;
+            }
+        }
+        return true;
+    }
 }

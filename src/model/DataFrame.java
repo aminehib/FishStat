@@ -135,8 +135,32 @@ public class DataFrame<T extends Data>  {
 
     }
 
-    
+    public ArrayList<Double> getColumn(String column ){
+        ArrayList<Double> x = null ;
+        
+             switch(column){
+            case "Length":
+                x = getLengths() ;
+                break ;
+            
+             case "Weight":
+                x = getWeights() ;
+                break ;
 
+             case "Size":
+                x = getSizes() ;
+                break ;
+
+            case "Parasites":
+                x = getParasites();
+                break ;
+            
+             case "InfestationRate":
+                x = getInfestationRates() ;
+                break ;
+        }
+        return x ; 
+    }
 
 
 

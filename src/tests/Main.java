@@ -12,6 +12,7 @@ import graphique.SvgGenerator;
 import model.DataFrame;
 import model.Fish;
 import model.Population;
+import traitements.KmeansCompletion;
 import traitements.LinearRegressionCompletion;
 import traitements.MeanValueCompletion;
 
@@ -58,7 +59,7 @@ public class Main {
 
         Double[] errors = {0.0,0.1,0.0,0.1};
         
-        Traitement t = new MeanValueCompletion();
+        Traitement t = new KmeansCompletion();
 
         t.clean(df ,errors );
         System.out.println("completion");
@@ -68,25 +69,21 @@ public class Main {
         Population pop = new Population(df);
         System.out.println(pop);
 
-        new LinearRegressionCompletion().Complete(df, "InfestationRate", "Parasites");
+        //new LinearRegressionCompletion().Complete(df, "InfestationRate", "Parasites");
 
        System.out.println(df);
 
         
 
 
-        SvgGenerator.GenerateSVG(df,800,800,50,10,10,1);
+        SvgGenerator.GenerateSVG(df,1000,800,50,100,10,1);
 
         LinearRegression model = new LinearRegression(df.getSizes(), df.getInfestationRates());
         System.out.println(model.getCoeff()+ " " + model.getIntercept() + " "+ df.getSpecies().size()); 
-        Coords[] c = new Coords[2] ;
-        c[1] = new Coords(new MeanValue(df.getLengths()).getMean(), 40.0);
-        c[0] = new Coords(50.0, 80.0);
+        
+        
 
-        ArrayList<Integer> labels = KMeans.Kmeans(c, 300, 0.005, df, "Length", "Parasites");
-        for(Integer l : labels){
-            System.out.println(l);
-        }
+       
         
     }
 

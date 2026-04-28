@@ -56,11 +56,10 @@ public class CsvReader {
                 return null;
             }
 
-            System.out.println("Works");
+            
             while( (line = buffer.readLine() ) != null){
             
-            
-                
+        
                 Fish poisson = null;
                 Population population = null;
                 if(type.equals(Fish.class)) poisson = new Fish(null, null, null, null, null) ;
@@ -70,7 +69,6 @@ public class CsvReader {
                     if(type.equals(Fish.class)){
                     switch (key) {
                         case "Species":
-                        
                             poisson.setSpecies(ligne[headerIndex.get(key)]) ;
                             break;
 
@@ -221,6 +219,7 @@ public static <T extends Data> ArrayList<T> readCsvFormat(String name ,String sp
                 System.out.println("Erreur:Aucune colonne ne correspond");
                 return null;
             }
+
             Fish poisson = null;
             Population population = null;
             int counter = 0 ;
@@ -373,7 +372,6 @@ public static <T extends Data> ArrayList<T> readCsvFormat(String name ,String sp
             counter ++ ;
 
         }
-            
             
 
         }catch(IOException e){

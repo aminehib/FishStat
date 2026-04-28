@@ -10,7 +10,6 @@ public abstract class Data{
     public abstract Double getWeight() ;
     public abstract Integer getParasites() ;
     public abstract String getSpecies() ;
-
     public abstract java.util.HashSet<String> getContent() ;
     public abstract void addContent(String content) ;
     
