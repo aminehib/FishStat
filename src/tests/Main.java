@@ -69,14 +69,14 @@ public class Main {
         //Population pop = new Population(df);
         //System.out.println(pop);
 
-        //new LinearRegressionCompletion().Complete(df, "InfestationRate", "Parasites");
+
 
        System.out.println(df);
 
         
 
 
-        SvgGenerator.GenerateSVG(df,"Size","InfestationRate",1600,1600,50,100,100,2);
+        SvgGenerator.GenerateSVG(df,"Size","InfestationRate",1600,1600,"Droite de régression",50,100,100,2);
 
         LinearRegression model = new LinearRegression(df.getSizes(), df.getInfestationRates());
         System.out.println(model.getCoeff()+ " " + model.getIntercept() + " "+ df.getSpecies().size()); 

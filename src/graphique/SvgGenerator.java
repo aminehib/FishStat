@@ -15,7 +15,7 @@ import java.nio.file.Path;
 
 public class SvgGenerator {
 
-    public static void GenerateSVG(DataFrame fish,String X ,String Y , int height , int width , int MARGE , int nbl , int nbc , int echelle ){
+    public static void GenerateSVG(DataFrame fish,String X ,String Y , int height , int width , String title ,int MARGE , int nbl , int nbc , int echelle ){
 
 
         double CELL_SIZE_X =  (width-2*MARGE) / nbc ;
@@ -71,7 +71,7 @@ public class SvgGenerator {
         }
         
         points += "' stroke='red' stroke-width='2' fill='none'/>\n";
-        SVG += text( (width-2*MARGE)/2 , MARGE /2  , MARGE , "Graphe de la régression", "green",0);
+        SVG += text( (width-2*MARGE)/2 , MARGE /2  , MARGE , title, "green",0);
         SVG += text( (width-2*MARGE)/2 , height -  MARGE / 3  , MARGE/3 , String.format("x( %s )",X ), "blue",0);
         SVG += text(width - MARGE /3  , (height-2*MARGE)/2 , MARGE / 3 , String.format("y( %s )",Y ), "blue",90);
         
@@ -106,7 +106,7 @@ public class SvgGenerator {
     
         for(int i = 0 ; i <= nbc ; i++){
             SVG += ligne(SVG_MARGE + i * SVG_CELLSIZE_X ,  SVG_MARGE , SVG_MARGE + i * SVG_CELLSIZE_X , SVG_MARGE + nbl * SVG_CELLSIZE_Y , "black", 1);
-            SVG += text(SVG_MARGE + i * SVG_CELLSIZE_X  , SVG_MARGE + nbl * SVG_CELLSIZE_Y  +SVG_MARGE /3.0 , SVG_MARGE / 5.0 ,String.format("%.2f",first_X +  ecart_X * i /nbc) , "black" , 0);
+            SVG += text(SVG_MARGE + i * SVG_CELLSIZE_X  , SVG_MARGE + nbl * SVG_CELLSIZE_Y  +SVG_MARGE /3.0 , SVG_MARGE / 5.0 ,String.format("%.2f",first_X +  ecart_X * i /nbc) , "black" , -60);
         }
 
         return SVG ;
