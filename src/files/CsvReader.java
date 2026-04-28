@@ -183,7 +183,7 @@ public class CsvReader {
 }
 
 
-public static <T extends Data> ArrayList<T> readCsvFormat(String name ,String split ,String multipleSplit ,int poucentage, LinkedHashMap<String , String > headers ,LinkedHashMap<String,String> params,int N , Class<T> type ) throws InvalidFileFormat, InvalidAttribute{
+public static <T extends Data> ArrayList<T> readCsv(String name ,String split ,String multipleSplit ,int poucentage, LinkedHashMap<String , String > headers ,LinkedHashMap<String,String> params,int N , Class<T> type ) throws InvalidFileFormat, InvalidAttribute{
 
 
       if(headers == null || headers.size() == 0 ) return null ;
