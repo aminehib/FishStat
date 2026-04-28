@@ -39,7 +39,7 @@ public abstract class Traitement implements Cleanable {
 
     @Override
     public void clean(DataFrame<Fish> Fish , Double[] errors)throws InvalidParametreLength{
-        if(errors.length != 4)throw new InvalidParametreLength("errors", 4);
+        if(errors.length != 5)throw new InvalidParametreLength("errors", 5);
         ArrayList<Fish> fish = new ArrayList<>(Fish.getData());
         LinkedHashMap<String , ArrayList<Fish> > sepecies = getSpecies(fish) ;
         for(ArrayList<Fish> poissons : sepecies.values()){
@@ -100,7 +100,7 @@ public abstract class Traitement implements Cleanable {
                 if( (parasites != null &&  boiteP.getMoustacheInf() != null  && boiteP.getMoustacheInf() != null )  && ( parasites.doubleValue()  > boiteP.getMoustacheSup()+ Math.abs(errors[1])||  parasites.doubleValue() < boiteP.getMoustacheInf()- Math.abs(errors[1]) ))
                     poisson.setParasites(null);
 
-                if((weight != null && boiteW.getMoustacheSup() != null) &&(weight > boiteW.getMoustacheSup()+ Math.abs(errors[1])||  weight < boiteW.getMoustacheInf()- Math.abs(errors[1])))
+                if((weight != null && boiteW.getMoustacheSup() != null) &&(weight > boiteW.getMoustacheSup()+ Math.abs(errors[3])||  weight < boiteW.getMoustacheInf()- Math.abs(errors[3])))
                     poisson.setWeight(null);
 
 
@@ -109,7 +109,7 @@ public abstract class Traitement implements Cleanable {
                 if((size != null && boiteS.getMoustacheSup() != null)&&(size > boiteS.getMoustacheSup() + Math.abs(errors[2])||  size < boiteS.getMoustacheInf()- Math.abs(errors[2])))
                     poisson.setSize(null);
 
-                if((length != null && boiteL.getMoustacheSup() != null) &&( length  > boiteL.getMoustacheSup() + Math.abs(errors[3])||  length  < boiteL.getMoustacheInf()- Math.abs(errors[3])))
+                if((length != null && boiteL.getMoustacheSup() != null) &&( length  > boiteL.getMoustacheSup() + Math.abs(errors[4])||  length  < boiteL.getMoustacheInf()- Math.abs(errors[4])))
                     poisson.setLength(null);
            
             }

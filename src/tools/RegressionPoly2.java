@@ -29,8 +29,9 @@ public class RegressionPoly2 {
         double Sy = 0, Sxy = 0, Sx2y = 0;
 
         for (int i = 0; i < n; i++) {
-            double xi = x.get(i);
-            double yi = y.get(i);
+            Double xi = x.get(i);
+            Double yi = y.get(i);
+            if(xi == null || yi == null) continue;
 
             double x2 = xi * xi;
             double x3 = x2 * xi;

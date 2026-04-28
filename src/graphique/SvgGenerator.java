@@ -15,26 +15,33 @@ import java.nio.file.Path;
 
 public class SvgGenerator {
 
-    public static void GenerateSVG(DataFrame fish, int height , int width , int MARGE , int nbl , int nbc , int echelle){
+    public static void GenerateSVG(DataFrame fish,String X ,String Y , int height , int width , int MARGE , int nbl , int nbc , int echelle ){
 
 
         double CELL_SIZE_X =  (width-2*MARGE) / nbc ;
         double CELL_SIZE_Y = (height-2*MARGE) / nbl ;
-        ArrayList<Fish> poissons = new ArrayList<>(fish.getData());
-        poissons.removeIf(arg->{
-            return arg.getSize() == null || arg.getInfestationRate() == null;
-        });
-        poissons.sort( (f1,f2) ->{
-            Double t1 = f1.getSize() ;
-            Double t2 = f2.getSize() ;
-            // tri croissant
-            return t1.compareTo(t2);
-        });
+        
+        ArrayList<Double> x0 = fish.getColumn(X) ;
+        ArrayList<Double> y0 = fish.getColumn(Y) ;
 
-        if(poissons.size() == 0){
+        for(int i = x0.size() - 1; i >= 0; i--){
+             if(x0.get(i) == null || y0.get(i) == null){
+                x0.remove(i);
+                y0.remove(i);
+            }
+        }
+
+        if(x0.size() == 0){
             System.out.println("Données manquantes");
             return ;
         }
+
+        x0.sort( (f1,f2) ->{
+            // tri croissant
+            return f1.compareTo(f2);
+        });
+
+       
 
 
         OutputStream out  = null ;
@@ -46,25 +53,27 @@ public class SvgGenerator {
         String SVG  = initialiserSVG(width,height ) ;
         
         String points = "<polyline points = '" ;
-        double first_X = poissons.get(0).getSize() ;
-        double last_X = poissons.get(poissons.size()-1).getSize() ;
-        LinearRegression model = new LinearRegression(fish.getSizes(), fish.getInfestationRates());
+        double first_X = x0.get(0) ;
+        double last_X = x0.get(x0.size()-1) ;
+    
+           
+        LinearRegression model = new LinearRegression(fish.getColumn(X), fish.getColumn(Y));
        
 
            
         SVG += dessinerGrilleEtMarge(nbc, nbl, CELL_SIZE_X, CELL_SIZE_Y, MARGE ,first_X ,  last_X -first_X ,0 , echelle );
-
-        for(Fish poisson : poissons){
-            double x = MARGE + ( (poisson.getSize() - first_X) / (last_X - first_X) ) *nbc*CELL_SIZE_X ;
-            double y = MARGE + (1 - ( (model.predict(poisson.getSize()) ) / (echelle ) ) )*nbl*CELL_SIZE_Y;
+        
+        for(int i = 0 ; i < x0.size() ; i++){
+            double x = MARGE + ( ( x0.get(i) - first_X) / (last_X - first_X) ) *nbc*CELL_SIZE_X ;
+            double y = MARGE + (1 - ( ( model.predict(x0.get(i) )  / echelle  ) ))  *nbl*CELL_SIZE_Y;
             points  += String.format("%f,%f ",x,y);
             SVG += String.format("<circle cx ='%f' cy ='%f' r='4' fill ='blue' />\n",x , y) ;
         }
         
         points += "' stroke='red' stroke-width='2' fill='none'/>\n";
-        SVG += text( (width-2*MARGE)/2 , MARGE /2  , MARGE , "Graphe de la régression", "green");
-        SVG += text( (width-2*MARGE)/2 , width -  MARGE / 3  , MARGE/3 , "x(....)", "blue");
-        SVG += text(MARGE /3  , (height-2*MARGE)/2 , MARGE / 3 , "y(.....)", "blue");
+        SVG += text( (width-2*MARGE)/2 , MARGE /2  , MARGE , "Graphe de la régression", "green",0);
+        SVG += text( (width-2*MARGE)/2 , height -  MARGE / 3  , MARGE/3 , String.format("x( %s )",X ), "blue",0);
+        SVG += text(width - MARGE /3  , (height-2*MARGE)/2 , MARGE / 3 , String.format("y( %s )",Y ), "blue",90);
         
         SVG += points + "</svg>" ;
         
@@ -75,20 +84,6 @@ public class SvgGenerator {
         }
         
     }
-
-    private static String grille(int length , int width ,double start, double end){
-        String svg = "" ;
-        for(int i = 0 ; i <= 10 ; i++){
-            svg += String.format("<line x1='%d' y1='%d' x2='%d' y2='%d' stroke='black' stroke-width='1' />", 0 , i*100 , width , i*100);
-            svg += String.format("<text x='%d' y='%d' >%d %%</text>" , width , i*100 , 100-i*10) ;
-        }
-        for(int i = 0 ; i <= 10 ; i++){
-            svg += String.format("<line x1='%d' y1='%d' x2='%d' y2='%d' stroke='black' stroke-width='1' />", i*(width/10) , 0 , i*(width/10), length);
-            svg += String.format("<text x='%d' y='%d'>%.1f </text>" , i*(width/10) , length +20 , start +i* ( (end -start)/ ((width/100))) );
-        }
-        return svg ;
-    }
-
 
     private static String initialiserSVG(int largeur, int hauteur){
         String SVG ="" ;
@@ -104,14 +99,14 @@ public class SvgGenerator {
     private static String dessinerGrilleEtMarge(int nbc, int nbl ,double SVG_CELLSIZE_X , double SVG_CELLSIZE_Y ,  int SVG_MARGE ,double first_X , double ecart_X , double first_Y , double ecart_Y){
         String SVG ="" ;
         for(int i = 0 ; i <= nbl ; i++){
-            SVG += ligne(SVG_MARGE , SVG_MARGE + i * SVG_CELLSIZE_Y, SVG_MARGE + nbc * SVG_CELLSIZE_Y, SVG_MARGE + i * SVG_CELLSIZE_Y ,"black",1);
-            SVG += text(SVG_MARGE / 2.0 , SVG_MARGE + i * SVG_CELLSIZE_Y , SVG_CELLSIZE_Y / 10 ,String.format("%.2f",first_Y +ecart_Y *(nbl - i) / nbl ) , "black" );
+            SVG += ligne(SVG_MARGE , SVG_MARGE + i * SVG_CELLSIZE_Y, SVG_MARGE + nbc * SVG_CELLSIZE_X, SVG_MARGE + i * SVG_CELLSIZE_Y ,"black",1);
+            SVG += text(SVG_MARGE / 2.0 , SVG_MARGE + i * SVG_CELLSIZE_Y , SVG_MARGE / 5.0  ,String.format("%.2f",first_Y +ecart_Y *(nbl - i) / nbl ) , "black" , -45 );
         }
 
     
         for(int i = 0 ; i <= nbc ; i++){
-            SVG += ligne(SVG_MARGE + i * SVG_CELLSIZE_X ,  SVG_MARGE , SVG_MARGE + i * SVG_CELLSIZE_X , SVG_MARGE + nbl * SVG_CELLSIZE_X , "black", 1);
-            SVG += text(SVG_MARGE + i * SVG_CELLSIZE_X  , SVG_MARGE + nbl * SVG_CELLSIZE_X  +SVG_MARGE /3.0 , SVG_CELLSIZE_X / 10 ,String.format("%.2f",first_X +  ecart_X * i /nbc) , "black");
+            SVG += ligne(SVG_MARGE + i * SVG_CELLSIZE_X ,  SVG_MARGE , SVG_MARGE + i * SVG_CELLSIZE_X , SVG_MARGE + nbl * SVG_CELLSIZE_Y , "black", 1);
+            SVG += text(SVG_MARGE + i * SVG_CELLSIZE_X  , SVG_MARGE + nbl * SVG_CELLSIZE_Y  +SVG_MARGE /3.0 , SVG_MARGE / 5.0 ,String.format("%.2f",first_X +  ecart_X * i /nbc) , "black" , 0);
         }
 
         return SVG ;
@@ -130,12 +125,13 @@ public class SvgGenerator {
 
     
 
-    private static String text(double x, double y, double size, String txt, String color){
+    private static String text(double x, double y, double size, String txt, String color , double rotation){
         String SVG = "" ;
         SVG += "<text x=\"" + x + "\" y=\"" + y + "\"" ;
         SVG += " font-family=\"Verdana\" font-size=\"" + size + "\"";
         SVG += " text-anchor=\"middle\" " ;
         SVG += " dominant-baseline=\"middle\" ";
+        SVG += String.format("transform=\"rotate(%.1f %.1f %.1f)\" ", rotation , x ,y);
         SVG += "fill=\"" + color + "\" >\n" ;
         SVG += txt + "\n"; 
         SVG += "</text>\n" ;

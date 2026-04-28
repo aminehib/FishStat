@@ -6,20 +6,29 @@ public class StandatrdDeviation {
 
     public static Double std(ArrayList<Double> x){
 
-        if(x.size() == 0)return  null ;
+    if(x == null || x.size() == 0) return null;
 
-        Double mx = new MeanValue(x).getMean() ;
+    ArrayList<Double> xf = new ArrayList<>();
 
-        double s = 0 ;
-
-
-        for(Double v : x){
-            if(v != null){
-                s += v - mx*mx ;
-            }
+    for(Double v : x){
+        if(v != null){
+            xf.add(v);
         }
-        return Math.sqrt(s  / x.size()) ;
     }
+
+    int n = xf.size();
+    if(n == 0) return null;
+
+    double mean = new MeanValue(xf).getMean();
+
+    double sum = 0;
+
+    for(Double v : xf){
+        sum += (v - mean) * (v - mean);
+    }
+
+    return Math.sqrt(sum / n);
+}
 
     
     

@@ -2,15 +2,12 @@ package traitements;
 
 import java.util.ArrayList;
 
-import model.DataFrame;
-import model.Fish;
-import tools.LinearRegression;
-import tools.Pearson;
-import tools.RegressionPoly2;
+import model.*;
+import tools.*;
 
 public class RegressionCompletion extends Traitement {
 
-    private static String[] cols = {"Length","Weight","Size","Total_parasites" ,"InfestationRate"};
+    private static String[] cols = {"Length","Weight","Size","Parasites" ,"InfestationRate"};
 
     
     @Override
@@ -22,13 +19,15 @@ public class RegressionCompletion extends Traitement {
             k = -1 ; 
             for(int j = 0 ; j < 5 ; j++){
                 if( i == j )continue ;
+                if(corr(fish, cols[i], cols[j]) == null)continue ;
                 if(c < corr(fish, cols[i], cols[j]) ) {
                     c = corr(fish, cols[i], cols[j]) ;
                     k = j ;
                 }
             }
             if(k != -1 && c >= 0.5){
-                Complete(fish, cols[i], cols[k]);
+                Complete(fish, cols[k], cols[i]);
+                System.out.println("Completing " + cols[i] + " using " + cols[k]);
             }
         }
         
@@ -68,43 +67,44 @@ public class RegressionCompletion extends Traitement {
         } ;
 
         y = model.predict(x) ;
-
+        for(int i = x.size() - 1; i >= 0; i--){
+             if(x.get(i) == null ){
+                x.remove(i);
+            }
+        }
 
         switch(Y){
             case "Length":
                 for(int i = 0 ; i < unknown.size() ;i++){
-                    unknown.get(i).setLength(y.get(i));
+                    unknown.get(i).setLength(Math.max(0.0,y.get(i)));
                 }
                 break ;
             
              case "Weight":
                 for(int i = 0 ; i < unknown.size() ;i++){
-                    unknown.get(i).setWeight(y.get(i));
+                    unknown.get(i).setWeight(Math.max(0.0,y.get(i)));
                 }
                 break ;
             
             case "Parasites":
                 for(int i = 0 ; i < unknown.size() ;i++){
-                    unknown.get(i).setParasites(y.get(i).intValue());
+                    unknown.get(i).setParasites((int)Math.max(0.0,y.get(i)));
                 }
                 break ;
 
              case "Size":
                 for(int i = 0 ; i < unknown.size() ;i++){
-                    unknown.get(i).setSize(y.get(i));
+                    unknown.get(i).setSize(Math.max(0.0,y.get(i)));
                 }
                 break ;
             
              case "InfestationRate":
                 for(int i = 0 ; i < unknown.size() ;i++){
-                    unknown.get(i).setInfestationRate(y.get(i));
+                    unknown.get(i).setInfestationRate(Math.max(0.0, Math.min(1.0, y.get(i))));
                 }
                 break ;
             
         }
-        
-
     }
 
-    
 }

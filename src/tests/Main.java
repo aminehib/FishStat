@@ -16,7 +16,7 @@ import traitements.KmeansCompletion;
 import traitements.LinearRegressionCompletion;
 import traitements.MeanValueCompletion;
 
-import traitements.Traitement;
+import traitements.*;
 import tools.*;
 
 
@@ -57,9 +57,9 @@ public class Main {
         System.out.println(df);
 
 
-        Double[] errors = {0.0,0.1,0.0,0.1};
+        Double[] errors = {0.0,0.1,0.0,0.1,0.1};
         
-        Traitement t = new KmeansCompletion();
+        Traitement t = new RegressionCompletion();
 
         t.clean(df ,errors );
         System.out.println("completion");
@@ -76,7 +76,7 @@ public class Main {
         
 
 
-        SvgGenerator.GenerateSVG(df,1000,800,50,100,10,1);
+        SvgGenerator.GenerateSVG(df,"Size","InfestationRate",1600,1600,50,100,100,2);
 
         LinearRegression model = new LinearRegression(df.getSizes(), df.getInfestationRates());
         System.out.println(model.getCoeff()+ " " + model.getIntercept() + " "+ df.getSpecies().size()); 
