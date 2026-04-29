@@ -1,0 +1,311 @@
+@startuml FishStat
+
+skinparam classAttributeIconSize 0
+skinparam packageStyle rectangle
+hide empty members
+
+' =========================================================
+' INTERFACES
+' =========================================================
+package interfaces {
+    interface Data {
+        +getInfestationRate() : Double
+        +getSize() : Double
+        +getLength() : Double
+        +getWeight() : Double
+        +getParasites() : Integer
+        +getSpecies() : String
+        +getContent() : HashSet<String>
+        +addContent(content : String) : void
+    }
+
+    interface Cleanable {
+        +clean(fish : DataFrame<Fish>, errors : Double[]) : void
+        +complete(fish : DataFrame<Fish>) : void
+    }
+}
+
+' =========================================================
+' MODEL
+' =========================================================
+package model {
+    class "DataFrame<T extends Data>" as DataFrame {
+        - poissons : ArrayList<T>
+        +DataFrame()
+        +DataFrame(poissons : ArrayList<T>)
+        +setData(poissons : ArrayList<T>) : void
+        +getData() : ArrayList<T>
+        +getInfestationRates() : ArrayList<Double>
+        +getSizes() : ArrayList<Double>
+        +getLengths() : ArrayList<Double>
+        +getWeights() : ArrayList<Double>
+        +getParasites() : ArrayList<Double>
+        +getSpecies() : HashSet<String>
+        +getSpecies(espece : String) : ArrayList<T>
+        +getContents() : HashSet<String>
+        +getColumn(column : String) : ArrayList<Double>
+        +toString() : String
+    }
+
+    class Fish {
+        - species : String
+        - length : Double
+        - weight : Double
+        - size : Double
+        - infestationRate : Double
+        - parasites_number : Integer
+        - content : HashSet<String>
+        +Fish(species, length, weight, size, infestationRate)
+        +setSpecies(species : String) : void
+        +setLength(length : Double) : void
+        +setWeight(weight : Double) : void
+        +setSize(size : Double) : void
+        +setParasites(parasites : Integer) : void
+        +setInfestationRate(rate : Double) : void
+        +getSpecies() : String
+        +getLength() : Double
+        +getWeight() : Double
+        +getSize() : Double
+        +getInfestationRate() : Double
+        +getParasites() : Integer
+        +addContent(c : String) : void
+        +getContent() : HashSet<String>
+        +removeContent(c : String) : boolean
+        +toString() : String
+    }
+
+    class Population {
+        - total : Integer
+        - parasites : Integer
+        - name : String
+        - contentTested : HashSet<String>
+        - infestationRate : Double
+        - intensity : Double
+        - meanLength : Double
+        - meanSize : Double
+        - meanWeight : Double
+        +Population(name, total, contentTested)
+        +Population(fish : DataFrame<Fish>)
+        +getSpecies() : String
+        +getParasites() : Integer
+        +getNumber() : Integer
+        +getContentTested() : HashSet<String>
+        +getInfestationRate() : Double
+        +getIntensity() : Double
+        +getSize() : Double
+        +getLength() : Double
+        +getWeight() : Double
+        +getAbondance() : Double
+        +addContent(c : String) : void
+        +getContent() : HashSet<String>
+        +setName(name : String) : void
+        +setParasites(p : Integer) : void
+        +setMeanLength(v : Double) : void
+        +setMeanSize(v : Double) : void
+        +setMeanWeight(v : Double) : void
+        +setInfestationRate(v : Double) : void
+        +setIntensity(v : Double) : void
+        +setTotal(v : Integer) : void
+        +toString() : String
+    }
+}
+
+' =========================================================
+' TOOLS
+' =========================================================
+package tools {
+    class MeanValue {
+        - mean : Double
+        +MeanValue(values : ArrayList<Double>)
+        +getMean() : Double
+    }
+
+    class StandatrdDeviation {
+        +{static} std(x : ArrayList<Double>) : Double
+    }
+
+    class Covariance {
+        +{static} covariance(x : ArrayList<Double>, y : ArrayList<Double>) : Double
+    }
+
+    class Pearson {
+        +{static} pearson(x : ArrayList<Double>, y : ArrayList<Double>) : Double
+    }
+
+    class BoiteAMoustaches {
+        - Q1 : Double
+        - Q2 : Double
+        - Q3 : Double
+        - moustacheInf : Double
+        - moustacheSup : Double
+        +BoiteAMoustaches(valeurs : ArrayList<Double>)
+        - median(list : ArrayList<Double>) : Double
+        +getPremierQuantile() : Double
+        +getMediane() : Double
+        +getDernierQuantile() : Double
+        +getMoustacheInf() : Double
+        +getMoustacheSup() : Double
+    }
+
+    class Coords {
+        - x : Double
+        - y : Double
+        +Coords(x : Double, y : Double)
+        +{static} init_Coords(X : ArrayList<Double>, Y : ArrayList<Double>) : Coords[]
+        +{static} distance(a : Coords, b : Coords) : Double
+        +getX() : Double
+        +getY() : Double
+        +setX(x : Double) : void
+        +setY(y : Double) : void
+    }
+
+    class KMeans {
+        +{static} Kmeans(centers : Coords[], maxIter : int, eps : double, df : DataFrame<Fish>, X : String, Y : String) : ArrayList<Integer>
+        -{static} stop(current : Coords[], previous : Coords[], eps : double) : boolean
+    }
+
+    class LinearRegression {
+        - a : Double
+        - b : Double
+        +LinearRegression(x : ArrayList<Double>, y : ArrayList<Double>)
+        +predict(x : ArrayList<Double>) : ArrayList<Double>
+        +predict(x : Double) : Double
+        +getCoeff() : Double
+        +getIntercept() : Double
+    }
+
+    class RegressionPoly2 {
+        - a : Double
+        - b : Double
+        - c : Double
+        +RegressionPoly2(x : ArrayList<Double>, y : ArrayList<Double>)
+        +getCoeffs() : Double[]
+        +getIntercept() : Double
+        +predict(x : Double) : Double
+        +predict(x : ArrayList<Double>) : ArrayList<Double>
+        -{static} solve3x3(A : double[][], B : double[]) : double[]
+    }
+}
+
+' =========================================================
+' TRAITEMENTS
+' =========================================================
+package traitements {
+    abstract class Traitement {
+        # getKnownValues(poissons : ArrayList<Fish>) : ArrayList<Fish>
+        # getUnknownValues(poissons : ArrayList<Fish>) : ArrayList<Fish>
+        # getSpecies(poissons : ArrayList<Fish>) : LinkedHashMap<String,ArrayList<Fish>>
+        +clean(fish : DataFrame<Fish>, errors : Double[]) : void
+    }
+
+    class MeanValueCompletion {
+        +complete(fish : DataFrame<Fish>) : void
+    }
+
+    class LinearRegressionCompletion {
+        -{static} cols : String[]
+        +complete(fish : DataFrame<Fish>) : void
+        +Complete(fish : DataFrame<Fish>, X : String, Y : String) : void
+        - corr(fish : DataFrame<Fish>, i : String, j : String) : Double
+    }
+
+    class RegressionCompletion {
+        -{static} cols : String[]
+        +complete(fish : DataFrame<Fish>) : void
+        +Complete(fish : DataFrame<Fish>, X : String, Y : String) : void
+        - corr(fish : DataFrame<Fish>, i : String, j : String) : Double
+    }
+
+    class KmeansCompletion {
+        -{static} cols : String[]
+        +complete(fish : DataFrame<Fish>) : void
+        +{static} inertie(coords : Coords[], centers : Coords[], labels : ArrayList<Integer>) : double
+        +cluster(df : DataFrame<Fish>, labels : ArrayList<Integer>) : LinkedHashMap<Integer,ArrayList<Fish>>
+        -{static} normalize(x : ArrayList<Double>) : void
+    }
+}
+
+' =========================================================
+' FILES / GRAPHIQUE
+' =========================================================
+package files {
+    class CsvReader {
+        -{static} fishAttributes : String[]
+        -{static} populationAttributes : String[]
+        +{static} readCsv(name, split, multipleSplit, pourcentage, headers, type) : ArrayList<T>
+        +{static} readCsv(name, split, multipleSplit, pourcentage, headers, params, N, type) : ArrayList<T>
+    }
+}
+
+package graphique {
+    class SvgGenerator {
+        +{static} GenerateSVG(fish : DataFrame, X : String, Y : String, height : int, width : int, title : String, marge : int, nbl : int, nbc : int, echelle : int) : void
+        -{static} initialiserSVG(w : int, h : int) : String
+        -{static} dessinerGrilleEtMarge(...) : String
+        -{static} ligne(...) : String
+        -{static} text(...) : String
+    }
+}
+
+' =========================================================
+' EXCEPTIONS
+' =========================================================
+package exceptions {
+    class InvalidAttribute extends RuntimeException
+    class InvalidParametreLength extends RuntimeException
+    class InvalidPopulation extends RuntimeException
+    class InvalidFileFormat extends Exception
+}
+
+' =========================================================
+' RELATIONS
+' =========================================================
+Fish              ..|> Data
+Population        ..|> Data
+Traitement        ..|> Cleanable
+
+Traitement <|-- MeanValueCompletion
+Traitement <|-- LinearRegressionCompletion
+Traitement <|-- RegressionCompletion
+Traitement <|-- KmeansCompletion
+
+DataFrame "1" o-- "*" Data : contient >
+Population        ..> DataFrame : << construit depuis >>
+Population        ..> MeanValue
+DataFrame         ..> InvalidAttribute
+DataFrame         ..> InvalidFileFormat
+Population        ..> InvalidPopulation
+
+Pearson            ..> Covariance
+Pearson            ..> StandatrdDeviation
+Covariance         ..> MeanValue
+StandatrdDeviation ..> MeanValue
+
+KMeans            ..> Coords
+KMeans            ..> DataFrame
+
+Traitement        ..> BoiteAMoustaches
+Traitement        ..> Fish
+Traitement        ..> InvalidParametreLength
+
+MeanValueCompletion        ..> MeanValue
+MeanValueCompletion        ..> DataFrame
+LinearRegressionCompletion ..> LinearRegression
+LinearRegressionCompletion ..> Pearson
+RegressionCompletion       ..> RegressionPoly2
+RegressionCompletion       ..> Pearson
+KmeansCompletion           ..> KMeans
+KmeansCompletion           ..> Coords
+KmeansCompletion           ..> MeanValue
+KmeansCompletion           ..> StandatrdDeviation
+
+CsvReader         ..> Fish
+CsvReader         ..> Population
+CsvReader         ..> Data
+CsvReader         ..> InvalidAttribute
+CsvReader         ..> InvalidFileFormat
+
+SvgGenerator      ..> DataFrame
+SvgGenerator      ..> LinearRegression
+
+@enduml
