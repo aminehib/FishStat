@@ -5,8 +5,9 @@ import java.util.HashSet;
 
 import exceptions.InvalidPopulation;
 import tools.MeanValue;
+import interfaces.*;
 
-public class Population extends Data{
+public class Population implements Data{
 
     private Integer total  ;
     private Integer parasites ;

@@ -8,7 +8,7 @@ import java.util.LinkedHashMap;
 
 import exceptions.InvalidAttribute;
 import exceptions.InvalidFileFormat;
-import model.Data;
+import interfaces.*;
 import model.Fish;
 import model.Population;
 

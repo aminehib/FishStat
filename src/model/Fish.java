@@ -1,8 +1,9 @@
 package model;
 import java.util.ArrayList;
 import java.util.HashSet;
+import interfaces.*;
 
-public class Fish extends Data{
+public class Fish implements Data{
 
     // Correction de la faute de frappe : "species" (cohérent avec le sujet et le reste du code).
     private String species;
