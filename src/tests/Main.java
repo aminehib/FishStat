@@ -59,16 +59,15 @@ public class Main {
         t.complete(df);
         System.out.println(df);
 
-        //Population pop = new Population(df);
-        //System.out.println(pop);
+        Population pop = new Population(new DataFrame<>(df.getSpecies("Sardine")));
+        System.out.println(pop);
 
 
 
-       System.out.println(df);
+       
 
 
-
-        SvgGenerator.GenerateSVG(df,"Size","InfestationRate",800,800,"Droite de régression",100,10,10,1.5);
+        SvgGenerator.GenerateSVG(df,"Size","InfestationRate",1000,1400,"Droite de régression",100,10,10,1);
 
         LinearRegression model = new LinearRegression(df.getSizes(), df.getInfestationRates());
         System.out.println(model.getCoeff()+ " " + model.getIntercept() + " "+ df.getSpecies().size()); 

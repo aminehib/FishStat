@@ -1,427 +1,171 @@
 <?xml version="1.0" encoding="utf-8"?>
-<svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="1600" height="1600">
-<line x1="50.0" y1="50.0" x2="1550.0" y2="50.0" stroke="black" stroke-width="1" />
-<text x="25.0" y="50.0" font-family="Verdana" font-size="10.0" text-anchor="middle"  dominant-baseline="middle" transform="rotate(-45,0 25,0 50,0)" fill="black" >
-1,00
-</text>
-<line x1="50.0" y1="80.0" x2="1550.0" y2="80.0" stroke="black" stroke-width="1" />
-<text x="25.0" y="80.0" font-family="Verdana" font-size="10.0" text-anchor="middle"  dominant-baseline="middle" transform="rotate(-45,0 25,0 80,0)" fill="black" >
-0,98
-</text>
-<line x1="50.0" y1="110.0" x2="1550.0" y2="110.0" stroke="black" stroke-width="1" />
-<text x="25.0" y="110.0" font-family="Verdana" font-size="10.0" text-anchor="middle"  dominant-baseline="middle" transform="rotate(-45,0 25,0 110,0)" fill="black" >
-0,96
-</text>
-<line x1="50.0" y1="140.0" x2="1550.0" y2="140.0" stroke="black" stroke-width="1" />
-<text x="25.0" y="140.0" font-family="Verdana" font-size="10.0" text-anchor="middle"  dominant-baseline="middle" transform="rotate(-45,0 25,0 140,0)" fill="black" >
-0,94
-</text>
-<line x1="50.0" y1="170.0" x2="1550.0" y2="170.0" stroke="black" stroke-width="1" />
-<text x="25.0" y="170.0" font-family="Verdana" font-size="10.0" text-anchor="middle"  dominant-baseline="middle" transform="rotate(-45,0 25,0 170,0)" fill="black" >
-0,92
-</text>
-<line x1="50.0" y1="200.0" x2="1550.0" y2="200.0" stroke="black" stroke-width="1" />
-<text x="25.0" y="200.0" font-family="Verdana" font-size="10.0" text-anchor="middle"  dominant-baseline="middle" transform="rotate(-45,0 25,0 200,0)" fill="black" >
-0,90
-</text>
-<line x1="50.0" y1="230.0" x2="1550.0" y2="230.0" stroke="black" stroke-width="1" />
-<text x="25.0" y="230.0" font-family="Verdana" font-size="10.0" text-anchor="middle"  dominant-baseline="middle" transform="rotate(-45,0 25,0 230,0)" fill="black" >
-0,88
-</text>
-<line x1="50.0" y1="260.0" x2="1550.0" y2="260.0" stroke="black" stroke-width="1" />
-<text x="25.0" y="260.0" font-family="Verdana" font-size="10.0" text-anchor="middle"  dominant-baseline="middle" transform="rotate(-45,0 25,0 260,0)" fill="black" >
-0,86
-</text>
-<line x1="50.0" y1="290.0" x2="1550.0" y2="290.0" stroke="black" stroke-width="1" />
-<text x="25.0" y="290.0" font-family="Verdana" font-size="10.0" text-anchor="middle"  dominant-baseline="middle" transform="rotate(-45,0 25,0 290,0)" fill="black" >
-0,84
-</text>
-<line x1="50.0" y1="320.0" x2="1550.0" y2="320.0" stroke="black" stroke-width="1" />
-<text x="25.0" y="320.0" font-family="Verdana" font-size="10.0" text-anchor="middle"  dominant-baseline="middle" transform="rotate(-45,0 25,0 320,0)" fill="black" >
-0,82
-</text>
-<line x1="50.0" y1="350.0" x2="1550.0" y2="350.0" stroke="black" stroke-width="1" />
-<text x="25.0" y="350.0" font-family="Verdana" font-size="10.0" text-anchor="middle"  dominant-baseline="middle" transform="rotate(-45,0 25,0 350,0)" fill="black" >
-0,80
-</text>
-<line x1="50.0" y1="380.0" x2="1550.0" y2="380.0" stroke="black" stroke-width="1" />
-<text x="25.0" y="380.0" font-family="Verdana" font-size="10.0" text-anchor="middle"  dominant-baseline="middle" transform="rotate(-45,0 25,0 380,0)" fill="black" >
-0,78
-</text>
-<line x1="50.0" y1="410.0" x2="1550.0" y2="410.0" stroke="black" stroke-width="1" />
-<text x="25.0" y="410.0" font-family="Verdana" font-size="10.0" text-anchor="middle"  dominant-baseline="middle" transform="rotate(-45,0 25,0 410,0)" fill="black" >
-0,76
-</text>
-<line x1="50.0" y1="440.0" x2="1550.0" y2="440.0" stroke="black" stroke-width="1" />
-<text x="25.0" y="440.0" font-family="Verdana" font-size="10.0" text-anchor="middle"  dominant-baseline="middle" transform="rotate(-45,0 25,0 440,0)" fill="black" >
-0,74
-</text>
-<line x1="50.0" y1="470.0" x2="1550.0" y2="470.0" stroke="black" stroke-width="1" />
-<text x="25.0" y="470.0" font-family="Verdana" font-size="10.0" text-anchor="middle"  dominant-baseline="middle" transform="rotate(-45,0 25,0 470,0)" fill="black" >
-0,72
-</text>
-<line x1="50.0" y1="500.0" x2="1550.0" y2="500.0" stroke="black" stroke-width="1" />
-<text x="25.0" y="500.0" font-family="Verdana" font-size="10.0" text-anchor="middle"  dominant-baseline="middle" transform="rotate(-45,0 25,0 500,0)" fill="black" >
-0,70
-</text>
-<line x1="50.0" y1="530.0" x2="1550.0" y2="530.0" stroke="black" stroke-width="1" />
-<text x="25.0" y="530.0" font-family="Verdana" font-size="10.0" text-anchor="middle"  dominant-baseline="middle" transform="rotate(-45,0 25,0 530,0)" fill="black" >
-0,68
-</text>
-<line x1="50.0" y1="560.0" x2="1550.0" y2="560.0" stroke="black" stroke-width="1" />
-<text x="25.0" y="560.0" font-family="Verdana" font-size="10.0" text-anchor="middle"  dominant-baseline="middle" transform="rotate(-45,0 25,0 560,0)" fill="black" >
-0,66
-</text>
-<line x1="50.0" y1="590.0" x2="1550.0" y2="590.0" stroke="black" stroke-width="1" />
-<text x="25.0" y="590.0" font-family="Verdana" font-size="10.0" text-anchor="middle"  dominant-baseline="middle" transform="rotate(-45,0 25,0 590,0)" fill="black" >
-0,64
-</text>
-<line x1="50.0" y1="620.0" x2="1550.0" y2="620.0" stroke="black" stroke-width="1" />
-<text x="25.0" y="620.0" font-family="Verdana" font-size="10.0" text-anchor="middle"  dominant-baseline="middle" transform="rotate(-45,0 25,0 620,0)" fill="black" >
-0,62
-</text>
-<line x1="50.0" y1="650.0" x2="1550.0" y2="650.0" stroke="black" stroke-width="1" />
-<text x="25.0" y="650.0" font-family="Verdana" font-size="10.0" text-anchor="middle"  dominant-baseline="middle" transform="rotate(-45,0 25,0 650,0)" fill="black" >
-0,60
-</text>
-<line x1="50.0" y1="680.0" x2="1550.0" y2="680.0" stroke="black" stroke-width="1" />
-<text x="25.0" y="680.0" font-family="Verdana" font-size="10.0" text-anchor="middle"  dominant-baseline="middle" transform="rotate(-45,0 25,0 680,0)" fill="black" >
-0,58
-</text>
-<line x1="50.0" y1="710.0" x2="1550.0" y2="710.0" stroke="black" stroke-width="1" />
-<text x="25.0" y="710.0" font-family="Verdana" font-size="10.0" text-anchor="middle"  dominant-baseline="middle" transform="rotate(-45,0 25,0 710,0)" fill="black" >
-0,56
-</text>
-<line x1="50.0" y1="740.0" x2="1550.0" y2="740.0" stroke="black" stroke-width="1" />
-<text x="25.0" y="740.0" font-family="Verdana" font-size="10.0" text-anchor="middle"  dominant-baseline="middle" transform="rotate(-45,0 25,0 740,0)" fill="black" >
-0,54
-</text>
-<line x1="50.0" y1="770.0" x2="1550.0" y2="770.0" stroke="black" stroke-width="1" />
-<text x="25.0" y="770.0" font-family="Verdana" font-size="10.0" text-anchor="middle"  dominant-baseline="middle" transform="rotate(-45,0 25,0 770,0)" fill="black" >
-0,52
-</text>
-<line x1="50.0" y1="800.0" x2="1550.0" y2="800.0" stroke="black" stroke-width="1" />
-<text x="25.0" y="800.0" font-family="Verdana" font-size="10.0" text-anchor="middle"  dominant-baseline="middle" transform="rotate(-45,0 25,0 800,0)" fill="black" >
-0,50
-</text>
-<line x1="50.0" y1="830.0" x2="1550.0" y2="830.0" stroke="black" stroke-width="1" />
-<text x="25.0" y="830.0" font-family="Verdana" font-size="10.0" text-anchor="middle"  dominant-baseline="middle" transform="rotate(-45,0 25,0 830,0)" fill="black" >
-0,48
-</text>
-<line x1="50.0" y1="860.0" x2="1550.0" y2="860.0" stroke="black" stroke-width="1" />
-<text x="25.0" y="860.0" font-family="Verdana" font-size="10.0" text-anchor="middle"  dominant-baseline="middle" transform="rotate(-45,0 25,0 860,0)" fill="black" >
-0,46
-</text>
-<line x1="50.0" y1="890.0" x2="1550.0" y2="890.0" stroke="black" stroke-width="1" />
-<text x="25.0" y="890.0" font-family="Verdana" font-size="10.0" text-anchor="middle"  dominant-baseline="middle" transform="rotate(-45,0 25,0 890,0)" fill="black" >
-0,44
-</text>
-<line x1="50.0" y1="920.0" x2="1550.0" y2="920.0" stroke="black" stroke-width="1" />
-<text x="25.0" y="920.0" font-family="Verdana" font-size="10.0" text-anchor="middle"  dominant-baseline="middle" transform="rotate(-45,0 25,0 920,0)" fill="black" >
-0,42
-</text>
-<line x1="50.0" y1="950.0" x2="1550.0" y2="950.0" stroke="black" stroke-width="1" />
-<text x="25.0" y="950.0" font-family="Verdana" font-size="10.0" text-anchor="middle"  dominant-baseline="middle" transform="rotate(-45,0 25,0 950,0)" fill="black" >
-0,40
-</text>
-<line x1="50.0" y1="980.0" x2="1550.0" y2="980.0" stroke="black" stroke-width="1" />
-<text x="25.0" y="980.0" font-family="Verdana" font-size="10.0" text-anchor="middle"  dominant-baseline="middle" transform="rotate(-45,0 25,0 980,0)" fill="black" >
-0,38
-</text>
-<line x1="50.0" y1="1010.0" x2="1550.0" y2="1010.0" stroke="black" stroke-width="1" />
-<text x="25.0" y="1010.0" font-family="Verdana" font-size="10.0" text-anchor="middle"  dominant-baseline="middle" transform="rotate(-45,0 25,0 1010,0)" fill="black" >
-0,36
-</text>
-<line x1="50.0" y1="1040.0" x2="1550.0" y2="1040.0" stroke="black" stroke-width="1" />
-<text x="25.0" y="1040.0" font-family="Verdana" font-size="10.0" text-anchor="middle"  dominant-baseline="middle" transform="rotate(-45,0 25,0 1040,0)" fill="black" >
-0,34
-</text>
-<line x1="50.0" y1="1070.0" x2="1550.0" y2="1070.0" stroke="black" stroke-width="1" />
-<text x="25.0" y="1070.0" font-family="Verdana" font-size="10.0" text-anchor="middle"  dominant-baseline="middle" transform="rotate(-45,0 25,0 1070,0)" fill="black" >
-0,32
-</text>
-<line x1="50.0" y1="1100.0" x2="1550.0" y2="1100.0" stroke="black" stroke-width="1" />
-<text x="25.0" y="1100.0" font-family="Verdana" font-size="10.0" text-anchor="middle"  dominant-baseline="middle" transform="rotate(-45,0 25,0 1100,0)" fill="black" >
-0,30
-</text>
-<line x1="50.0" y1="1130.0" x2="1550.0" y2="1130.0" stroke="black" stroke-width="1" />
-<text x="25.0" y="1130.0" font-family="Verdana" font-size="10.0" text-anchor="middle"  dominant-baseline="middle" transform="rotate(-45,0 25,0 1130,0)" fill="black" >
-0,28
-</text>
-<line x1="50.0" y1="1160.0" x2="1550.0" y2="1160.0" stroke="black" stroke-width="1" />
-<text x="25.0" y="1160.0" font-family="Verdana" font-size="10.0" text-anchor="middle"  dominant-baseline="middle" transform="rotate(-45,0 25,0 1160,0)" fill="black" >
-0,26
-</text>
-<line x1="50.0" y1="1190.0" x2="1550.0" y2="1190.0" stroke="black" stroke-width="1" />
-<text x="25.0" y="1190.0" font-family="Verdana" font-size="10.0" text-anchor="middle"  dominant-baseline="middle" transform="rotate(-45,0 25,0 1190,0)" fill="black" >
-0,24
-</text>
-<line x1="50.0" y1="1220.0" x2="1550.0" y2="1220.0" stroke="black" stroke-width="1" />
-<text x="25.0" y="1220.0" font-family="Verdana" font-size="10.0" text-anchor="middle"  dominant-baseline="middle" transform="rotate(-45,0 25,0 1220,0)" fill="black" >
-0,22
-</text>
-<line x1="50.0" y1="1250.0" x2="1550.0" y2="1250.0" stroke="black" stroke-width="1" />
-<text x="25.0" y="1250.0" font-family="Verdana" font-size="10.0" text-anchor="middle"  dominant-baseline="middle" transform="rotate(-45,0 25,0 1250,0)" fill="black" >
-0,20
-</text>
-<line x1="50.0" y1="1280.0" x2="1550.0" y2="1280.0" stroke="black" stroke-width="1" />
-<text x="25.0" y="1280.0" font-family="Verdana" font-size="10.0" text-anchor="middle"  dominant-baseline="middle" transform="rotate(-45,0 25,0 1280,0)" fill="black" >
-0,18
-</text>
-<line x1="50.0" y1="1310.0" x2="1550.0" y2="1310.0" stroke="black" stroke-width="1" />
-<text x="25.0" y="1310.0" font-family="Verdana" font-size="10.0" text-anchor="middle"  dominant-baseline="middle" transform="rotate(-45,0 25,0 1310,0)" fill="black" >
-0,16
-</text>
-<line x1="50.0" y1="1340.0" x2="1550.0" y2="1340.0" stroke="black" stroke-width="1" />
-<text x="25.0" y="1340.0" font-family="Verdana" font-size="10.0" text-anchor="middle"  dominant-baseline="middle" transform="rotate(-45,0 25,0 1340,0)" fill="black" >
-0,14
-</text>
-<line x1="50.0" y1="1370.0" x2="1550.0" y2="1370.0" stroke="black" stroke-width="1" />
-<text x="25.0" y="1370.0" font-family="Verdana" font-size="10.0" text-anchor="middle"  dominant-baseline="middle" transform="rotate(-45,0 25,0 1370,0)" fill="black" >
-0,12
-</text>
-<line x1="50.0" y1="1400.0" x2="1550.0" y2="1400.0" stroke="black" stroke-width="1" />
-<text x="25.0" y="1400.0" font-family="Verdana" font-size="10.0" text-anchor="middle"  dominant-baseline="middle" transform="rotate(-45,0 25,0 1400,0)" fill="black" >
-0,10
-</text>
-<line x1="50.0" y1="1430.0" x2="1550.0" y2="1430.0" stroke="black" stroke-width="1" />
-<text x="25.0" y="1430.0" font-family="Verdana" font-size="10.0" text-anchor="middle"  dominant-baseline="middle" transform="rotate(-45,0 25,0 1430,0)" fill="black" >
-0,08
-</text>
-<line x1="50.0" y1="1460.0" x2="1550.0" y2="1460.0" stroke="black" stroke-width="1" />
-<text x="25.0" y="1460.0" font-family="Verdana" font-size="10.0" text-anchor="middle"  dominant-baseline="middle" transform="rotate(-45,0 25,0 1460,0)" fill="black" >
-0,06
-</text>
-<line x1="50.0" y1="1490.0" x2="1550.0" y2="1490.0" stroke="black" stroke-width="1" />
-<text x="25.0" y="1490.0" font-family="Verdana" font-size="10.0" text-anchor="middle"  dominant-baseline="middle" transform="rotate(-45,0 25,0 1490,0)" fill="black" >
-0,04
-</text>
-<line x1="50.0" y1="1520.0" x2="1550.0" y2="1520.0" stroke="black" stroke-width="1" />
-<text x="25.0" y="1520.0" font-family="Verdana" font-size="10.0" text-anchor="middle"  dominant-baseline="middle" transform="rotate(-45,0 25,0 1520,0)" fill="black" >
-0,02
-</text>
-<line x1="50.0" y1="1550.0" x2="1550.0" y2="1550.0" stroke="black" stroke-width="1" />
-<text x="25.0" y="1550.0" font-family="Verdana" font-size="10.0" text-anchor="middle"  dominant-baseline="middle" transform="rotate(-45,0 25,0 1550,0)" fill="black" >
-0,00
-</text>
-<line x1="50.0" y1="50.0" x2="50.0" y2="1550.0" stroke="black" stroke-width="1" />
-<text x="50.0" y="1566.6666666666667" font-family="Verdana" font-size="10.0" text-anchor="middle"  dominant-baseline="middle" transform="rotate(-60,0 50,0 1566,7)" fill="black" >
-150,00
-</text>
-<line x1="80.0" y1="50.0" x2="80.0" y2="1550.0" stroke="black" stroke-width="1" />
-<text x="80.0" y="1566.6666666666667" font-family="Verdana" font-size="10.0" text-anchor="middle"  dominant-baseline="middle" transform="rotate(-60,0 80,0 1566,7)" fill="black" >
-162,00
-</text>
-<line x1="110.0" y1="50.0" x2="110.0" y2="1550.0" stroke="black" stroke-width="1" />
-<text x="110.0" y="1566.6666666666667" font-family="Verdana" font-size="10.0" text-anchor="middle"  dominant-baseline="middle" transform="rotate(-60,0 110,0 1566,7)" fill="black" >
-174,00
-</text>
-<line x1="140.0" y1="50.0" x2="140.0" y2="1550.0" stroke="black" stroke-width="1" />
-<text x="140.0" y="1566.6666666666667" font-family="Verdana" font-size="10.0" text-anchor="middle"  dominant-baseline="middle" transform="rotate(-60,0 140,0 1566,7)" fill="black" >
-186,00
-</text>
-<line x1="170.0" y1="50.0" x2="170.0" y2="1550.0" stroke="black" stroke-width="1" />
-<text x="170.0" y="1566.6666666666667" font-family="Verdana" font-size="10.0" text-anchor="middle"  dominant-baseline="middle" transform="rotate(-60,0 170,0 1566,7)" fill="black" >
-198,00
-</text>
-<line x1="200.0" y1="50.0" x2="200.0" y2="1550.0" stroke="black" stroke-width="1" />
-<text x="200.0" y="1566.6666666666667" font-family="Verdana" font-size="10.0" text-anchor="middle"  dominant-baseline="middle" transform="rotate(-60,0 200,0 1566,7)" fill="black" >
-210,00
-</text>
-<line x1="230.0" y1="50.0" x2="230.0" y2="1550.0" stroke="black" stroke-width="1" />
-<text x="230.0" y="1566.6666666666667" font-family="Verdana" font-size="10.0" text-anchor="middle"  dominant-baseline="middle" transform="rotate(-60,0 230,0 1566,7)" fill="black" >
-222,00
-</text>
-<line x1="260.0" y1="50.0" x2="260.0" y2="1550.0" stroke="black" stroke-width="1" />
-<text x="260.0" y="1566.6666666666667" font-family="Verdana" font-size="10.0" text-anchor="middle"  dominant-baseline="middle" transform="rotate(-60,0 260,0 1566,7)" fill="black" >
-234,00
-</text>
-<line x1="290.0" y1="50.0" x2="290.0" y2="1550.0" stroke="black" stroke-width="1" />
-<text x="290.0" y="1566.6666666666667" font-family="Verdana" font-size="10.0" text-anchor="middle"  dominant-baseline="middle" transform="rotate(-60,0 290,0 1566,7)" fill="black" >
-246,00
-</text>
-<line x1="320.0" y1="50.0" x2="320.0" y2="1550.0" stroke="black" stroke-width="1" />
-<text x="320.0" y="1566.6666666666667" font-family="Verdana" font-size="10.0" text-anchor="middle"  dominant-baseline="middle" transform="rotate(-60,0 320,0 1566,7)" fill="black" >
-258,00
-</text>
-<line x1="350.0" y1="50.0" x2="350.0" y2="1550.0" stroke="black" stroke-width="1" />
-<text x="350.0" y="1566.6666666666667" font-family="Verdana" font-size="10.0" text-anchor="middle"  dominant-baseline="middle" transform="rotate(-60,0 350,0 1566,7)" fill="black" >
-270,00
-</text>
-<line x1="380.0" y1="50.0" x2="380.0" y2="1550.0" stroke="black" stroke-width="1" />
-<text x="380.0" y="1566.6666666666667" font-family="Verdana" font-size="10.0" text-anchor="middle"  dominant-baseline="middle" transform="rotate(-60,0 380,0 1566,7)" fill="black" >
-282,00
-</text>
-<line x1="410.0" y1="50.0" x2="410.0" y2="1550.0" stroke="black" stroke-width="1" />
-<text x="410.0" y="1566.6666666666667" font-family="Verdana" font-size="10.0" text-anchor="middle"  dominant-baseline="middle" transform="rotate(-60,0 410,0 1566,7)" fill="black" >
-294,00
-</text>
-<line x1="440.0" y1="50.0" x2="440.0" y2="1550.0" stroke="black" stroke-width="1" />
-<text x="440.0" y="1566.6666666666667" font-family="Verdana" font-size="10.0" text-anchor="middle"  dominant-baseline="middle" transform="rotate(-60,0 440,0 1566,7)" fill="black" >
-306,00
-</text>
-<line x1="470.0" y1="50.0" x2="470.0" y2="1550.0" stroke="black" stroke-width="1" />
-<text x="470.0" y="1566.6666666666667" font-family="Verdana" font-size="10.0" text-anchor="middle"  dominant-baseline="middle" transform="rotate(-60,0 470,0 1566,7)" fill="black" >
-318,00
-</text>
-<line x1="500.0" y1="50.0" x2="500.0" y2="1550.0" stroke="black" stroke-width="1" />
-<text x="500.0" y="1566.6666666666667" font-family="Verdana" font-size="10.0" text-anchor="middle"  dominant-baseline="middle" transform="rotate(-60,0 500,0 1566,7)" fill="black" >
-330,00
-</text>
-<line x1="530.0" y1="50.0" x2="530.0" y2="1550.0" stroke="black" stroke-width="1" />
-<text x="530.0" y="1566.6666666666667" font-family="Verdana" font-size="10.0" text-anchor="middle"  dominant-baseline="middle" transform="rotate(-60,0 530,0 1566,7)" fill="black" >
-342,00
-</text>
-<line x1="560.0" y1="50.0" x2="560.0" y2="1550.0" stroke="black" stroke-width="1" />
-<text x="560.0" y="1566.6666666666667" font-family="Verdana" font-size="10.0" text-anchor="middle"  dominant-baseline="middle" transform="rotate(-60,0 560,0 1566,7)" fill="black" >
-354,00
-</text>
-<line x1="590.0" y1="50.0" x2="590.0" y2="1550.0" stroke="black" stroke-width="1" />
-<text x="590.0" y="1566.6666666666667" font-family="Verdana" font-size="10.0" text-anchor="middle"  dominant-baseline="middle" transform="rotate(-60,0 590,0 1566,7)" fill="black" >
-366,00
-</text>
-<line x1="620.0" y1="50.0" x2="620.0" y2="1550.0" stroke="black" stroke-width="1" />
-<text x="620.0" y="1566.6666666666667" font-family="Verdana" font-size="10.0" text-anchor="middle"  dominant-baseline="middle" transform="rotate(-60,0 620,0 1566,7)" fill="black" >
-378,00
-</text>
-<line x1="650.0" y1="50.0" x2="650.0" y2="1550.0" stroke="black" stroke-width="1" />
-<text x="650.0" y="1566.6666666666667" font-family="Verdana" font-size="10.0" text-anchor="middle"  dominant-baseline="middle" transform="rotate(-60,0 650,0 1566,7)" fill="black" >
-390,00
-</text>
-<line x1="680.0" y1="50.0" x2="680.0" y2="1550.0" stroke="black" stroke-width="1" />
-<text x="680.0" y="1566.6666666666667" font-family="Verdana" font-size="10.0" text-anchor="middle"  dominant-baseline="middle" transform="rotate(-60,0 680,0 1566,7)" fill="black" >
-402,00
-</text>
-<line x1="710.0" y1="50.0" x2="710.0" y2="1550.0" stroke="black" stroke-width="1" />
-<text x="710.0" y="1566.6666666666667" font-family="Verdana" font-size="10.0" text-anchor="middle"  dominant-baseline="middle" transform="rotate(-60,0 710,0 1566,7)" fill="black" >
-414,00
-</text>
-<line x1="740.0" y1="50.0" x2="740.0" y2="1550.0" stroke="black" stroke-width="1" />
-<text x="740.0" y="1566.6666666666667" font-family="Verdana" font-size="10.0" text-anchor="middle"  dominant-baseline="middle" transform="rotate(-60,0 740,0 1566,7)" fill="black" >
-426,00
-</text>
-<line x1="770.0" y1="50.0" x2="770.0" y2="1550.0" stroke="black" stroke-width="1" />
-<text x="770.0" y="1566.6666666666667" font-family="Verdana" font-size="10.0" text-anchor="middle"  dominant-baseline="middle" transform="rotate(-60,0 770,0 1566,7)" fill="black" >
-438,00
-</text>
-<line x1="800.0" y1="50.0" x2="800.0" y2="1550.0" stroke="black" stroke-width="1" />
-<text x="800.0" y="1566.6666666666667" font-family="Verdana" font-size="10.0" text-anchor="middle"  dominant-baseline="middle" transform="rotate(-60,0 800,0 1566,7)" fill="black" >
-450,00
-</text>
-<line x1="830.0" y1="50.0" x2="830.0" y2="1550.0" stroke="black" stroke-width="1" />
-<text x="830.0" y="1566.6666666666667" font-family="Verdana" font-size="10.0" text-anchor="middle"  dominant-baseline="middle" transform="rotate(-60,0 830,0 1566,7)" fill="black" >
-462,00
-</text>
-<line x1="860.0" y1="50.0" x2="860.0" y2="1550.0" stroke="black" stroke-width="1" />
-<text x="860.0" y="1566.6666666666667" font-family="Verdana" font-size="10.0" text-anchor="middle"  dominant-baseline="middle" transform="rotate(-60,0 860,0 1566,7)" fill="black" >
-474,00
-</text>
-<line x1="890.0" y1="50.0" x2="890.0" y2="1550.0" stroke="black" stroke-width="1" />
-<text x="890.0" y="1566.6666666666667" font-family="Verdana" font-size="10.0" text-anchor="middle"  dominant-baseline="middle" transform="rotate(-60,0 890,0 1566,7)" fill="black" >
-486,00
-</text>
-<line x1="920.0" y1="50.0" x2="920.0" y2="1550.0" stroke="black" stroke-width="1" />
-<text x="920.0" y="1566.6666666666667" font-family="Verdana" font-size="10.0" text-anchor="middle"  dominant-baseline="middle" transform="rotate(-60,0 920,0 1566,7)" fill="black" >
-498,00
-</text>
-<line x1="950.0" y1="50.0" x2="950.0" y2="1550.0" stroke="black" stroke-width="1" />
-<text x="950.0" y="1566.6666666666667" font-family="Verdana" font-size="10.0" text-anchor="middle"  dominant-baseline="middle" transform="rotate(-60,0 950,0 1566,7)" fill="black" >
-510,00
-</text>
-<line x1="980.0" y1="50.0" x2="980.0" y2="1550.0" stroke="black" stroke-width="1" />
-<text x="980.0" y="1566.6666666666667" font-family="Verdana" font-size="10.0" text-anchor="middle"  dominant-baseline="middle" transform="rotate(-60,0 980,0 1566,7)" fill="black" >
-522,00
-</text>
-<line x1="1010.0" y1="50.0" x2="1010.0" y2="1550.0" stroke="black" stroke-width="1" />
-<text x="1010.0" y="1566.6666666666667" font-family="Verdana" font-size="10.0" text-anchor="middle"  dominant-baseline="middle" transform="rotate(-60,0 1010,0 1566,7)" fill="black" >
-534,00
-</text>
-<line x1="1040.0" y1="50.0" x2="1040.0" y2="1550.0" stroke="black" stroke-width="1" />
-<text x="1040.0" y="1566.6666666666667" font-family="Verdana" font-size="10.0" text-anchor="middle"  dominant-baseline="middle" transform="rotate(-60,0 1040,0 1566,7)" fill="black" >
-546,00
-</text>
-<line x1="1070.0" y1="50.0" x2="1070.0" y2="1550.0" stroke="black" stroke-width="1" />
-<text x="1070.0" y="1566.6666666666667" font-family="Verdana" font-size="10.0" text-anchor="middle"  dominant-baseline="middle" transform="rotate(-60,0 1070,0 1566,7)" fill="black" >
-558,00
-</text>
-<line x1="1100.0" y1="50.0" x2="1100.0" y2="1550.0" stroke="black" stroke-width="1" />
-<text x="1100.0" y="1566.6666666666667" font-family="Verdana" font-size="10.0" text-anchor="middle"  dominant-baseline="middle" transform="rotate(-60,0 1100,0 1566,7)" fill="black" >
-570,00
-</text>
-<line x1="1130.0" y1="50.0" x2="1130.0" y2="1550.0" stroke="black" stroke-width="1" />
-<text x="1130.0" y="1566.6666666666667" font-family="Verdana" font-size="10.0" text-anchor="middle"  dominant-baseline="middle" transform="rotate(-60,0 1130,0 1566,7)" fill="black" >
-582,00
-</text>
-<line x1="1160.0" y1="50.0" x2="1160.0" y2="1550.0" stroke="black" stroke-width="1" />
-<text x="1160.0" y="1566.6666666666667" font-family="Verdana" font-size="10.0" text-anchor="middle"  dominant-baseline="middle" transform="rotate(-60,0 1160,0 1566,7)" fill="black" >
-594,00
-</text>
-<line x1="1190.0" y1="50.0" x2="1190.0" y2="1550.0" stroke="black" stroke-width="1" />
-<text x="1190.0" y="1566.6666666666667" font-family="Verdana" font-size="10.0" text-anchor="middle"  dominant-baseline="middle" transform="rotate(-60,0 1190,0 1566,7)" fill="black" >
-606,00
-</text>
-<line x1="1220.0" y1="50.0" x2="1220.0" y2="1550.0" stroke="black" stroke-width="1" />
-<text x="1220.0" y="1566.6666666666667" font-family="Verdana" font-size="10.0" text-anchor="middle"  dominant-baseline="middle" transform="rotate(-60,0 1220,0 1566,7)" fill="black" >
-618,00
-</text>
-<line x1="1250.0" y1="50.0" x2="1250.0" y2="1550.0" stroke="black" stroke-width="1" />
-<text x="1250.0" y="1566.6666666666667" font-family="Verdana" font-size="10.0" text-anchor="middle"  dominant-baseline="middle" transform="rotate(-60,0 1250,0 1566,7)" fill="black" >
-630,00
-</text>
-<line x1="1280.0" y1="50.0" x2="1280.0" y2="1550.0" stroke="black" stroke-width="1" />
-<text x="1280.0" y="1566.6666666666667" font-family="Verdana" font-size="10.0" text-anchor="middle"  dominant-baseline="middle" transform="rotate(-60,0 1280,0 1566,7)" fill="black" >
-642,00
-</text>
-<line x1="1310.0" y1="50.0" x2="1310.0" y2="1550.0" stroke="black" stroke-width="1" />
-<text x="1310.0" y="1566.6666666666667" font-family="Verdana" font-size="10.0" text-anchor="middle"  dominant-baseline="middle" transform="rotate(-60,0 1310,0 1566,7)" fill="black" >
-654,00
-</text>
-<line x1="1340.0" y1="50.0" x2="1340.0" y2="1550.0" stroke="black" stroke-width="1" />
-<text x="1340.0" y="1566.6666666666667" font-family="Verdana" font-size="10.0" text-anchor="middle"  dominant-baseline="middle" transform="rotate(-60,0 1340,0 1566,7)" fill="black" >
-666,00
-</text>
-<line x1="1370.0" y1="50.0" x2="1370.0" y2="1550.0" stroke="black" stroke-width="1" />
-<text x="1370.0" y="1566.6666666666667" font-family="Verdana" font-size="10.0" text-anchor="middle"  dominant-baseline="middle" transform="rotate(-60,0 1370,0 1566,7)" fill="black" >
-678,00
-</text>
-<line x1="1400.0" y1="50.0" x2="1400.0" y2="1550.0" stroke="black" stroke-width="1" />
-<text x="1400.0" y="1566.6666666666667" font-family="Verdana" font-size="10.0" text-anchor="middle"  dominant-baseline="middle" transform="rotate(-60,0 1400,0 1566,7)" fill="black" >
-690,00
-</text>
-<line x1="1430.0" y1="50.0" x2="1430.0" y2="1550.0" stroke="black" stroke-width="1" />
-<text x="1430.0" y="1566.6666666666667" font-family="Verdana" font-size="10.0" text-anchor="middle"  dominant-baseline="middle" transform="rotate(-60,0 1430,0 1566,7)" fill="black" >
-702,00
-</text>
-<line x1="1460.0" y1="50.0" x2="1460.0" y2="1550.0" stroke="black" stroke-width="1" />
-<text x="1460.0" y="1566.6666666666667" font-family="Verdana" font-size="10.0" text-anchor="middle"  dominant-baseline="middle" transform="rotate(-60,0 1460,0 1566,7)" fill="black" >
-714,00
-</text>
-<line x1="1490.0" y1="50.0" x2="1490.0" y2="1550.0" stroke="black" stroke-width="1" />
-<text x="1490.0" y="1566.6666666666667" font-family="Verdana" font-size="10.0" text-anchor="middle"  dominant-baseline="middle" transform="rotate(-60,0 1490,0 1566,7)" fill="black" >
-726,00
-</text>
-<line x1="1520.0" y1="50.0" x2="1520.0" y2="1550.0" stroke="black" stroke-width="1" />
-<text x="1520.0" y="1566.6666666666667" font-family="Verdana" font-size="10.0" text-anchor="middle"  dominant-baseline="middle" transform="rotate(-60,0 1520,0 1566,7)" fill="black" >
-738,00
-</text>
-<line x1="1550.0" y1="50.0" x2="1550.0" y2="1550.0" stroke="black" stroke-width="1" />
-<text x="1550.0" y="1566.6666666666667" font-family="Verdana" font-size="10.0" text-anchor="middle"  dominant-baseline="middle" transform="rotate(-60,0 1550,0 1566,7)" fill="black" >
-750,00
-</text>
-<circle cx ='50,000000' cy ='494,762757' r='4' fill ='blue' />
-<circle cx ='200,000000' cy ='474,331756' r='4' fill ='blue' />
-<circle cx ='375,000000' cy ='450,495588' r='4' fill ='blue' />
-<circle cx ='1375,000000' cy ='314,288912' r='4' fill ='blue' />
-<circle cx ='1475,000000' cy ='300,668244' r='4' fill ='blue' />
-<circle cx ='1550,000000' cy ='290,452743' r='4' fill ='blue' />
-<text x="750.0" y="25.0" font-family="Verdana" font-size="25.0" text-anchor="middle"  dominant-baseline="middle" transform="rotate(0,0 750,0 25,0)" fill="green" >
-Droite de regression
-</text>
-<text x="750.0" y="1584.0" font-family="Verdana" font-size="16.0" text-anchor="middle"  dominant-baseline="middle" transform="rotate(0,0 750,0 1584,0)" fill="blue" >
-x( Length )
-</text>
-<text x="1584.0" y="750.0" font-family="Verdana" font-size="16.0" text-anchor="middle"  dominant-baseline="middle" transform="rotate(90,0 1584,0 750,0)" fill="blue" >
+<svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="1400" height="1000">
+<line x1="100.0" y1="100.0" x2="1300.0" y2="100.0" stroke="black" stroke-width="1" />
+<text x="50.0" y="100.0" font-family="Verdana" font-size="20.0" text-anchor="middle"  dominant-baseline="middle" transform="rotate(-45.0 50.0 100.0)" fill="black" >
+1.00
+</text>
+<line x1="100.0" y1="180.0" x2="1300.0" y2="180.0" stroke="black" stroke-width="1" />
+<text x="50.0" y="180.0" font-family="Verdana" font-size="20.0" text-anchor="middle"  dominant-baseline="middle" transform="rotate(-45.0 50.0 180.0)" fill="black" >
+0.90
+</text>
+<line x1="100.0" y1="260.0" x2="1300.0" y2="260.0" stroke="black" stroke-width="1" />
+<text x="50.0" y="260.0" font-family="Verdana" font-size="20.0" text-anchor="middle"  dominant-baseline="middle" transform="rotate(-45.0 50.0 260.0)" fill="black" >
+0.80
+</text>
+<line x1="100.0" y1="340.0" x2="1300.0" y2="340.0" stroke="black" stroke-width="1" />
+<text x="50.0" y="340.0" font-family="Verdana" font-size="20.0" text-anchor="middle"  dominant-baseline="middle" transform="rotate(-45.0 50.0 340.0)" fill="black" >
+0.70
+</text>
+<line x1="100.0" y1="420.0" x2="1300.0" y2="420.0" stroke="black" stroke-width="1" />
+<text x="50.0" y="420.0" font-family="Verdana" font-size="20.0" text-anchor="middle"  dominant-baseline="middle" transform="rotate(-45.0 50.0 420.0)" fill="black" >
+0.60
+</text>
+<line x1="100.0" y1="500.0" x2="1300.0" y2="500.0" stroke="black" stroke-width="1" />
+<text x="50.0" y="500.0" font-family="Verdana" font-size="20.0" text-anchor="middle"  dominant-baseline="middle" transform="rotate(-45.0 50.0 500.0)" fill="black" >
+0.50
+</text>
+<line x1="100.0" y1="580.0" x2="1300.0" y2="580.0" stroke="black" stroke-width="1" />
+<text x="50.0" y="580.0" font-family="Verdana" font-size="20.0" text-anchor="middle"  dominant-baseline="middle" transform="rotate(-45.0 50.0 580.0)" fill="black" >
+0.40
+</text>
+<line x1="100.0" y1="660.0" x2="1300.0" y2="660.0" stroke="black" stroke-width="1" />
+<text x="50.0" y="660.0" font-family="Verdana" font-size="20.0" text-anchor="middle"  dominant-baseline="middle" transform="rotate(-45.0 50.0 660.0)" fill="black" >
+0.30
+</text>
+<line x1="100.0" y1="740.0" x2="1300.0" y2="740.0" stroke="black" stroke-width="1" />
+<text x="50.0" y="740.0" font-family="Verdana" font-size="20.0" text-anchor="middle"  dominant-baseline="middle" transform="rotate(-45.0 50.0 740.0)" fill="black" >
+0.20
+</text>
+<line x1="100.0" y1="820.0" x2="1300.0" y2="820.0" stroke="black" stroke-width="1" />
+<text x="50.0" y="820.0" font-family="Verdana" font-size="20.0" text-anchor="middle"  dominant-baseline="middle" transform="rotate(-45.0 50.0 820.0)" fill="black" >
+0.10
+</text>
+<line x1="100.0" y1="900.0" x2="1300.0" y2="900.0" stroke="black" stroke-width="1" />
+<text x="50.0" y="900.0" font-family="Verdana" font-size="20.0" text-anchor="middle"  dominant-baseline="middle" transform="rotate(-45.0 50.0 900.0)" fill="black" >
+0.00
+</text>
+<line x1="100.0" y1="100.0" x2="100.0" y2="900.0" stroke="black" stroke-width="1" />
+<text x="100.0" y="933.3333333333334" font-family="Verdana" font-size="20.0" text-anchor="middle"  dominant-baseline="middle" transform="rotate(-60.0 100.0 933.3)" fill="black" >
+25.00
+</text>
+<line x1="220.0" y1="100.0" x2="220.0" y2="900.0" stroke="black" stroke-width="1" />
+<text x="220.0" y="933.3333333333334" font-family="Verdana" font-size="20.0" text-anchor="middle"  dominant-baseline="middle" transform="rotate(-60.0 220.0 933.3)" fill="black" >
+47.50
+</text>
+<line x1="340.0" y1="100.0" x2="340.0" y2="900.0" stroke="black" stroke-width="1" />
+<text x="340.0" y="933.3333333333334" font-family="Verdana" font-size="20.0" text-anchor="middle"  dominant-baseline="middle" transform="rotate(-60.0 340.0 933.3)" fill="black" >
+70.00
+</text>
+<line x1="460.0" y1="100.0" x2="460.0" y2="900.0" stroke="black" stroke-width="1" />
+<text x="460.0" y="933.3333333333334" font-family="Verdana" font-size="20.0" text-anchor="middle"  dominant-baseline="middle" transform="rotate(-60.0 460.0 933.3)" fill="black" >
+92.50
+</text>
+<line x1="580.0" y1="100.0" x2="580.0" y2="900.0" stroke="black" stroke-width="1" />
+<text x="580.0" y="933.3333333333334" font-family="Verdana" font-size="20.0" text-anchor="middle"  dominant-baseline="middle" transform="rotate(-60.0 580.0 933.3)" fill="black" >
+115.00
+</text>
+<line x1="700.0" y1="100.0" x2="700.0" y2="900.0" stroke="black" stroke-width="1" />
+<text x="700.0" y="933.3333333333334" font-family="Verdana" font-size="20.0" text-anchor="middle"  dominant-baseline="middle" transform="rotate(-60.0 700.0 933.3)" fill="black" >
+137.50
+</text>
+<line x1="820.0" y1="100.0" x2="820.0" y2="900.0" stroke="black" stroke-width="1" />
+<text x="820.0" y="933.3333333333334" font-family="Verdana" font-size="20.0" text-anchor="middle"  dominant-baseline="middle" transform="rotate(-60.0 820.0 933.3)" fill="black" >
+160.00
+</text>
+<line x1="940.0" y1="100.0" x2="940.0" y2="900.0" stroke="black" stroke-width="1" />
+<text x="940.0" y="933.3333333333334" font-family="Verdana" font-size="20.0" text-anchor="middle"  dominant-baseline="middle" transform="rotate(-60.0 940.0 933.3)" fill="black" >
+182.50
+</text>
+<line x1="1060.0" y1="100.0" x2="1060.0" y2="900.0" stroke="black" stroke-width="1" />
+<text x="1060.0" y="933.3333333333334" font-family="Verdana" font-size="20.0" text-anchor="middle"  dominant-baseline="middle" transform="rotate(-60.0 1060.0 933.3)" fill="black" >
+205.00
+</text>
+<line x1="1180.0" y1="100.0" x2="1180.0" y2="900.0" stroke="black" stroke-width="1" />
+<text x="1180.0" y="933.3333333333334" font-family="Verdana" font-size="20.0" text-anchor="middle"  dominant-baseline="middle" transform="rotate(-60.0 1180.0 933.3)" fill="black" >
+227.50
+</text>
+<line x1="1300.0" y1="100.0" x2="1300.0" y2="900.0" stroke="black" stroke-width="1" />
+<text x="1300.0" y="933.3333333333334" font-family="Verdana" font-size="20.0" text-anchor="middle"  dominant-baseline="middle" transform="rotate(-60.0 1300.0 933.3)" fill="black" >
+250.00
+</text>
+<circle cx ='100.000000' cy ='820.000000' r='4' fill ='blue' />
+<circle cx ='127.733333' cy ='804.000000' r='4' fill ='blue' />
+<circle cx ='153.333333' cy ='804.000000' r='4' fill ='blue' />
+<circle cx ='154.400000' cy ='788.000000' r='4' fill ='blue' />
+<circle cx ='207.733333' cy ='756.000000' r='4' fill ='blue' />
+<circle cx ='222.666667' cy ='756.000000' r='4' fill ='blue' />
+<circle cx ='244.533333' cy ='732.000000' r='4' fill ='blue' />
+<circle cx ='260.533333' cy ='724.000000' r='4' fill ='blue' />
+<circle cx ='286.666667' cy ='740.000000' r='4' fill ='blue' />
+<circle cx ='313.866667' cy ='692.000000' r='4' fill ='blue' />
+<circle cx ='313.866667' cy ='700.000000' r='4' fill ='blue' />
+<circle cx ='342.133333' cy ='660.000000' r='4' fill ='blue' />
+<circle cx ='351.733333' cy ='676.000000' r='4' fill ='blue' />
+<circle cx ='368.266667' cy ='644.000000' r='4' fill ='blue' />
+<circle cx ='368.800000' cy ='700.000000' r='4' fill ='blue' />
+<circle cx ='393.333333' cy ='636.000000' r='4' fill ='blue' />
+<circle cx ='394.933333' cy ='620.000000' r='4' fill ='blue' />
+<circle cx ='420.000000' cy ='620.000000' r='4' fill ='blue' />
+<circle cx ='420.000000' cy ='596.000000' r='4' fill ='blue' />
+<circle cx ='438.133333' cy ='580.000000' r='4' fill ='blue' />
+<circle cx ='446.666667' cy ='660.000000' r='4' fill ='blue' />
+<circle cx ='473.333333' cy ='564.000000' r='4' fill ='blue' />
+<circle cx ='474.933333' cy ='632.571429' r='4' fill ='blue' />
+<circle cx ='476.000000' cy ='580.000000' r='4' fill ='blue' />
+<circle cx ='484.133333' cy ='632.571429' r='4' fill ='blue' />
+<circle cx ='500.533333' cy ='564.000000' r='4' fill ='blue' />
+<circle cx ='501.066667' cy ='540.000000' r='4' fill ='blue' />
+<circle cx ='526.666667' cy ='596.000000' r='4' fill ='blue' />
+<circle cx ='528.800000' cy ='620.000000' r='4' fill ='blue' />
+<circle cx ='553.333333' cy ='632.571429' r='4' fill ='blue' />
+<circle cx ='581.600000' cy ='632.571429' r='4' fill ='blue' />
+<circle cx ='604.436364' cy ='532.000000' r='4' fill ='blue' />
+<circle cx ='604.436364' cy ='380.000000' r='4' fill ='blue' />
+<circle cx ='604.436364' cy ='500.000000' r='4' fill ='blue' />
+<circle cx ='604.436364' cy ='756.000000' r='4' fill ='blue' />
+<circle cx ='604.436364' cy ='780.000000' r='4' fill ='blue' />
+<circle cx ='604.436364' cy ='500.000000' r='4' fill ='blue' />
+<circle cx ='604.436364' cy ='460.000000' r='4' fill ='blue' />
+<circle cx ='604.436364' cy ='740.000000' r='4' fill ='blue' />
+<circle cx ='604.436364' cy ='484.000000' r='4' fill ='blue' />
+<circle cx ='604.436364' cy ='724.000000' r='4' fill ='blue' />
+<circle cx ='604.436364' cy ='660.000000' r='4' fill ='blue' />
+<circle cx ='604.436364' cy ='564.000000' r='4' fill ='blue' />
+<circle cx ='604.436364' cy ='276.000000' r='4' fill ='blue' />
+<circle cx ='606.666667' cy ='484.000000' r='4' fill ='blue' />
+<circle cx ='609.866667' cy ='632.571429' r='4' fill ='blue' />
+<circle cx ='609.866667' cy ='540.000000' r='4' fill ='blue' />
+<circle cx ='635.466667' cy ='632.571429' r='4' fill ='blue' />
+<circle cx ='686.666667' cy ='500.000000' r='4' fill ='blue' />
+<circle cx ='686.666667' cy ='420.000000' r='4' fill ='blue' />
+<circle cx ='687.733333' cy ='420.000000' r='4' fill ='blue' />
+<circle cx ='714.400000' cy ='420.000000' r='4' fill ='blue' />
+<circle cx ='714.400000' cy ='460.000000' r='4' fill ='blue' />
+<circle cx ='716.533333' cy ='404.000000' r='4' fill ='blue' />
+<circle cx ='743.200000' cy ='404.000000' r='4' fill ='blue' />
+<circle cx ='768.266667' cy ='356.000000' r='4' fill ='blue' />
+<circle cx ='769.333333' cy ='356.000000' r='4' fill ='blue' />
+<circle cx ='769.866667' cy ='420.000000' r='4' fill ='blue' />
+<circle cx ='793.333333' cy ='340.000000' r='4' fill ='blue' />
+<circle cx ='793.333333' cy ='356.000000' r='4' fill ='blue' />
+<circle cx ='820.000000' cy ='340.000000' r='4' fill ='blue' />
+<circle cx ='874.400000' cy ='340.000000' r='4' fill ='blue' />
+<circle cx ='874.933333' cy ='292.000000' r='4' fill ='blue' />
+<circle cx ='901.066667' cy ='276.000000' r='4' fill ='blue' />
+<circle cx ='926.666667' cy ='300.000000' r='4' fill ='blue' />
+<circle cx ='1034.933333' cy ='220.000000' r='4' fill ='blue' />
+<circle cx ='1086.666667' cy ='220.000000' r='4' fill ='blue' />
+<circle cx ='1140.000000' cy ='164.000000' r='4' fill ='blue' />
+<circle cx ='1194.933333' cy ='164.000000' r='4' fill ='blue' />
+<circle cx ='1300.000000' cy ='116.000000' r='4' fill ='blue' />
+<text x="600.0" y="50.0" font-family="Verdana" font-size="50.0" text-anchor="middle"  dominant-baseline="middle" transform="rotate(0.0 600.0 50.0)" fill="green" >
+Droite de régression
+</text>
+<text x="600.0" y="967.0" font-family="Verdana" font-size="33.0" text-anchor="middle"  dominant-baseline="middle" transform="rotate(0.0 600.0 967.0)" fill="blue" >
+x( Size )
+</text>
+<text x="1367.0" y="400.0" font-family="Verdana" font-size="33.0" text-anchor="middle"  dominant-baseline="middle" transform="rotate(90.0 1367.0 400.0)" fill="blue" >
 y( InfestationRate )
 </text>
-<polyline points = '50,000000,494,762757 200,000000,474,331756 375,000000,450,495588 1375,000000,314,288912 1475,000000,300,668244 1550,000000,290,452743 ' stroke='red' stroke-width='2' fill='none'/>
+<polyline points = '100.000000,843.910718 127.733333,826.292468 153.333333,810.029469 154.400000,809.351844 207.733333,775.470595 222.666667,765.983845 244.533333,752.092533 260.533333,741.928159 286.666667,725.326347 313.866667,708.046910 313.866667,708.046910 342.133333,690.089848 351.733333,683.991223 368.266667,673.488036 368.800000,673.149224 393.333333,657.563849 394.933333,656.547412 420.000000,640.623225 420.000000,640.623225 438.133333,629.103600 446.666667,623.682601 473.333333,606.741976 474.933333,605.725539 476.000000,605.047914 484.133333,599.881023 500.533333,589.462539 501.066667,589.123727 526.666667,572.860727 528.800000,571.505477 553.333333,555.920103 581.600000,537.963041 604.436364,523.455706 604.436364,523.455706 604.436364,523.455706 604.436364,523.455706 604.436364,523.455706 604.436364,523.455706 604.436364,523.455706 604.436364,523.455706 604.436364,523.455706 604.436364,523.455706 604.436364,523.455706 604.436364,523.455706 604.436364,523.455706 606.666667,522.038854 609.866667,520.005979 609.866667,520.005979 635.466667,503.742980 686.666667,471.216981 686.666667,471.216981 687.733333,470.539356 714.400000,453.598732 714.400000,453.598732 716.533333,452.243482 743.200000,435.302857 768.266667,419.378670 769.333333,418.701045 769.866667,418.362233 793.333333,403.454484 793.333333,403.454484 820.000000,386.513859 874.400000,351.954985 874.933333,351.616173 901.066667,335.014361 926.666667,318.751362 1034.933333,249.972427 1086.666667,217.107615 1140.000000,183.226366 1194.933333,148.328680 1300.000000,81.582620 ' stroke='red' stroke-width='2' fill='none'/>
 </svg>
