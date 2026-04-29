@@ -14,7 +14,7 @@ import traitements.MeanValue;
 
 public class IntegrationFilesToMeanValueTest {
 
-    @Test
+    @TestPopulation1
     void csvToFilesToFishToDataFrameToMeanValue() throws IOException {
         ArrayList<String> lines = Files.getFile("tests/resources/integration_files_to_mean.csv");
         ArrayList<Fish> poissons = TestCsvParser.parseLines(lines);

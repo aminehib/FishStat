@@ -12,10 +12,6 @@ import graphique.SvgGenerator;
 import model.DataFrame;
 import model.Fish;
 import model.Population;
-import traitements.KmeansCompletion;
-import traitements.LinearRegressionCompletion;
-import traitements.MeanValueCompletion;
-
 import traitements.*;
 import tools.*;
 import interfaces.*;
@@ -31,9 +27,7 @@ public class Main {
 
         LinkedHashMap<String , String > head = new LinkedHashMap<>() ;
 
-        //head.put("N", "Total");
-    
-
+       
 
         header.put("espece", "Species");
         //header.put("NParasitesTotal", "Total_parasites");
@@ -47,11 +41,9 @@ public class Main {
         try{
             df.setData(CsvReader.readCsv("src/tests.csv" ,",",";",1 , header, Fish.class)) ;
             System.out.println(df);
-
         }catch(Exception e){
             e.printStackTrace();
         }
-       
         /*for(Fish p : df.getData()){
             p.setSpecies("mackerel");
         }*/
@@ -74,10 +66,9 @@ public class Main {
 
        System.out.println(df);
 
-        
 
 
-        SvgGenerator.GenerateSVG(df,"Size","InfestationRate",1600,1600,"Droite de régression",50,100,100,2);
+        SvgGenerator.GenerateSVG(df,"Size","InfestationRate",800,800,"Droite de régression",100,10,10,1.5);
 
         LinearRegression model = new LinearRegression(df.getSizes(), df.getInfestationRates());
         System.out.println(model.getCoeff()+ " " + model.getIntercept() + " "+ df.getSpecies().size()); 

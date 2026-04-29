@@ -8,17 +8,17 @@ import files.Files;
 
 public class FilesTest {
 
-    @Test
+    @TestPopulation1
     void getExtensionReturnsCsvForLowercase() {
         assertEquals("csv", Files.getExtension("data.csv"));
     }
 
-    @Test
+    @TestPopulation1
     void getExtensionReturnsEmptyWhenMissing() {
         assertEquals("", Files.getExtension("data"));
     }
 
-    @Test
+    @TestPopulation1
     void getExtensionReturnsEmptyWhenTrailingDot() {
         assertEquals("", Files.getExtension("data."));
     }

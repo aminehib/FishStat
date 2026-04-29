@@ -34,12 +34,12 @@ public class CsvReader {
         
         
         String line ;
-        ArrayList<String> lines  = new ArrayList<>() ;
+        
 
         line = buffer.readLine();
 
             String header[] = line.split(split);
-            lines.add(String.join(",", header));
+            
 
             for(int i = 0 ; i < header.length; i++){
                 if(headers.containsKey(header[i])){
@@ -198,12 +198,11 @@ public static <T extends Data> ArrayList<T> readCsv(String name ,String split ,S
         
         
         String line ;
-        ArrayList<String> lines  = new ArrayList<>() ;
 
         line = buffer.readLine();
 
             String header[] = line.split(split);
-            lines.add(String.join(",", header));
+            
 
             for(int i = 0 ; i < header.length; i++){
                 if(headers.containsKey(header[i])){

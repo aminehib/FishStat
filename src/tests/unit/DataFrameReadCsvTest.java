@@ -16,7 +16,7 @@ import model.* ;
 
 public class DataFrameReadCsvTest {
 
-    @Test
+    @TestPopulation1
     void readCsvParsesValidFile() throws InvalidFileFormat {
         DataFrame df = new DataFrame();
         df.setData(CsvReader.readCsv("tests/resources/valid.csv", null, null, 0, null, null));
@@ -44,31 +44,31 @@ public class DataFrameReadCsvTest {
         assertEquals("parasite", second.getContent().toArray()[0]);
     }
 
-    @Test
+    @TestPopulation1
     void readCsvRejectsInvalidExtension() {
         DataFrame df = new DataFrame();
         assertThrows(InvalidFileFormat.class, () -> df.readcsv("tests/resources/upper_ext.CSV"));
     }
 
-    @Test
+    @TestPopulation1
     void readCsvRejectsInvalidColumnCount() {
         DataFrame df = new DataFrame();
         assertThrows(InvalidFileFormat.class, () -> df.readcsv("tests/resources/invalid_columns.csv"));
     }
 
-    @Test
+    @TestPopulation1
     void readCsvRejectsInvalidNumber() {
         DataFrame df = new DataFrame();
         assertThrows(InvalidFileFormat.class, () -> df.readcsv("tests/resources/invalid_number.csv"));
     }
 
-    @Test
+    @TestPopulation1
     void readCsvRejectsMissingFile() {
         DataFrame df = new DataFrame();
         assertThrows(InvalidFileFormat.class, () -> df.readcsv("tests/resources/missing.csv"));
     }
 
-    @Test
+    @TestPopulation1
     void readCsvRejectsEmptyLines() {
         DataFrame df = new DataFrame();
         assertThrows(InvalidFileFormat.class, () -> df.readcsv("tests/resources/empty_lines.csv"));

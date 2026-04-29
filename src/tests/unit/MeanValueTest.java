@@ -14,7 +14,7 @@ import traitements.MeanValueCompletion;
 
 public class MeanValueTest {
 
-    @Test
+    @TestPopulation1
     void completesMissingRatesPerSpecies() {
         ArrayList<Fish> data = new ArrayList<>();
         data.add(fish("a", 0.10));
