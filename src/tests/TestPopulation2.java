@@ -37,7 +37,7 @@ public class TestPopulation2 {
             e.printStackTrace();
         }
        
-        SvgGenerator.GenerateSVG(df,"Length","InfestationRate",1600,1600,"Droite de régression",50,50,50,1);
+        SvgGenerator.GenerateSVG(df,"Length","InfestationRate",1600,1600,"Droite de regression",50,50,50,1);
         LinearRegression model = new LinearRegression(df.getSizes(), df.getInfestationRates());
         System.out.println(model.getCoeff()+ " " + model.getIntercept() + " "+ df.getSpecies().size()); 
     }

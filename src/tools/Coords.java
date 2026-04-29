@@ -70,8 +70,7 @@ public class Coords {
     }
     /** @param y la nouvelle ordonnée */
     public void setY(Double y){
-        this.y = x ;
-        if(y == null) y = Double.MAX_VALUE ;
+        this.y = (y == null) ? Double.MAX_VALUE : y ;
     }
 
 }

@@ -55,12 +55,23 @@ public class SvgGenerator {
             return ;
         }
 
-        x0.sort( (f1,f2) ->{
-            return f1.compareTo(f2);
-        });
+       
+        for(int i = 0; i < x0.size() - 1; i++){
+            for(int j = i + 1; j < x0.size(); j++){
+                if(x0.get(i) > x0.get(j)){
+                    Double tmpX = x0.get(i);
+                    Double tmpY = y0.get(i);
+                    x0.set(i, x0.get(j));
+                    x0.set(j, tmpX);
+                    y0.set(i, y0.get(j));
+                    y0.set(j, tmpY);
+                }
+            }
+        }
 
+       
 
-
+        
 
         OutputStream out  = null ;
 
@@ -83,8 +94,9 @@ public class SvgGenerator {
 
         for(int i = 0 ; i < x0.size() ; i++){
             double x = MARGE + ( ( x0.get(i) - first_X) / (last_X - first_X) ) *nbc*CELL_SIZE_X ;
-            double y = MARGE + (1 - ( ( model.predict(x0.get(i) )  / echelle  ) ))  *nbl*CELL_SIZE_Y;
-            points  += String.format("%f,%f ",x,y);
+            double y = MARGE + (1 - ( y0.get(i)  / echelle  ) )  *nbl*CELL_SIZE_Y; 
+            double  predict_y  = MARGE + (1 - ( model.predict(x0.get(i)) / echelle  ) )  *nbl*CELL_SIZE_Y ;
+            points  += String.format("%f,%f ", x,  predict_y   );
             SVG += String.format("<circle cx ='%f' cy ='%f' r='4' fill ='blue' />\n",x , y) ;
         }
 
