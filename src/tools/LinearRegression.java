@@ -2,11 +2,21 @@ package tools;
 
 import java.util.ArrayList;
 
+/**
+ * Régression linéaire simple {@code y = a*x + b} ajustée par les
+ * moindres carrés. Les paires contenant un {@code null} sont ignorées.
+ */
 public class LinearRegression {
 
     private Double a = null;
     private Double b = null ;
 
+    /**
+     * Calcule les coefficients de la droite de régression.
+     *
+     * @param x la série des abscisses
+     * @param y la série des ordonnées (même taille)
+     */
     public LinearRegression(ArrayList<Double> x , ArrayList<Double> y){
 
         if(x.size() != y.size())return ;
@@ -41,6 +51,12 @@ public class LinearRegression {
 
     }
 
+    /**
+     * Prédit les ordonnées pour une liste d'abscisses.
+     *
+     * @param x la liste d'abscisses
+     * @return les prédictions, ou {@code null} si le modèle est invalide
+     */
     public ArrayList<Double> predict(ArrayList<Double> x){
         if(a == null || b == null)return null ;
         ArrayList<Double> y = new ArrayList<>() ;
@@ -50,14 +66,21 @@ public class LinearRegression {
         return y ;
     }
 
+    /**
+     * Prédit l'ordonnée pour une abscisse unique.
+     *
+     * @param x une abscisse
+     * @return la prédiction, ou {@code null} si entrée ou modèle invalide
+     */
     public Double predict(Double x ){
         if(x == null || a == null || b == null)return null ;
         return  a*x + b ;
     }
 
-
+    /** @return le coefficient directeur {@code a} */
     public Double getCoeff(){return this.a ;}
 
+    /** @return l'ordonnée à l'origine {@code b} */
     public Double getIntercept(){return this.b ;}
-    
+
 }

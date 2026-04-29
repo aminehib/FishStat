@@ -2,23 +2,33 @@ package tools;
 
 import java.util.ArrayList;
 
+/**
+ * Régression polynomiale d'ordre 2 {@code y = a*x^2 + b*x + c}
+ * ajustée par les moindres carrés via résolution d'un système 3x3.
+ */
 public class RegressionPoly2 {
 
     private Double a  = null ;
     private Double b  = null ;
     private Double c  = null ;
 
+    /** @return un tableau {@code [a, b]} des coefficients de degré 2 et 1 */
     public Double[] getCoeffs(){
         Double[] coeffs  = {a,b};
         return coeffs;
     }
 
+    /** @return le terme constant {@code c} */
     public Double getIntercept(){
         return c ;
     }
 
-
-
+    /**
+     * Ajuste un polynôme de degré 2 sur les données fournies.
+     *
+     * @param x la série des abscisses
+     * @param y la série des ordonnées (même taille)
+     */
     public  RegressionPoly2(ArrayList<Double> x , ArrayList<Double> y){
 
         if(x.size() != y.size())return ;
@@ -62,7 +72,13 @@ public class RegressionPoly2 {
         c = res[0] ;
     }
 
-    // Gauss 3x3 simple
+    /**
+     * Résout un système linéaire 3x3 par élimination de Gauss.
+     *
+     * @param A matrice 3x3 des coefficients
+     * @param B vecteur des seconds membres (taille 3)
+     * @return la solution (taille 3)
+     */
     static double[] solve3x3(double[][] A, double[] B) {
         int n = 3;
 
@@ -87,6 +103,12 @@ public class RegressionPoly2 {
         return B;
     }
 
+    /**
+     * Prédit l'ordonnée pour une abscisse unique.
+     *
+     * @param x une abscisse
+     * @return la valeur du polynôme, ou {@code null} si modèle invalide
+     */
     public  Double predict(Double x){
         if(a == null || b == null || c == null )return null ;
         if(x != null)
@@ -94,6 +116,12 @@ public class RegressionPoly2 {
         return null ;
     }
 
+    /**
+     * Prédit les ordonnées pour une liste d'abscisses.
+     *
+     * @param x liste d'abscisses
+     * @return liste des prédictions, ou {@code null} si invalide
+     */
     public ArrayList<Double> predict(ArrayList<Double> x){
         if(a == null || b == null || c == null || x.size() == 0 )return null ;
         ArrayList<Double> res = new ArrayList<>() ;
@@ -104,5 +132,3 @@ public class RegressionPoly2 {
         return res ;
     }
 }
-       
-

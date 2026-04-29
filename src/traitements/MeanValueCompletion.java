@@ -5,20 +5,27 @@ import tools.MeanValue;
 
 import java.util.ArrayList;
 import java.util.LinkedHashMap;
-import java.util.LinkedHashSet;
 
-import tools.MeanValue;
-
-
+/**
+ * Stratégie de complétion par moyenne : pour chaque espèce, les
+ * mesures manquantes sont remplacées par la moyenne des valeurs
+ * connues de la même espèce.
+ */
 public class MeanValueCompletion extends Traitement {
 
+    /**
+     * Complète les valeurs manquantes du DataFrame en utilisant
+     * la moyenne par espèce de chaque mesure.
+     *
+     * @param fish le DataFrame à compléter
+     */
     @Override
     public void complete(DataFrame<Fish> fish){
         ArrayList<Fish> poissons = new ArrayList<>(fish.getData());
         LinkedHashMap<String , ArrayList<Fish> > Species = getSpecies(poissons);
         for(String species : Species.keySet()){
             DataFrame Known = new DataFrame(Species.get(species));
-        
+
             LinkedHashMap<String, ArrayList<Double> > KnownValues = new LinkedHashMap<>();
             KnownValues.put("InfestationRates", Known.getInfestationRates());
             KnownValues.put("Parasites", Known.getParasites());
@@ -38,7 +45,7 @@ public class MeanValueCompletion extends Traitement {
                             if(unknown.getInfestationRate() == null)
                                 unknown.setInfestationRate(moyenne);
                             break;
-                        
+
                         case "Parasites":
                             if(unknown.getParasites() == null)
                                 unknown.setParasites((moyenne == null)? null : moyenne.intValue() );
@@ -60,10 +67,8 @@ public class MeanValueCompletion extends Traitement {
                             break;
                     }
             }
-            
+
         }
     }
 
-  
-    
 }

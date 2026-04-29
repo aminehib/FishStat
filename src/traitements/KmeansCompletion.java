@@ -8,10 +8,23 @@ import tools.Coords;
 import tools.KMeans;
 import tools.MeanValue;
 import tools.StandatrdDeviation;
+
+/**
+ * Stratégie de complétion par K-Means : sélectionne le couple
+ * de colonnes minimisant l'inertie, regroupe les poissons en
+ * clusters, puis remplace les valeurs manquantes par la moyenne
+ * du cluster d'appartenance.
+ */
 public class KmeansCompletion extends Traitement {
 
     private static String[] cols = {"Length","Weight","Size","Parasites","InfestationRate"};
 
+    /**
+     * Complète les valeurs manquantes en utilisant un clustering
+     * K-Means sur le couple de colonnes le plus discriminant.
+     *
+     * @param fish le DataFrame à compléter
+     */
     @Override
     public void complete(DataFrame<Fish> fish){
 
@@ -132,6 +145,15 @@ public class KmeansCompletion extends Traitement {
         }
     }
 
+    /**
+     * Calcule l'inertie totale d'un partitionnement (somme des
+     * carrés des distances au centre du cluster d'appartenance).
+     *
+     * @param coords  les points
+     * @param centers les centres des clusters
+     * @param labels  l'étiquette de cluster de chaque point
+     * @return l'inertie totale
+     */
     public static double inertie(Coords[] coords, Coords[] centers, ArrayList<Integer> labels) {
         double inertie = 0.0;
 
@@ -144,6 +166,13 @@ public class KmeansCompletion extends Traitement {
         return inertie;
     }
 
+    /**
+     * Regroupe les poissons par cluster selon les étiquettes.
+     *
+     * @param df     le DataFrame source
+     * @param labels les étiquettes (même taille que les données)
+     * @return une map ordonnée cluster → liste de poissons
+     */
     public LinkedHashMap<Integer , ArrayList<Fish>> cluster(DataFrame<Fish> df , ArrayList<Integer> labels){
         ArrayList<Fish> poissons = df.getData();
         LinkedHashMap<Integer , ArrayList<Fish>> cl = new LinkedHashMap<>();

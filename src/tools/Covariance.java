@@ -2,8 +2,20 @@ package tools;
 
 import java.util.ArrayList;
 
+/**
+ * Outil utilitaire de calcul de la covariance entre deux séries.
+ */
 public class Covariance {
 
+/**
+ * Calcule la covariance entre {@code x} et {@code y}.
+ * Les paires contenant un {@code null} sont ignorées.
+ *
+ * @param x première série
+ * @param y deuxième série (même taille que {@code x})
+ * @return la covariance, ou {@code null} si les listes sont
+ *         invalides ou de taille &lt; 2
+ */
 public static Double covariance(ArrayList<Double> x ,ArrayList<Double> y){
 
     if(x == null || y == null || x.size() != y.size()) return null;
@@ -32,5 +44,5 @@ public static Double covariance(ArrayList<Double> x ,ArrayList<Double> y){
 
     return cov / n;
 }
-    
+
 }

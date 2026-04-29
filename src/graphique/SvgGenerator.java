@@ -8,19 +8,38 @@ import java.nio.file.StandardOpenOption;
 import java.util.ArrayList;
 
 import model.DataFrame;
-import model.Fish;
 import tools.LinearRegression;
 
 import java.nio.file.Path;
 
+/**
+ * Génère un fichier SVG représentant un nuage de points et la
+ * droite de régression linéaire associée pour deux colonnes
+ * d'un {@link DataFrame}.
+ */
 public class SvgGenerator {
 
+    /**
+     * Construit et écrit le fichier {@code graphique.svg} dans
+     * le répertoire courant.
+     *
+     * @param fish    le DataFrame source
+     * @param X       nom de la colonne servant d'abscisse
+     * @param Y       nom de la colonne servant d'ordonnée
+     * @param height  hauteur du SVG en pixels
+     * @param width   largeur du SVG en pixels
+     * @param title   titre affiché en haut du graphique
+     * @param MARGE   marge en pixels autour de la zone tracée
+     * @param nbl     nombre de lignes de la grille
+     * @param nbc     nombre de colonnes de la grille
+     * @param echelle facteur d'échelle vertical
+     */
     public static void GenerateSVG(DataFrame fish,String X ,String Y , int height , int width , String title ,int MARGE , int nbl , int nbc , double echelle ){
 
 
         double CELL_SIZE_X =  (width-2*MARGE) / nbc ;
         double CELL_SIZE_Y = (height-2*MARGE) / nbl ;
-        
+
         ArrayList<Double> x0 = fish.getColumn(X) ;
         ArrayList<Double> y0 = fish.getColumn(Y) ;
 
@@ -37,11 +56,10 @@ public class SvgGenerator {
         }
 
         x0.sort( (f1,f2) ->{
-            // tri croissant
             return f1.compareTo(f2);
         });
 
-       
+
 
 
         OutputStream out  = null ;
@@ -51,32 +69,32 @@ public class SvgGenerator {
         try{
         out = Files.newOutputStream(p, StandardOpenOption.CREATE , StandardOpenOption.TRUNCATE_EXISTING );
         String SVG  = initialiserSVG(width,height ) ;
-        
+
         String points = "<polyline points = '" ;
         double first_X = x0.get(0) ;
         double last_X = x0.get(x0.size()-1) ;
-    
-           
-        LinearRegression model = new LinearRegression(fish.getColumn(X), fish.getColumn(Y));
-       
 
-           
+
+        LinearRegression model = new LinearRegression(fish.getColumn(X), fish.getColumn(Y));
+
+
+
         SVG += dessinerGrilleEtMarge(nbc, nbl, CELL_SIZE_X, CELL_SIZE_Y, MARGE ,first_X ,  last_X -first_X ,0 , echelle );
-        
+
         for(int i = 0 ; i < x0.size() ; i++){
             double x = MARGE + ( ( x0.get(i) - first_X) / (last_X - first_X) ) *nbc*CELL_SIZE_X ;
             double y = MARGE + (1 - ( ( model.predict(x0.get(i) )  / echelle  ) ))  *nbl*CELL_SIZE_Y;
             points  += String.format("%f,%f ",x,y);
             SVG += String.format("<circle cx ='%f' cy ='%f' r='4' fill ='blue' />\n",x , y) ;
         }
-        
+
         points += "' stroke='red' stroke-width='2' fill='none'/>\n";
         SVG += text( (width-2*MARGE)/2 , MARGE /2  , MARGE/2 , title, "green",0);
         SVG += text( (width-2*MARGE)/2 , height -  MARGE / 3  , MARGE/3 , String.format("x( %s )",X ), "blue",0);
         SVG += text(width - MARGE /3  , (height-2*MARGE)/2 , MARGE / 3 , String.format("y( %s )",Y ), "blue",90);
-        
+
         SVG += points + "</svg>" ;
-        
+
         out.write(SVG.getBytes());
         out.close();
         }catch(IOException e){
@@ -84,7 +102,7 @@ public class SvgGenerator {
         }
 
         System.out.println("GENERE AVEC SUCCES");
-        
+
     }
 
     private static String initialiserSVG(int largeur, int hauteur){
@@ -105,7 +123,7 @@ public class SvgGenerator {
             SVG += text(SVG_MARGE / 2.0 , SVG_MARGE + i * SVG_CELLSIZE_Y , SVG_MARGE / 5.0  ,String.format("%.2f",first_Y +ecart_Y *(nbl - i) / nbl ) , "black" , -45 );
         }
 
-    
+
         for(int i = 0 ; i <= nbc ; i++){
             SVG += ligne(SVG_MARGE + i * SVG_CELLSIZE_X ,  SVG_MARGE , SVG_MARGE + i * SVG_CELLSIZE_X , SVG_MARGE + nbl * SVG_CELLSIZE_Y , "black", 1);
             SVG += text(SVG_MARGE + i * SVG_CELLSIZE_X  , SVG_MARGE + nbl * SVG_CELLSIZE_Y  +SVG_MARGE /3.0 , SVG_MARGE / 5.0 ,String.format("%.2f",first_X +  ecart_X * i /nbc) , "black" , -60);
@@ -125,7 +143,7 @@ public class SvgGenerator {
         return SVG ;
     }
 
-    
+
 
     private static String text(double x, double y, double size, String txt, String color , double rotation){
         String SVG = "" ;
@@ -135,12 +153,11 @@ public class SvgGenerator {
         SVG += " dominant-baseline=\"middle\" ";
         SVG += String.format("transform=\"rotate(%.1f %.1f %.1f)\" ", rotation , x ,y);
         SVG += "fill=\"" + color + "\" >\n" ;
-        SVG += txt + "\n"; 
+        SVG += txt + "\n";
         SVG += "</text>\n" ;
         return SVG ;
 }
 
 
 
-    
 }

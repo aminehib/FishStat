@@ -3,8 +3,23 @@ package tools;
 import java.util.*;
 import model.*;
 
+/**
+ * Algorithme de clustering K-Means en 2D appliqué à deux colonnes
+ * d'un {@link DataFrame} de poissons.
+ */
 public class KMeans {
 
+    /**
+     * Exécute l'algorithme K-Means.
+     *
+     * @param init_centers centres initiaux (modifiés en place)
+     * @param max_iter     nombre maximum d'itérations
+     * @param epsilon      seuil de convergence sur le déplacement des centres
+     * @param df           DataFrame source
+     * @param X            nom de la colonne servant d'abscisse
+     * @param Y            nom de la colonne servant d'ordonnée
+     * @return les étiquettes de cluster pour chaque point, ou {@code null} si invalide
+     */
     public static ArrayList<Integer> Kmeans(Coords[] init_centers, int max_iter, double epsilon, DataFrame<Fish> df, String X, String Y) {
 
         if (init_centers == null || init_centers.length == 0) return null;
@@ -26,7 +41,7 @@ public class KMeans {
 
         Coords[] coords = Coords.init_Coords(x, y);
 
-        
+
         Coords[] previous_centers = new Coords[init_centers.length];
         for (int i = 0; i < init_centers.length; i++) {
             previous_centers[i] = new Coords(init_centers[i].getX(), init_centers[i].getY());
@@ -37,12 +52,12 @@ public class KMeans {
         while (iter < max_iter) {
             iter++;
 
-            
+
             for (int i = 0; i < dist.size(); i++) {
                 dist.set(i, Double.MAX_VALUE);
             }
 
-            
+
             for (int i = 0; i < init_centers.length; i++) {
                 previous_centers[i] = new Coords(init_centers[i].getX(), init_centers[i].getY());
             }
@@ -79,7 +94,7 @@ public class KMeans {
                 }
             }
 
-           
+
             if (stop(init_centers, previous_centers, epsilon)) {
                 break;
             }

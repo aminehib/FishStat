@@ -2,6 +2,11 @@ package tools;
 
 import java.util.ArrayList;
 
+/**
+ * Calcule les statistiques d'une boîte à moustaches :
+ * quartiles Q1, Q2 (médiane), Q3 et bornes des moustaches
+ * basées sur l'écart interquartile (1.5 * IQR).
+ */
 public class BoiteAMoustaches {
 
     private Double Q1;
@@ -9,12 +14,16 @@ public class BoiteAMoustaches {
     private Double Q3;
     private Double moustacheInf;
     private Double moustacheSup;
-    
+
+    /**
+     * Construit la boîte à moustaches à partir d'une liste de valeurs
+     * (les {@code null} sont ignorés ; la liste passée n'est pas modifiée).
+     *
+     * @param valeurs les valeurs à analyser
+     */
     public BoiteAMoustaches(ArrayList<Double> valeurs ){
 
-        // Pourquoi: éviter de modifier la liste d'origine (effet de bord).
         ArrayList<Double> filtered = new ArrayList<>(valeurs);
-        // garder les poissons avec un taux d'infestation connu
         filtered.removeIf( arg->{
             return (arg == null ) ;
         });
@@ -22,17 +31,15 @@ public class BoiteAMoustaches {
         filtered.sort((f1, f2) -> {
         Double t1 = f1 ;
         Double t2 = f2 ;
-        // tri croissant
         return t1.compareTo(t2);
         });
 
-        // médiane globale
         Q2 = median(filtered);
         int n = filtered.size() ;
         int milieu = n / 2;
 
-        ArrayList<Double> lower;//liste des valeurs inferieures a la mediane
-        ArrayList<Double> upper;//liste des valeurs superieures a la mediane
+        ArrayList<Double> lower;
+        ArrayList<Double> upper;
 
         if(n % 2 == 0){
             lower = new ArrayList<>(filtered.subList(0, milieu));
@@ -42,7 +49,6 @@ public class BoiteAMoustaches {
             upper = new ArrayList<>(filtered.subList(milieu + 1, n));
         }
 
-        // quartiles (mediane inferieure , superieure)
         Q1 = median(lower);
         Q3 = median(upper);
 
@@ -52,7 +58,6 @@ public class BoiteAMoustaches {
             return ;
         }
 
-        // écart interquartile
         double ecartInterquantile = Q3 - Q1 ;
 
         moustacheInf =  Q1 -  (1.5 * ecartInterquantile) ;
@@ -72,22 +77,27 @@ public class BoiteAMoustaches {
         }
     }
 
+    /** @return le premier quartile (Q1) */
     public Double getPremierQuantile(){
         return Q1;
     }
 
+    /** @return la médiane (Q2) */
     public Double getMediane(){
         return Q2;
     }
 
+    /** @return le troisième quartile (Q3) */
     public Double getDernierQuantile(){
         return Q3;
     }
 
+    /** @return la moustache inférieure {@code Q1 - 1.5 * IQR} */
     public Double getMoustacheInf(){
         return moustacheInf;
     }
 
+    /** @return la moustache supérieure {@code Q3 + 1.5 * IQR} */
     public Double getMoustacheSup(){
         return moustacheSup;
     }

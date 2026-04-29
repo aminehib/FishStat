@@ -2,8 +2,18 @@ package tools;
 
 import java.util.ArrayList;
 
+/**
+ * Outil utilitaire de calcul de l'écart-type d'une liste de
+ * valeurs (les {@code null} sont ignorés).
+ */
 public class StandatrdDeviation {
 
+    /**
+     * Calcule l'écart-type de la liste fournie.
+     *
+     * @param x la liste de valeurs
+     * @return l'écart-type, ou {@code null} si la liste est vide ou nulle
+     */
     public static Double std(ArrayList<Double> x){
 
     if(x == null || x.size() == 0) return null;
@@ -30,6 +40,6 @@ public class StandatrdDeviation {
     return Math.sqrt(sum / n);
 }
 
-    
-    
+
+
 }

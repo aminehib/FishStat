@@ -12,14 +12,33 @@ import interfaces.*;
 import model.Fish;
 import model.Population;
 
+/**
+ * Lecteur de fichiers CSV produisant des listes de {@link Fish}
+ * ou de {@link Population}. Les colonnes sont mappées aux
+ * attributs via une correspondance fournie par l'appelant.
+ */
 public class CsvReader {
 
     private static String[] fishAttributes = {"Species","Length","Weight","Size","Total_parasites" ,"InfestationRate","Content"};
     private static String[] populationAttributes = {"Name","Total","MeanLength","MeanWeight","MeanSize","Total_parasites" ,"InfestationRate","Intensity","Content"};
 
-    
-//utiliser equale 
 
+    /**
+     * Lit un CSV "ligne par entité" et construit une liste d'objets
+     * du type demandé.
+     *
+     * @param <T>            type cible ({@link Fish} ou {@link Population})
+     * @param name           chemin du fichier CSV
+     * @param split          séparateur de colonnes (regex)
+     * @param multipleSplit  séparateur des éléments multiples (ex. contenu)
+     * @param poucentage     diviseur appliqué au taux d'infestation
+     *                       (ex. 100 si le taux est en pourcentage)
+     * @param headers        map "en-tête CSV" → "attribut interne"
+     * @param type           classe cible utilisée pour le cast
+     * @return la liste des entités lues, ou {@code null} si {@code headers} est vide
+     * @throws InvalidFileFormat si le fichier est mal formé
+     * @throws InvalidAttribute  si un attribut interne n'est pas reconnu
+     */
     public static <T extends Data> ArrayList<T> readCsv(String name ,String split ,String multipleSplit ,int poucentage, LinkedHashMap<String , String > headers  , Class<T> type ) throws InvalidFileFormat, InvalidAttribute{
 
       if(headers == null || headers.size() == 0 ) return null ;
@@ -183,6 +202,24 @@ public class CsvReader {
 }
 
 
+/**
+ * Lit un CSV "long format" où chaque entité s'étale sur {@code N}
+ * lignes (paire Parametre/Value) et construit la liste d'objets
+ * cible.
+ *
+ * @param <T>            type cible ({@link Fish} ou {@link Population})
+ * @param name           chemin du fichier CSV
+ * @param split          séparateur de colonnes (regex)
+ * @param multipleSplit  séparateur des éléments multiples
+ * @param poucentage     diviseur appliqué au taux d'infestation
+ * @param headers        map "en-tête CSV" → "attribut interne"
+ * @param params         map "valeur de Parametre" → "attribut interne"
+ * @param N              nombre de lignes par entité
+ * @param type           classe cible utilisée pour le cast
+ * @return la liste des entités lues
+ * @throws InvalidFileFormat si le fichier est mal formé
+ * @throws InvalidAttribute  si un attribut interne n'est pas reconnu
+ */
 public static <T extends Data> ArrayList<T> readCsv(String name ,String split ,String multipleSplit ,int poucentage, LinkedHashMap<String , String > headers ,LinkedHashMap<String,String> params,int N , Class<T> type ) throws InvalidFileFormat, InvalidAttribute{
 
 
